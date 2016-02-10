@@ -1,152 +1,85 @@
-\chapter{The Description of a Set of Trajectories and Its Median Trajectory}
-\label{chap:definition}
+\chapter{Dasar Teori}
+\label{chap: dasarTeori}
 
-\section{Set of Trajectories}
-\label{sec:setoftrjs}
+\section{AngularJS}
+\label{sec: angularJS}
+	
+	AngularJS \cite{angularJS} merupakan framework javascript berbasis \textit{open-source} yang dirilis oleh Google pada tahun 2009. AngularJS sendiri merupakan jawaban dari banyak tantangan pemakaian web yang memerlukan pengaplikasian suatu fungsi tanpa berganti halaman. Jika anda merujuk pada situs resmi AngularJS yaitu http://angularjs.org maka anda akan dapat membaca sebuah tagline "HTML Enchanced for Web Apps". Tag line tersebut mengartikan bahwa pemakaian angularJS merupakan pemakaian HTML yang telah ditingkatkan fungsinya untuk membangun sebuah aplikasi dalam web.
+	
+	HTML merupakan alat yang digunakan untuk membangun web statik sehingga membutuhkan bantuan dari alat lain untuk membuat sebuah aplikasi web pada HTML ini. Oleh sebab minat dan banyaknya permintaan dari developer web untuk membuat aplikasi web dengan mudah, maka Google meresmikan AngularJS pada tahun 2009 yagn lalu.
+	
+	AngularJS bukan merupakan pustaka (library) javascript melainkan sebuah framework yang solid untuk membangun web app, seperti framework javascript pada umumnya AngularJS mengadopsi konsep MVC (Model, View, Controller), meskipun menggunakan implementasi yang berbeda dengan konsep asli MVC.
+	
+\section{Keistimewaan AngularJS}
+\label{sec: keistimewaanAngularJS}
+	Keistimewaan penggunaan AngularJS sangatlah banyak. Berikut beberapa diantaranya:
+	
+	\begin{enumerate}
+		\item Two way data-binding
+		\item Mengajari browsers dengan sintak HTML baru	
+		\item HTML Template
+		\item Dependency Injection (DI)
+	\end{enumerate}
+	
+\subsection{Two way data-binding}
+\label{sub: twoWayDataBinding}
 
-In this thesis, we only consider the spatial component of the trajectory. 
-Therefore, we represent a trajectory as a polygonal line built by a series of points and connected by line segments.   
+	Two way data-binding merupakan mekanisme sinkronisasi otomatis antara Controller dan View. Gampangnya, ketika ada perubahan pada Model yang berasal dari View, Angular secara otomatis membuat perubahan pada Controller. Begitu pula sebaliknya. Hal ini terjadi secara otomatis, jadi kita tidak perlu menuliskan kode secara manual untuk mencapai mekanisme ini.
+
+\subsection{Mengajari browsers dengan sintak HTML baru}
+\label{sub: mengajariBrowsersDenganSintakHTMLBaru}
+
+	HTML5 menawarkan sejumlah elemen baru semisal <video>, <section>, <article>, dsb. Nah dengan AngularJS, Kita bahkan dapat menambahkan lebih banyak lagi elemen-elemen baru yang akan dimengerti oleh browser, misal <draggable> membuat elemen bisa didrag, <zippy> membuat elemen semisal akordion, atau bahkan menggunakan bahasa indonesia seperti <sembunyikan> jika diklik akan menyembunyikan elemen (contoh saja, pada praktik gunakanlah bahasa inggris sebagai bahasa internasional). Fungsi ini disebut dengan istilah Directive. Kitalah yang bertanggungjawab membuat Directive tersebut bisa ditafsirkan oleh browser dengan menuliskan kode pada deklarasi Directive itu sendiri. Atau dengan kata lain, kita mengajari browser sintak HTML baru. Bahkan tidak terbatas pada elemen, kita bisa membuat Directive menggunakan attribute, HTML comment atau class.
+
+\subsection{HTML Template}
+\label{sub: HTMLTemplate}
+
+	Template yang digunakan AngularJS hanyalah HTML biasa dengan penambahan ekspresi (expression), sehingga kita tidak perlu menggunakan template engine khusus.
+
+\subsection{Dependecy Injection (DI)}
+\label{sub: DI}
+
+	Dependency Injection memungkinkan developer menulis beberapa komponen kode yang terpisah satu sama lain. Ketika memerlukan salah satu komponen, developer dapat memanggil komponen yang dibutuhkan tersebut dan dapat menggunakan fungsi yang tersedia. Fitur ini memudahkan developer dalam membuat komponen yang dapat dipakai berulang kali (reusable component)
+
+\section{Key Concept AngularJS}
+\label{sec: keyConceptAngularJS}
+
+\subsection{Model}
+\label{sub: model}
+
+	Dalam pola MVC, Model merepresentasikan suatu set data yang digunakan oleh Controller dan View.Model dapat mendeteksi perubahan data dan memberikan notifikasi perubahan tersebut ke Controller dan View. Pada implementasi pasif, notifikasi perubahan dapat diabaikan. Untuk membuat Model di beberapa framework selain AngularJS diperlukan konstruktor khusus. Sedangkan Model pada AngularJS tidak memiliki konstruktor tersendiri dan tidak memerlukan inheritance dari Object Class tertentu. Model tidak memerlukan setter atau getter method khusus. Model bisa berupa primitive, object hash, atau full object. Dengan kata lain Model hanyalah javascript object biasa.
+
+\subsection{Scope}
+\label{sub: Scope}
+
+	Scope merupakan perekat (glue) atau perantara antara Controller dengan View. Masing-masing controller memiliki scope atau lingkup sendiri.
+	
+\subsection{Controller}
+\label{sub: controller}
+
+	Controller merupakan kode dibalik View. Kode pemrosesan dan logika ditaruh pada controller yang akan menghasilkan Model untuk ditampilkan pada View.
+
+\subsection{View}
+\label{sub: view}
+
+	View adalah apa yang terlihat oleh pengguna. Dimulai dari sebuah template kemudian digabungkan dengan Model lalu browser melakukan proses rendering dan hasilnya ditampilkan ke pengguna. Template yang digunakan hanyalah sintak HTML (bukan HTML diselingi dengan markup khusus seperti pada template engine pada umumnya).
+
+\subsection{Expression}
+\label{sub: expression}
+
+	Expression merupakan kode snippet yang dapat kita tulis pada View. Expression berkaitan dengan mekanisme binding pada AngularJS, formatnya adalah sebagai berikut {{ expression }} Contoh :
+	
+	\begin{enumerate}
+		\item "{{ 1+2 }}" , akan menampilkan angka 3 ke pengguna.
+		\item {{ user.name }} , akan menampilkan nilai properti 'name' dari model 'user'
+		\item {{ 1000 | currency }} , akan menampilkan angka 1000 dalam format mata uang (currency), keyword setelah tanda pipa ( | ) merupakan filter.
+	\end{enumerate}
+
+\subsection{Directive}
+\label{sub: directive}
+
+	Directive merupakan cara untuk membuat sintak HTML baru yang akan dimengerti oleh browser. Directive dapat berupa elemen, attribute, HTML comment atau Class. Angular telah menyediakan beberapa directive bawaan yang penting dalam pengembangan web app. Beberepa directive bawaan Angular diantaranya ng-controller, ng-model, ng-repeat, ng-click dll. Kita dapat pula membuat custom directive dengan perilaku (behavior) tertentu seperti yang telah dijelaskan pada pembahasan Apa yang membuat AngularJS istimewa.
+	
+
+	
  
-Let $T:=\{\tau_{1},\tau_{2},...,\tau_{m}\}$ be the input set of $m$ trajectories for which we want to compute its median trajectory $\tau^{M}$.
-We define each trajectory in $T$ as a list of at most $n$ points, $\tau_{i}:=(p_{i,1},...,p_{i,k})$ where $1 \leq i \leq m$ and $2 \leq k \leq n$. 
-Note that the number of points for each trajectory can be different.
-Every two consecutive points $p_{i,j}$ and $p_{i,j+1}$ $(1 \leq j \leq k-1)$ are connected by a segment $s_{i,j}:=(\overline{p_{i,j},p_{i,j+1}})$.
-
-$P$ is the set of all points in $T$, $P:=\{p_{i,j} \mid i \in \{ 1 ... m\} , j \in \{ 1 ... n\} \}$ and $S$ is the set of all segments in $T$, $S:=\{s_{i,j} \mid i \in \{ 1 ... m\} , j \in \{ 1 ... n-1\} \}$.
-All trajectories in $T$ share the same start and end points $(p_{1,1}=p_{2,1}=...=p_{m,1}$ and $p_{1,k_{1}}=p_{2,k_{2}}=...=p_{m,k_{m}}$ where $ \{k_{1},...,k_{m}\} \in \{1,...,n\})$. 
-
-Trajectories can intersect with other trajectories in other points than their start and end points.
-These intersection points are also included in the list of points that define the trajectory. When two segments intersect each other, then both segments will be split into two parts and all four segments share one intersection point as one of their endpoints (see Figure~\ref{fig:number_trj}).
-
-\begin{figure}
-\centering
-\includegraphics[scale=0.8]{Gambar/number_trj}
-\caption[Numbering of points and segments]{Numbering of points and segments} 
-\label{fig:number_trj}
-\end{figure}
-
-Let $n'$ be the number of points in a trajectory, including their intersection points with other trajectories. 
-In the worst case, $n' = mn^{2}$. 
-In the rest of this thesis, we define $n$ as a number of points in a trajectory, inclusive with its intersection points with other trajectories. 
-Note that the number of segments for each trajectory is linear to the number of points, because trajectory with $n$ points has $n-1$ segments.
-
-\section{Properties of the Median Trajectory}
-\label{sec:prop_medtrj}
-
-We define several properties for the median trajectory  $\tau^{M}$ with respect to the input set of trajectories $T$:
-
-\begin{itemize}
-\item 
-$\tau^{M}$ is a directed polygonal line from start point to end point and should be similar to most trajectories in $T$.
-
-\item 
-It must be built only using points and segments which are parts of trajectories in the input set. 
-
-\item 
-The usage of segments should follow the direction of them. Therefore, it is not allowed to use a segment such that the direction of $\tau^{M}$ is opposite to the direction of that segment in a trajectory (see Figure~\ref{fig:forbid_seg}, indicated by the dark blue arrow).
-
-\begin{figure}
-\centering
-\includegraphics[scale=0.9]{Gambar/forbid_seg}
-\caption[Possible median trajectory (in black) with backward direction (pointed by the blue arrow)]{Possible median trajectory (in black) with backward direction (indicated by the blue arrow)} 
-\label{fig:forbid_seg}
-\end{figure}
-
-\item 
-The length of the median trajectory should be relatively the same as the average length of all trajectories in the input set.
-
-\item 
-The total angular change should also be similar to the average of total angular change of all trajectories in the input set.
-The total angular change of a trajectory is the sum of all angular changes at every vertex in that trajectory (see Figure~\ref{fig:total_ang}). 
-
-\begin{figure}
-\centering
-\includegraphics[scale=1]{Gambar/total_ang}
-\caption[Red arcs indicate the angular change at each vertex]{Red arcs indicate the angular change at each vertex} 
-\label{fig:total_ang}
-\end{figure}
-
-\item 
-The number of vertices and edges of $\tau^{M}$ should be about the same with the average of the number of vertices and edges from all trajectories in the input set.
-		%\item The final result of $\tau^{M}$ should not be influenced by an outliers.  
-\end{itemize}
-
-
-Using the definition of the input set of trajectories defined in the previous section, we define a median trajectory $\tau^{M}$ as a sequence of points from $T$, $\tau^{M}:=(p_{i_{1},j_{1}},p_{i_{2},j_{2}},...,$ $p_{i_{k},j_{k}})$ where $\{i_{1},i_{2},...,i_{k}\} \in \{1 ... m\}$ and $\{j_{1},j_{2},...,j_{k}\} \in \{ 1 ... n\}$, or defined as a sequence of segments: $\tau^{M}:=(s_{i_{1},j_{1}},s_{i_{2},j_{2}}, ...,s_{i_{k},j_{k}})$ where $\{i_{1},i_{2},...,i_{k}\} \in \{1 ... m\}$ and $\{j_{1},j_{2},...,j_{k}\} \in \{1 ... n-1\}$. 
-Note that $\tau^{M}$ and all trajectories in $T$ share the same start point and end point.   
-
-
-%  
-
-Table~\ref{tab:tab_begin} shows how this information is kept in $\Gamma$. 
-\begin{table}
-\centering
-\caption{Table $\Gamma$ after inserting $\mathcal{S}_{1}$}
-\label{tab:tab_begin}
-\begin{tabular}{cccc}
-\toprule
-
- & $v_{start}$ & $\mathcal{S}_{1}$ & $v_{end}$\\
-\midrule
-$\tau_{1}$ & 1 & 12& 20\\
-$\tau_{2}$ & 1 &  & 20\\
-$\tau_{3}$ & 1 & 9 & 20\\
-$\tau_{4}$ & 1 &  & 20\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-There are two possibilities of the placement of $\mathcal{S}_{2}$: 
-\begin{table}[H]
-\begin{minipage}[c]{0.49\linewidth}
-\centering
-\caption{$\mathcal{S}_{2}$ between $v_{start}$ and $\mathcal{S}_{1}$}
-\label{tab:tab_next1}
-\begin{tabular}{ccccc}
-\toprule
-
- & $v_{start}$ & $\mathcal{S}_{2}$ & $\mathcal{S}_{1}$ & $v_{end}$\\
-\midrule
-$\tau_{1}$ & 1 & 5 \cellcolor{green}& 12& 20\\
-$\tau_{2}$ & 1 & 8 \cellcolor{green}& & 20\\
-$\tau_{3}$ & 1 & 2/8/17 \cellcolor{green}& 9 & 20\\
-$\tau_{4}$ & 1 & \cellcolor{red}& & 20\\
-\bottomrule
-\end{tabular}
-\end{minipage}
-\begin{minipage}[c]{0.49\linewidth}
-
-\centering
-\caption{$\mathcal{S}_{2}$ between $\mathcal{S}_{1}$ and $v_{end}$}
-\label{tab:tab_next2}
-\begin{tabular}{ccccc}
-\toprule
-
- & $v_{start}$ & $\mathcal{S}_{1}$ & $\mathcal{S}_{2}$ & $v_{end}$\\
-\midrule
-$\tau_{1}$ & 1 & 12& 5 \cellcolor{red} &20\\
-$\tau_{2}$ & 1 &  &  8 \cellcolor{green} &20\\
-$\tau_{3}$ & 1 & 9 & 2/8/17 \cellcolor{green} &20\\
-$\tau_{4}$ & 1 &   & \cellcolor{red} &20\\
-\bottomrule
-\end{tabular}
-\end{minipage}
-\end{table}
-
-The final placement of table $\Gamma$ after simplification: 
-\begin{table}[H]
-\centering
-\caption{Final $\Gamma$}
-\label{tab:tab_final}
-\begin{tabular}{ccccc}
-\toprule
- & $v_{start}$ & $\mathcal{S}_{2}$ & $\mathcal{S}_{1}$ & $v_{end}$\\
-\midrule
-$\tau_{1}$ & 1 & 5 & 12& 20\\
-$\tau_{2}$ & 1 & 8 &   & 20\\
-$\tau_{3}$ & 1 & 8 & 9 & 20\\
-$\tau_{4}$ & 1 &   &   & 20\\
-\bottomrule
-\end{tabular}
-\end{table}
-
