@@ -28,7 +28,7 @@
 %tulis nama dan NPM anda di sini:
 \newcommand{\nama}{Billy Yanuar}
 \newcommand{\@npm}{2012730017}
-\newcommand{\@judultopik}{Sistem Operasi Penilaian Skripsi dengan AngularJS} % Judul/topik anda
+\newcommand{\@judultopik}{Sistem Penilaian Sidang Skripsi 2 dengan AngularJS} % Judul/topik anda
 \newcommand{\jumpemb}{1} % Jumlah pembimbing, 1 atau 2
 \newcommand{\tanggal}{11/02/2016}
 \maketitle
@@ -36,48 +36,40 @@
 \pagenumbering{arabic}
 
 \section{Deskripsi}
-Sistem penilaian skripsi khususnya pada program studi teknik informatika di Universitas Katolik Parhyangan masih bersifat bersifat manual. Sifat manual ini mengakibatkan kelalaian manusia dalam melakukan penilaian pun beberapa kali tidak dapat dihindarkan. Kelalaian manusia yang biasa terjadi contohnya adalah kesalahan perhitungan nilai akhir oleh penilai, kesalahan penulisan nama dana npm mahasiswa yang bersangkutan, kesalahan penulisan semester atau tahun ajaran saat penilaian skripsi. Selain itu, penyimpanan skripsi pun tergolong sulit karena tidak langsung dibarengi dengan nilai dan npm mahasiswa yang mengerjakan. Untuk mengatasi hal-hal tersebut, diperlukan suatu sistem yang dapat menanggulangi masalah pengisian, kalkulasi perhitungan, dan juga penyimpanan skripsi.
-Pada Skripsi ini, akan dibuat sebuah sistem informasi yang menanggulangi masalah-masalah tersebut dengan cara membuat beberapa input dijadikan otomatis dan juga melakukan eksekusi perhitungan nilai akhir sesuai bobot secara otomatis. Hal ini dianggap akan memudahkan penilai dalam proses penilaian skripsi, karena penilai tidka perlu lagi repot menghitung dan juga mengisi hal-hal yang sudah terisi secara otomatis.
+Sistem penilaian sidang skripsi 2 pada Program Studi Teknik Informatika di Universitas Katolik Parahyangan masih bersifat manual. Sifat manual ini mengakibatkan kelalaian manusia dalam melakukan penilaian pun beberapa kali tidak dapat dihindarkan. Kelalaian manusia yang biasa terjadi contohnya adalah kesalahan perhitungan nilai akhir oleh penilai, kesalahan penulisan nama dan NPM mahasiswa yang bersangkutan, kesalahan penulisan semester atau tahun ajaran saat penilaian skripsi. Selain itu, penyimpanan nilai skripsi pun tergolong sulit karena tidak langsung dibarengi dengan nilai dan npm mahasiswa yang mengerjakan. Untuk mengatasi hal-hal tersebut, diperlukan suatu sistem yang dapat menanggulangi masalah pengisian, kalkulasi perhitungan, dan juga penyimpanan skripsi.
+Pada penelitian ini, akan dibuat sebuah sistem penilaian yang menanggulangi masalah-masalah tersebut dengan cara membuat beberapa masukan dijadikan otomatis dan juga melakukan eksekusi perhitungan nilai akhir sesuai bobot secara otomatis. Hal ini dianggap akan memudahkan penilai dalam proses penilaian skripsi, karena penilai tidak perlu lagi repot menghitung dan juga mengisi hal-hal yang sudah terisi secara otomatis.
 
 
 \section{Rumusan Masalah}
+Rumusan masalah yang dapat disimpulkan dari skripsi ini antara lain:
 \begin{itemize}
-	\item Bagaimana sistem penilaian skripsi yang ada di Universitas Parahyangan pada program studi Teknik Informatika?
-	\item Bagaimana proses data untuk penyimpanan skripsi?
+	\item Bagaimana sistem penilaian skripsi yang ada pada Program Studi Teknik Informatika di Universitas Katolik Parahyangan?
+	\item Bagaimana proses penyimpanan nilai skripsi?
 	\item Bagaimana AngularJS bekerja pada eksekusi perhitungan nilai akhir?
 \end{itemize}
 
 \section{Tujuan}
 Tujuan dari skripsi ini antara lain adalah:
 \begin{itemize}
-	\item Mempelajari sistem penilaian skripsi di Universitas Parahyangan pada program studi Teknik Informatika
-	\item Mempelajari proses data untuk penyimpanan skripsi
-	\item Mempelajari AngularJS
+	\item Mempelajari sistem penilaian skripsi pada Program Studi Teknik Informatika di Universitas Katolik Parahyangan
+	\item Merancang dan mengimplementasi proses penyimpanan nilai skripsi
+	\item Menentukan dan mengimplementasi AngularJS untuk mengeksekusi perhitungan nilai akhir
 \end{itemize}
 
 \section{Deskripsi Perangkat Lunak}
 Perangkat lunak akhir yang akan dibuat memiliki fitur minimal sebagai berikut:
 \begin{itemize}
-	\item Input nama mahasiswa
-	\item Input npm mahasiswa
-	\item Input judul skripsi
-	\item Input pembimbing utama
-	\item input pembimbing pendamping
-	\item Input ketua tim penguji
-	\item Input anggota tim penguji
-	\item Pengguna dapat mengisi nilai yang ingin diberikan di kolom yang sesuai dan sistem akan memunculkan nilai akhir sesuai dengan presentase yang ada secara otomatis
-	\item Otomatisasi semester dan tahun ajaran
+	\item Menerima masukan berupa data mahasiswa yang sedang melakukan sidang
+	\item Menerima masukan berupa nilai yang diberikan oleh pembimbing dan penguji
+	\item Melakukan kalkulasi otomatis nilai akhir skripsi
+	\item Melakukan pencatatan terhadap nilai skripsi yang dimasukkan
 \end{itemize}
 
 \section{Detail Pengerjaan Skripsi}
-Tuliskan bagian-bagian pengerjaan skripsi secara detail. Bagian pekerjaan tersebut mencakup awal hingga akhir skripsi, termasuk di dalamnya pengerjaan dokumentasi skripsi, pengujian, survei, dll.
-
 Bagian-bagian pekerjaan skripsi ini adalah sebagai berikut :
 	\begin{enumerate}
-		\item Mempelajari github sebagai basis penyimpanan skripsi
 		\item Mempelajari lembar penilaian skripsi yang dipakai saat ini
-		\item Mempelajari input apa saja yang diperlukan dalam form skripsi
-		\item Mempelajari bahasa pemrograman AngularJS
+		\item Mempelajari bahasa pemrograman AngularJS, Code Igniter, dan Bootstrap
 		\item Merancang tampilan form yang akan dipakai untuk penilaian
 		\item Mengimplementasikan fitur fitur yang ada pada form tersebut
 		\item Melakukan pengujian (dan eksperimen) yang melibatkan responden untuk menilai hasil simulasi secara kualitatif
@@ -92,14 +84,12 @@ Berikut adalah rencana kerja saya di skripsi ini:
   \begin{tabular}{ | c | c | c | c | l |}
     \hline
     1*  & 2*(\%) & 3*(\%) & 4*(\%) &5*\\ \hline \hline
-    1   & 5  & 5  &  &  \\ \hline
-    2   & 5 & 5  &   & \\ \hline
-    3   & 10  & 9  & 1 & {\footnotesize melengkapi kembali input yang diperlukan di s2}  \\ \hline
-    4   & 15  & 6  &  9 & {\footnotesize teknik menyimpan dan kalkulasi di S2} \\ \hline
-    5   & 20 & 5  & 15 & {\footnotesize perancangan awal prototipe di S1 dan di tingkatkan di S2} \\ \hline
-    6   & 20 &   & 20  & \\ \hline
-    7   & 20  & 5  & 15 &  {\footnotesize eksperimen prototipe di S1}\\ \hline
-    8   & 5  &   &  5  & \\ \hline
+    1   & 20  & 20  &  &  \\ \hline
+    2   & 15 & 5  & 10  & \\ \hline
+    3   & 10  & 10  &  &   \\ \hline
+    4   & 15  & 5  &  10 & {\footnotesize teknik menyimpan dan kalkulasi di S2} \\ \hline
+    5   & 20 &   & 20 & {\footnotesize perancangan awal prototipe di S1 dan di tingkatkan di S2} \\ \hline
+    6   & 20 &  & 20  & \\ \hline
     Total  & 100  & 40  & 60 &  \\ \hline
                           \end{tabular}
 \end{center}
