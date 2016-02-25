@@ -6,27 +6,32 @@
 
 	Skripsi merupakan istilah yang digunakan di Indonesia untuk mengilustrasikan suatu karya tulis ilmiah berupa paparan tulisan hasil penelitian sarjana S1 yang membahas suatu permasalahan/fenomena dalam bidang ilmu tertentu dengan menggunakan kaidah-kaidah yang berlaku.
 	
-	Saat ini, sistem penilaian skripsi di Universitas Katolik Parahyangan khususnya pada jurusan Teknik Informatika masih mengandalkan otak manusia dan dilakukan secara manual. Kerap kali hal tersebut menyebabkan kesulitan dalam pemberian nilai dan resiko terjadinya kesalahan dalam perhitungan nilai skripsi cukup besar. Selain itu, kelalaian akan pemberi nilai dalam menulis (6 menjadi 0) pun dapat menyebabkan kesalahan yang fatal pada nilai skripsi mahasiswa. 
+	Sistem penilaian sidang skripsi 2 pada Program Studi Teknik Informatika di Universitas Katolik Parahyangan masih bersifat manual. Sifat manual ini mengakibatkan kelalaian manusia dalam melakukan penilaian pun beberapa kali tidak dapat dihindarkan. Kelalaian manusia yang biasa terjadi contohnya adalah kesalahan perhitungan nilai akhir oleh penilai, kesalahan penulisan nama dan NPM mahasiswa yang bersangkutan, kesalahan penulisan semester atau tahun ajaran saat penilaian skripsi{\footnotesize berdasarkan diskusi dengan dosen pembimbing}. Selain itu, penyimpanan nilai skripsi pun tergolong sulit karena tidak langsung dibarengi dengan nilai dan npm mahasiswa yang mengerjakan. Untuk mengatasi hal-hal tersebut, diperlukan suatu sistem yang dapat menanggulangi masalah pengisian, kalkulasi perhitungan, dan juga penyimpanan skripsi.
 	
 	Menurut penjelasan di atas, maka otomatisasi sistem dalam penilaian skripsi sangat dibutuhkan oleh Universitas guna mengurangi kesalahan - kesalahan kecil yang dapat berakibat fatal pada nilai mahasiswa yang bersangkutan. Berdasarkan hal tersebut dibuatlah penelitian otomatisasi sistem penilaian skripsi dengan cara membuat sebuah aplikasi berbasis web yaitu Sistem informasi Penilaian Skripsi.
+		
+	Pada penelitian ini, akan dibuat sebuah sistem penilaian yang menanggulangi masalah-masalah tersebut dengan cara membuat beberapa masukan dijadikan otomatis dan juga melakukan eksekusi perhitungan nilai akhir sesuai bobot secara otomatis. Hal ini dianggap akan memudahkan penilai dalam proses penilaian skripsi, karena penilai tidak perlu lagi repot menghitung dan juga mengisi hal-hal yang sudah terisi secara otomatis.
+	
+	Dalam penelitian ini saya memakai framework AngularJS yang dimiliki oleh perusahaan \textit{Google}. AngularJS merupakan salah satu framework yang paling sering digunakan untuk membuat sebuah aplikasi berbasis web dengan konsep \textit{Single Page Application (SPA)}. \textit{Single Page Application} merupakan aplikasi berbasis web yang memungkinkan sebuah halaman HTML memiliki konten - konten yang dapat digunakan di halaman tersebut tanpa perlu berganti ke halaman lain.
+	
+	AngularJS juga bisa di integrasikan dengan aplikasi yang menggunakan framework lain, sehingga sangat berguna dalam pengerjaan aplikasi berbasis web yang sangat luas cakupannya.
 	
 \section{Rumusan Masalah}
 \label{sec: rumusanMasalah}
 
 	Berikut adalah susunan permasalahan yang akan dibahas pada penelitian ini:
 	\begin{enumerate}
-		\item Bagaimana sistem penilaian skripsi pada jurusan Teknik Informatika Universitas Katolik Parahyangan?
-		\item Data apa saja yang diperlukan sebagai acuan dalam penilaian skripsi?
-		\item Bagaimana tampilan yang dipakai dalam penilaian skripsi?
+		\item Bagaimana sistem penilaian skripsi yang ada pada Program Studi Teknik Informatika di Universitas Katolik Parahyangan?
+		\item Bagaimana proses penyimpanan nilai skripsi?
+		\item Bagaimana AngularJS bekerja pada eksekusi perhitungan nilai akhir?
 	\end{enumerate}
 
 \section{Tujuan}
 \label{tujuan}
 
-	Berdasarkan rumusan masalah yang telah dibuat, maka tujuan penelitian ini dijelaskan ke dalam
-	poin-poin sebagai berikut:
+	Berdasarkan rumusan masalah yang telah dibuat, maka tujuan penelitian ini dijelaskan ke dalam poin-poin sebagai berikut:
 	\begin{enumerate}
-		\item Mengetahui sistem penilaian skripsi pada jurusan Teknik Infromatika Universitas Katolik Parahyangan
-		\item Mengetahui data yang diperlukan untuk penilaian skripsi
-		\item Memodelkan user interface seperti apa yang sebaiknya digunakan di sistem informasi penilaian skripsi
+		\item Mempelajari sistem penilaian skripsi pada Program Studi Teknik Informatika di Universitas Katolik Parahyangan
+		\item Merancang dan mengimplementasi proses penyimpanan nilai skripsi
+		\item Menentukan dan mengimplementasi AngularJS untuk mengeksekusi perhitungan nilai akhir
 	\end{enumerate}
