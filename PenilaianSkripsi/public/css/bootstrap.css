@@ -182,6 +182,8 @@ optgroup {
 table {
   border-spacing: 0;
   border-collapse: collapse;
+  /* custom table */
+  width:100%;
 }
 td,
 th {
@@ -6762,8 +6764,8 @@ button.close {
 
 /* custom css */
 body{
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 #form-quarter{
   width:25%;
@@ -6772,6 +6774,12 @@ body{
   width: 50%;
   float: left;
 }
-table{
-  width: 50%;
+
+input[disabled="disabled"]{
+  background-color: #fff;
+}
+#pembimbing{
+  width:20%;
+  float: right;
+  margin-right:63%;
 }

@@ -11,9 +11,9 @@ and open the template in the editor.
         <!-- Bootstrap Core CSS -->
         <link rel="stylesheet" href="<?php echo base_url("public/css/bootstrap.css");?>">
         <script type="text/javascript" src="<?php echo base_url("public/js/bootstrap.js");?>"></script>
-
+        <script src="<?php echo base_url("public/js/angular.min.js") ?>"></script>
     </head>
-    <body>
+    <body ng-app>
         <!-- Page Heading -->
             <div class="row">
                 <div class="col-lg-6.col-lg-offset-3">
@@ -28,10 +28,9 @@ and open the template in the editor.
                                     <option>Ganjil</option>
                                     <option>Genap</option>
                                 </select>
-
-                                <input id="form-quarter"type="number" max="9999">
+                                <input id="form-quarter"type="number" max="9999" ng-model="tahun">
                                 /
-                                <input id="form-quarter"type="number" max="9999">
+                                <input id="form-quarter"type="number" max="9999" value={{tahun+1}} disabled="disabled">
                             </div>
                     </div>
                 </div>
@@ -53,7 +52,7 @@ and open the template in the editor.
                                 dengan pembimbing dan penguji:
                                 <table>
                                     <tr>
-                                        <td>Pembimbing <select class="form-control">
+                                        <td>Pembimbing <select class="form-control" id="pembimbing">
                                             <option>Utama</option>
                                             <option>Tunggal</option>
                                             </select>
@@ -127,9 +126,11 @@ and open the template in the editor.
                                 </table>
                             </div>
 
-                            <p>
+                            <div>
                             Ditetapkan di Bandung,<input type="date">
+                            </div>
                         </form>
-                    </div>                
+                    </div> 
+                </div>
     </body>
 </html>
