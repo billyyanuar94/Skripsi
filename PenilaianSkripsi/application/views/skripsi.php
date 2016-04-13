@@ -11,12 +11,15 @@ and open the template in the editor.
         <!-- Bootstrap Core CSS -->
         <link rel="stylesheet" href="<?php echo base_url("public/css/bootstrap.css");?>">
         <script type="text/javascript" src="<?php echo base_url("public/js/bootstrap.js");?>"></script>
+        <!-- AngularJS -->
         <script src="<?php echo base_url("public/js/angular.min.js") ?>"></script>
+
+
     </head>
-    <body ng-app>
+    <body ng-app="penilaian">
         <!-- Page Heading -->
             <div class="row">
-                <div class="col-lg-6.col-lg-offset-3">
+                <div class="col-lg-6 col-lg-offset-3">
                     <div class="page-header">
                         <h1>
                             Berita Acara Sidang Skripsi
@@ -28,7 +31,7 @@ and open the template in the editor.
                                     <option>Ganjil</option>
                                     <option>Genap</option>
                                 </select>
-                                <input id="form-quarter"type="number" max="9999" ng-model="tahun">
+                                <input id="form-quarter" type="number" max="9999" ng-model="tahun">
                                 /
                                 <input id="form-quarter"type="number" max="9999" value={{tahun+1}} disabled="disabled">
                             </div>
@@ -39,96 +42,116 @@ and open the template in the editor.
                  <div class="row">
                     <div class="col-lg-12">
 
-                        <form role="form">
+                        <form role="form" ng-controller="DefaultValue">
 
                             <div class="form-group">
                                 Telah diselenggarakan Sidang Skripsi untuk mata kuliah AIF402-6 Skripsi 2 bagi:
-                                <p><label>NPM:</label><input class="form-control" placeholder="Enter text">
-                                <p><label>Nama:</label><input class="form-control" placeholder="Enter text">
-                                <p><label>Judul:</label><input class="form-control" placeholder="Enter text">
+                                <p><label class="col-md-1 col-xs-6">NPM:</label><input maxlength="10" class="inline-form col-md-3 col-xs-6">
+                                <label class="col-md-1 col-xs-6">Nama:</label><input class="inline-form col-md-7 col-xs-6">
+                                <p><label class="col-md-1 col-xs-6">Judul:</label><input class="inline-form col-md-11 col-xs-6">
                             </div>
 
-                            <div class="form-group">
-                                dengan pembimbing dan penguji:
-                                <table>
-                                    <tr>
-                                        <td>Pembimbing <select class="form-control" id="pembimbing">
-                                            <option>Utama</option>
-                                            <option>Tunggal</option>
-                                            </select>
-                                        <td>
-                                            <input class="form-control" placeholder="Enter text">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Pembimbing Pendamping:
-                                        <td>
-                                            <input class="form-control" placeholder="Enter text">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ketua Tim Penguji:
-                                        <td>
-                                            <input class="form-control" placeholder="Enter text">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Anggota Tim Penguji:
-                                        <td>
-                                            <input class="form-control" placeholder="Enter text">
-                                        </td>
-                                    </tr>
-                                </table>
+                            <p> dengan pembimbing dan penguji:
+                            <p>
+                            
+                            <div id="test">
+                                <label class="col-md-3 col-xs-6">Pembimbing:</label>
+                                <input class="col-md-9 col-xs-6">
+                                <p>
+                                <label class="col-md-3 col-xs-6">Pembimbing Pendamping:</label>
+                                <input class="col-md-9 col-xs-6">
+                                <p>
+                                <label class="col-md-3 col-xs-6">Ketua Tim Penguji:</label>
+                                <input class="col-md-9 col-xs-6">
+                                <p>
+                                <label class="col-md-3 col-xs-6">Anggota Tim Penguji:</label>
+                                <input class="col-md-9 col-xs-6">
+                                <p>
+                            </div>
                                 <p>
                                 Rekapitulasi nilai Sidang Skripsi 2 yang diberikan oleh pembimbing, penguji & koordinator skripsi:
-                                <table>
+                                <table class="col-md-8 col-xs-12 col-md-offset-4 col-md-pull-2 table-responsive">
                                     <tr>
                                         <th>No</th>
                                         <th>Pembimbing/Penguji</th>
                                         <th>Nilai</th>
-                                        <th>Bobot</th>
+                                        <th>Bobot(%)</th>
                                         <th>Nilai Akhir</th>
                                     </tr>
                                     <tr>
                                         <td>1</td>
                                         <td>Ketua Tim Penguji</td>
-                                        <td><input type="number" max="9999"></td>
-                                        <td>35%</td>
-                                        <td><input type="number" max="9999"></td>
+                                        <td><input type="number" max="100" ng-model="nilai_ketua"class="form-nilai"></td>
+                                        <td><input type="number" name="input" ng-model="ketua.value" min="0" max="100" class="form-nilai">
+                                        <td><input type="number" disabled="disabled" value={{nilai_ketua*ketua.value/100}} ng-model="total_ketua" class="form-nilai"></td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>Anggota Tim Penguji</td>
-                                        <td><input type="number" max="9999"></td>
-                                        <td>35%</td>
-                                        <td><input type="number" max="9999"></td>
+                                        <td><input type="number" max="100" ng-model="nilai_anggota"class="form-nilai"></td>
+                                        <td><input type="number" name="input" ng-model="anggota.value" min="0" max="100" class="form-nilai">
+                                        <td><input type="number" disabled="disabled" value={{nilai_anggota*anggota.value/100}} ng-model="total_anggota" class="form-nilai"></td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
                                         <td>Pembimbing</td>
-                                        <td><input type="number" max="9999"></td>
-                                        <td>20%</td>
-                                        <td><input type="number" max="9999"></td>
+                                        <td><input type="number" max="100" ng-model="nilai_pembimbing"class="form-nilai"></td>
+                                        <td><input type="number" name="input" ng-model="pembimbing.value" min="0" max="100" class="form-nilai"></td>
+                                        <td><input type="number" disabled="disabled" value={{nilai_pembimbing*pembimbing.value/100}} ng-model="total_pembimbing" class="form-nilai"></td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
                                         <td>Koordinator Skripsi</td>
-                                        <td><input type="number" max="9999"></td>
-                                        <td>10%</td>
-                                        <td><input type="number" max="9999"></td>
+                                        <td><input type="number" max="100" ng-model="nilai_koordinator"class="form-nilai"></td>
+                                        <td><input type="number" name="input" ng-model="koordinator.value" min="0" max="100" class="form-nilai"></td>
+                                        <td><input type="number" disabled="disabled" value={{nilai_koordinator*koordinator.value/100}} ng-model="total_koodinator" class="form-nilai"></td>
                                     </tr>
                                     <tr>
                                         <td></td>
-                                        <td colspan="2">Total</td>
+                                        <td colspan="2" >Total</td>
                                         <td>100%</td>
-                                        <td><input type="number" max="9999"></td>
+                                        <td><input type="number" max="100" disabled="disabled" value={{total_ketua+total_anggota+total_pembimbing+total_koordinator}} class="form-nilai"></td>
                                     </tr>
                                 </table>
-                            </div>
+                                <!-- Set Default Value pada ng-model type number -->
+                                    <script>
+                                      angular.module('penilaian', [])
+                                        .controller('DefaultValue', ['$scope', function($scope) {
+                                          $scope.ketua = {
+                                            value: 35
+                                          };
+                                          $scope.anggota = {
+                                            value: 35
+                                          };
+                                          $scope.pembimbing = {
+                                            value: 20
+                                          };
+                                          $scope.koordinator = {
+                                            value: 10
+                                          };
+                                        }]);
+                                    </script>
+                                <p>
+                            Ditetapkan di Bandung, <span id="date"/>
+                                <script>
+                                    var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+                                    var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'];
+                                    var date = new Date();
+                                    var day = date.getDate();
+                                    var month = date.getMonth();
+                                    var thisDay = date.getDay(),
+                                        thisDay = myDays[thisDay];
+                                    var yy = date.getYear();
+                                    var year = (yy < 1000) ? yy + 1900 : yy;
+//-->
 
-                            <div>
-                            Ditetapkan di Bandung,<input type="date">
-                            </div>
+                                    newdate = thisDay + ', ' + day + ' ' + months[month] + ' ' + year;
+                                    document.getElementById("date").innerHTML = newdate;
+                                    document.getElementById("year").innerHTML = newdate;
+                                </script>
+</div>
+
+                            <input type="submit" id="submit" value="Submit">
                         </form>
                     </div> 
                 </div>

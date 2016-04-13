@@ -181,13 +181,12 @@ optgroup {
 }
 table {
   border-spacing: 0;
-  border-collapse: collapse;
   /* custom table */
   width:100%;
 }
 td,
 th {
-  padding: 0;
+  padding: 0; 
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
@@ -1413,7 +1412,7 @@ a.bg-danger:focus {
 .page-header {
   text-align: center;
   padding-bottom: 9px;
-  margin: 100px 0 20px;
+  margin: 0 0 20px;
   border-bottom: 1px solid #eee;
 }
 ul,
@@ -6764,8 +6763,8 @@ button.close {
 
 /* custom css */
 body{
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 #form-quarter{
   width:25%;
@@ -6782,4 +6781,12 @@ input[disabled="disabled"]{
   width:20%;
   float: right;
   margin-right:63%;
+}
+
+#submit{
+  margin-left: 50%;
+}
+
+.form-nilai{
+  width: 45px;
 }
