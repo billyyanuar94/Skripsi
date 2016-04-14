@@ -1,16 +1,32 @@
 \chapter{Dasar Teori}
 \label{chap: dasarTeori}
 
+\section{CodeIgniter}
+\label{codeigniter}
+
+	CodeIgniter merupakan sebuah aplikasi pengembangan \textit{framework} yang digunakan dengan PHP untuk membangun sebuah halaman web. Tujuan dari CodeIgniter sendiri adalah untuk mempermudah dan mempercepat pembuatan suatu proyek dengan cara menyediakan \textit{libraries} yang biasa dipakai beserta dengan struktur logika untuk mengakses \textit{libraries} tersebut.
+	
+\subsection{Keistimewaan CodeIgniter}
+\label{keistimewaanCodeIgniter}
+	
+	CodeIgniter memiliki beberapa keistimewaan antara lain:
+	\begin{enumerate}
+		\item Ukuran file kecil dan cepat
+		\item Memakai konsep \textit{Model View Controller}
+		\item Tidak membutuhkan \textit{command line} dalam pengerjaannya
+		\item 
+	\end{enumerate}
+
 \section{AngularJS}
 \label{sec: angularJS}
 	
-	AngularJS \cite{angularJS} merupakan framework javascript berbasis \textit{open-source} yang dirilis oleh Google pada tahun 2009. AngularJS sendiri merupakan jawaban dari banyak tantangan pemakaian web yang memerlukan pengaplikasian suatu fungsi tanpa berganti halaman. Jika anda merujuk pada situs resmi AngularJS yaitu http://angularjs.org maka anda akan dapat membaca sebuah tagline "HTML Enchanced for Web Apps". Tag line tersebut mengartikan bahwa pemakaian angularJS merupakan pemakaian HTML yang telah ditingkatkan fungsinya untuk membangun sebuah aplikasi dalam web.
+	AngularJS \cite{angularJS} merupakan \textit{framework javascript} berbasis \textit{open-source} yang dirilis oleh Google pada tahun 2009. AngularJS sendiri merupakan jawaban dari banyak tantangan pemakaian web yang memerlukan pengaplikasian suatu fungsi tanpa berganti halaman. Jika anda merujuk pada situs resmi AngularJS yaitu http://angularjs.org maka anda akan dapat membaca sebuah tagline "HTML Enchanced for Web Apps". Tag line tersebut mengartikan bahwa pemakaian angularJS merupakan pemakaian HTML yang telah ditingkatkan fungsinya untuk membangun sebuah aplikasi dalam web.
 	
 	HTML merupakan alat yang digunakan untuk membangun web statik sehingga membutuhkan bantuan dari alat lain untuk membuat sebuah aplikasi web pada HTML ini. Oleh sebab minat dan banyaknya permintaan dari developer web untuk membuat aplikasi web dengan mudah, maka Google meresmikan AngularJS pada tahun 2009 yagn lalu.
 	
 	AngularJS bukan merupakan pustaka (library) javascript melainkan sebuah framework yang solid untuk membangun web app, seperti framework javascript pada umumnya AngularJS mengadopsi konsep MVC (Model, View, Controller), meskipun menggunakan implementasi yang berbeda dengan konsep asli MVC.
 	
-\section{Keistimewaan AngularJS}
+\subsection{Keistimewaan AngularJS}
 \label{sec: keistimewaanAngularJS}
 	Keistimewaan penggunaan AngularJS sangatlah banyak. Berikut beberapa diantaranya:
 	
@@ -41,30 +57,30 @@
 
 	Dependency Injection memungkinkan developer menulis beberapa komponen kode yang terpisah satu sama lain. Ketika memerlukan salah satu komponen, developer dapat memanggil komponen yang dibutuhkan tersebut dan dapat menggunakan fungsi yang tersedia. Fitur ini memudahkan developer dalam membuat komponen yang dapat dipakai berulang kali (reusable component)
 
-\section{Key Concept AngularJS}
+\subsection{Key Concept AngularJS}
 \label{sec: keyConceptAngularJS}
 
-\subsection{Model}
+\subsubsection{Model}
 \label{sub: model}
 
 	Dalam pola MVC, Model merepresentasikan suatu set data yang digunakan oleh Controller dan View.Model dapat mendeteksi perubahan data dan memberikan notifikasi perubahan tersebut ke Controller dan View. Pada implementasi pasif, notifikasi perubahan dapat diabaikan. Untuk membuat Model di beberapa framework selain AngularJS diperlukan konstruktor khusus. Sedangkan Model pada AngularJS tidak memiliki konstruktor tersendiri dan tidak memerlukan inheritance dari Object Class tertentu. Model tidak memerlukan setter atau getter method khusus. Model bisa berupa primitive, object hash, atau full object. Dengan kata lain Model hanyalah javascript object biasa.
 
-\subsection{Scope}
+\subsubsection{Scope}
 \label{sub: Scope}
 
 	Scope merupakan perekat (glue) atau perantara antara Controller dengan View. Masing-masing controller memiliki scope atau lingkup sendiri.
 	
-\subsection{Controller}
+\subsubsection{Controller}
 \label{sub: controller}
 
 	Controller merupakan kode dibalik View. Kode pemrosesan dan logika ditaruh pada controller yang akan menghasilkan Model untuk ditampilkan pada View.
 
-\subsection{View}
+\subsubsection{View}
 \label{sub: view}
 
 	View adalah apa yang terlihat oleh pengguna. Dimulai dari sebuah template kemudian digabungkan dengan Model lalu browser melakukan proses rendering dan hasilnya ditampilkan ke pengguna. Template yang digunakan hanyalah sintak HTML (bukan HTML diselingi dengan markup khusus seperti pada template engine pada umumnya).
 
-\subsection{Expression}
+\subsubsection{Expression}
 \label{sub: expression}
 
 	Expression merupakan kode snippet yang dapat kita tulis pada View. Expression berkaitan dengan mekanisme binding pada AngularJS, formatnya adalah sebagai berikut {{ expression }} Contoh :
@@ -75,7 +91,7 @@
 		\item {{ 1000 | currency }} , akan menampilkan angka 1000 dalam format mata uang (currency), keyword setelah tanda pipa ( | ) merupakan filter.
 	\end{enumerate}
 
-\subsection{Directive}
+\subsubsection{Directive}
 \label{sub: directive}
 
 	Directive merupakan cara untuk membuat sintak HTML baru yang akan dimengerti oleh browser. Directive dapat berupa elemen, attribute, HTML comment atau Class. Angular telah menyediakan beberapa directive bawaan yang penting dalam pengembangan web app. Beberepa directive bawaan Angular diantaranya ng-controller, ng-model, ng-repeat, ng-click dll. Kita dapat pula membuat custom directive dengan perilaku (behavior) tertentu seperti yang telah dijelaskan pada pembahasan Apa yang membuat AngularJS istimewa.

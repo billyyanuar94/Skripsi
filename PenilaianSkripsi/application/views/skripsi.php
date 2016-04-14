@@ -147,11 +147,14 @@ and open the template in the editor.
 
                                     newdate = thisDay + ', ' + day + ' ' + months[month] + ' ' + year;
                                     document.getElementById("date").innerHTML = newdate;
-                                    document.getElementById("year").innerHTML = newdate;
                                 </script>
-</div>
-
-                            <input type="submit" id="submit" value="Submit">
+                            </div>
+                            <p>
+                            <?php echo anchor('public/rekPembimbing.php', 'Lembar Rekapitulasi Pembimbing')?>
+                            <p>
+                            <?php echo anchor('public/rekKetua.php', 'Lembar Rekapitulasi Ketua Tim Penguji')?>
+                            <p>
+                            <?php echo anchor('public/rekAnggota.php', 'Lembar Rekapitulasi Anggota Tim Penguji')?>
                         </form>
                     </div> 
                 </div>
