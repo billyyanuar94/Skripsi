@@ -26,15 +26,15 @@
 \author{\nama \textendash \@npm} 
 
 %ISILAH DATA DATA BERIKUT INI:
-\newcommand{\nama}{Lionov}
-\newcommand{\@npm}{1997730020}
-\newcommand{\tanggal}{01/01/1900} %Tanggal pembuatan dokumen
-\newcommand{\@judultopik}{Simulasi Kerumunan di Museum} % Judul/topik anda
-\newcommand{\kodetopik}{TAB0901}
+\newcommand{\nama}{Billy Yanuar}
+\newcommand{\@npm}{2012730017}
+\newcommand{\tanggal}{03/05/2016} %Tanggal pembuatan dokumen
+\newcommand{\@judultopik}{Sistem Penilaian Sidang Skripsi 2 Dengan AngularJS} % Judul/topik anda
+\newcommand{\kodetopik}{PAS4004}
 \newcommand{\jumpemb}{1} % Jumlah pembimbing, 1 atau 2
-\newcommand{\pembA}{Thomas Anung Basuki}
+\newcommand{\pembA}{Pascal Alfadian}
 \newcommand{\pembB}{-}
-\newcommand{\semesterPertama}{39 - Ganjil 15/16} % semester pertama kali topik diambil, angka 1 dimulai dari sem Ganjil 96/97
+\newcommand{\semesterPertama}{40 - Genap 15/16} % semester pertama kali topik diambil, angka 1 dimulai dari sem Ganjil 96/97
 \newcommand{\lamaSkripsi}{1} % Jumlah semester untuk mengerjakan skripsi s.d. dokumen ini dibuat
 \newcommand{\kulPertama}{Skripsi 1} % Kuliah dimana topik ini diambil pertama kali
 \newcommand{\tipePR}{B} % tipe progress report :
@@ -64,47 +64,33 @@ Tipe Laporan : {\bf \tipePR} -
 \section{Detail Perkembangan Pengerjaan Skripsi}
 Detail bagian pekerjaan skripsi sesuai dengan rencan kerja/laporan perkembangan terkahir :
 	\begin{enumerate}
-		\item Melakukan survei ke Museum Geologi Bandung untuk mendapatkan denah serta mengetahui perilaku pengunjung museum secara umum (arah perjalanan, kecepatan, lama melihat objek, dll).\\
+		\item Mempelajari isi dan variabel - variabel yang perlu disimpan pada lembar penilaian skripsi yang dipakai saat ini \\
 		{\bf status :} Ada sejak rencana kerja skripsi.\\
-		{\bf hasil :} Survei sudah dilakukan sebanyak 3x pada tanggal X, Y dan Z. Pada kunjungan pertama, diperhaitkan denah museum dan dibuat sketsa berdasarkan pengamatan. Pada kunjunga kedua, bertemu dengan bagian humas museum dan berhasil mendapatkan denah serta melakukan wawancara. Hasil wawancara sudah dibuat dan ada softcopy-nya. Pada kunjungan ketiga, secara khusus dilihat perilaku pengunjung. Masih direncakanan 2x kunjungan lagi. Bukti-bukti kunjungan dapat dilihat di lampiran
+		{\bf hasil :} Untuk mengetahui isi dan variabel - variabel yang dibutuhkan untuk penyimpanan sistem penilaian sidang skripsi 2 ini, diperlukan contoh lembaran form penilaian sidang skripsi 2 yang sekarang dipakai pada Program Studi Teknik Informatika di Universitas Katolik Parahyangan. Form penilaian tersebut sudah berhasil didapatkan berdasarkan izin dari dosen pembimbing dan juga ketua jurusan Program Studi Teknik Informatika di Universitas Katolik Parahyangan. Berdasarkan form tersebut dan diskusi dengan dosen pembimbing, maka dapat disimpulkan bahwa sistem penilaian sidang skripsi 2 pada Program Studi Teknik Informatika di Universitas Katolik Parahyangan hanya membutuhkan satu buah tabel dengan 29 variabel yang perlu disimpan. Variabel - variabel tersebut meliputi tahun, semester, npm, nama, judul skripsi, nama pembimbing, nama ketua tim penguji, nama anggota tim penguji, bobot ketua tim penguji, bobot anggota tim penguji, bobot pembimbing, nilai koodinator skripsi, bobot koordinator skripsi, bobot tata tulis laporan anggota tim penguji, bobot kelengkapan materi anggota tim penguji, bobot penguasaan materi anggota tim penguji, bobot presentasi anggota tim penguji, bobot pencapaian tujuan anggota tim penguji, bobot tata tulis laporan ketua tim penguji, bobot kelengkapan materi ketua tim penguji, bobot penguasaan materi ketua tim penguji, bobot presentasi ketua tim penguji, bobot pencapaian tujuan ketua tim penguji, bobot tata tulis laporan pembimbing, bobot kelengkapan materi pembimbing, bobot penguasaan materi pembimbing, bobot proses bimbingan pembimbing, dan nilai akhir mahasiswa. Nilai nilai selain ke 29 hal itu tidak diperlukan untuk disimpan karena bisa dihitung dari data nilai akhir dan bobot yang tersimpan pada basis data.
 		
-		\item Melakukan analisis pada hasil survei terhadap pergerakan pengunjung di museum dan membuat rancangan denah di komputer yang dilengkapi dengan penghalang dan objek di museum.\\
+		\item Mempelajari bahasa pemrograman AngularJS, Code Igniter, dan Bootstrap\\
 		{\bf status :} Ada sejak rencana kerja skripsi.\\
-		{\bf hasil :}
+		{\bf hasil :} Dalam proses pembelajaran, framework pertama yang saya pelajari adalah CodeIgniter, karena framework ini merupakan framework PHP dengan Model, View, dan Controller (MVC) yang menjadi dasar dari struktur dan pemanggilan file - file dengan menggunakan PHP pada sistem penilaian sidang skripsi 2 ini. Tujuan penggunaan CodeIgniter sendiri adalah untuk mempermudah dan mempercepat \textit{developer} dalam pengembangan aplikasi, dibandingkan dengan membuatnya dari awal. CodeIgniter menyediakan banyak \textit{library} yang berupa kumpulan \textit{task} umum yang biasa dipakai, \textit{interface} sederhana, dan juga stuktur - struktu logika yang sudah disiapkan untuk pengaksesan \textit{library}.
+		Selanjutnya saya mempelajari Bootstrap. Bootstrap sebuah alat bantu untuk membuat sebuah tampilan halaman website yang dapat mempercepat pekerjaan seorang pengembang website ataupun pendesain halaman website. Dasar dari Bootstrap sendiri adalah kumpulan class CSS dan \textit{plugin} JavaScript yang sudah siap untuk dipakai pada sebuah halaman HTML. Karena sebelumnya saya sempat memakai \textit{foundation zurb}, maka saya tidak terlalu mengalami kesulitan dalam proses pembelajaran bootstrap yang dikarenakan kemiripan cara kerja dari kedua \textit{framework} tersebut.
+		Setelah selesai menguasai kedua framework tersebut barulah saya mempelajari AngularJS. AngularJS merupakan sebuah \textit{web-application-framework} yang berfokus pada \textit{web-based single-page application} dimana fitur-fitur yang ada pada aplikasi web dapat berjalan dengan menggunakan sebuah halaman HTML tanpa perlu berganti halaman. AngularJS bekerja dengan membaca HTML page yang sudah diberi \textit{tag} tambahan khusus yang berfungsi untuk mulai mengeksekusi AngularJS, seperti ng-app, ng-model, ng-controller, dll. AngularJS memanfaatkan \textit{tag} tersebut sebagai atribut input dan output yang direpresentasikan oleh javascript biasa. 
+		Setelah berhasil untuk menggunakan ketiganya barulah saya membuat sistem penilaian sidang skripsi 2.
 
-		\item Melakukan studi literatur mengenai sifat kolektif suatu kerumunan, teknik {\it social force model} dan teknik {\it flow tiles}\\
+		\item Merancang tampilan form yang akan dipakai untuk penilaian\\
 		{\bf status :} Ada sejak rencana kerja skripsi.\\
-		{\bf hasil :}
+		{\bf hasil :} Tampilan form mulai dirancang ketika saya selesai belajar CodeIgniter dan Bootstrap. Tampilan form sistem penilaian sidang skripsi 2 ini merupakan pengembangan dari template dasar bootstrap bernama scrolling-nav dengan versi 1.04 yang saya dapatkan dengan mendownload file zip dari http://startbootstrap.com/template-categories/all/ . Saya memilih template ini dengan mempertimbangkan beberapa alasan yang sangat vital untuk form sistem penilaian sidang skripsi 2, diantaranya adalah sistem yang dibuat memakai AngularJS memiliki keunggulan pada \textit{single-page application}, diperlukan sebuah form yang menggabungkan seluruh lembar form penilaian dan lembar form rekapitulasi, dibutuhkannya navigasi sebagai bantuan untuk user dalam meletakkan nilai-nilai yang diperlukan. Oleh karena itu, template \textit{scrolling-nav} ini merupakan sebuah template yang sangat cocok dan memenuhi syarat untuk sistem penilaian sidang skripsi 2 ini. Ditambah lagi dengan navigasi yang jika ditekan akan menunjukkan tempat yang diinginkan seperti user menggunakan \textit{scroll} pada mouse akan menambah nilai keunikan tersendiri pada sistem penilaian sidang skripsi 2 ini.
 
-		\item Mempelajari bahasa pemrograman C++ dan cara menggunakan framework OpenSteer\\
+		\item Mengimplementasikan fitur fitur yang ada pada form tersebut
 		{\bf status :} Ada sejak rencana kerja skripsi.\\
-		{\bf hasil :}
+		{\bf hasil :} Fitur - fitur yang terdapat pada sistem penilaian sidang skripsi 2 ini kebanyakan adalah fitur - fitur yang mengisi secara otomatis nilai - nilai yang seharusnya diisi oleh pengguna secara manual, contohnya adalah pengisian tanggal, pengisian npm pada form rekapitulasi, perhitungan nilai dan total nilai, pengisian nilai default bobot per nilai, dll. Dari berbagai macam fitur - fitur yang ada pada sistem penilaian sidang skripsi 2, hampir semuanya sudah dapat berjalan dengan baik sampai saat ini. Saya mengalami beberapa hambatan dalam pengimplementasian fitur pengisian tahun secara otomatis dan juga pengisian total dari seluruh perhitungan nilai yang ada. Untuk fitur pengisian tahun secara otomatis sudah berhasil dilakukan jika saya memakai \textit{input} dengan tipe teks, tetapi saya membutuhkan input dengan tipe angka sehingga dapat dilakukan perhitungan otomatis untuk menulis tahun berikutnya dengan menggunakan AngularJS. Sampai saat ini, saya masih belum mendapatkan solusi untuk fitur pengisian tahun secara otomatis ini. Selain fitur pegisian tahun secara otomatis, saya juga mengalami kendala dalam mengimplementasikan fitur perhitungan total keseluruhan nilai yang sudah di dapat oleh mahasiswa. Hal ini dikarenakan saya harus melakukan perhitungan dari nilai - nilai setiap penilai dikalikan dengan bobot masing - masing penilai, setelah mendapatkan nilai yang sudah dikalikan bobot tersebut saya perlu untuk menambahkan hasil seluruhnya untuk dijadikan nilai sidang skripsi 2 mahasiswa yang bersangkutan. Saya sudah berhasil melakukan perhitungan sampai kepada perhitungan nilai dikalikan dengan bobot, tetapi begitu variabel AngularJS yang menyimpan perkalian nilai - nilai tersebut dijumlahkan, AngularJS tidak menghasilkan apa - apa. Hal ini dikarenakan adanya variabel beruntun yang dipakai dalam perhitungan ng-model pada AngularJS. Hingga saat ini saya masih belum dapat menemukan solusi dari masalah fitur perhitungan total nilai mahasiswa. Selain ke dua fitur tersebut, saya masih belum berhasil menyimpan hasil pengisian form penilaian pada database dikarenakan masih dilakukannya perbaikan form dan juga masih melakukan percobaan dalam proses untuk menciptakan sambungan form dengan database phpmyadmin.
 
-		\item Merancang pergerakan kerumunan di dalam museum menggunakan teknik {\it social force model} dan {\it flow tiles} serta menggunakan teknik lainnya seperti konsep pathway dan waypoints. Selain itu, dirancang pula adanya waktu tunggu (pada saat pengunjung melihat objek di museum) dan cara pembuatan jalur bagi setiap individu pengunjung\\
+		\item Melakukan pengujian (dan eksperimen) pada sidang skripsi 2 semester ganjil yang melibatkan responden untuk menilai hasil simulasi secara kualitatif
 		{\bf status :} Ada sejak rencana kerja skripsi.\\
-		{\bf hasil :}
+		{\bf hasil :} Untuk pengujian sistem penilaian sidang skripsi 2, diperlukan adanya sidang skripsi 2 yang berlangsung. Oleh karena itu pengujian sistem ini akan dilakukan pada sidang skripsi 2 di semester 39 ganjil tahun 2015/2016.
 
-		\item Melakukan analisa dan merancang struktur data yang cocok untuk menyimpan penghalang (obstacle)\\
-		{\bf status :} dihapuskan/tidak dikerjakan \\
-		{\bf hasil :} berdasarkan analisis singkat, tidak dilakukan analisis lebih jauh karena tidak diperlukan struktur data baru, karena sudah disediakan oleh OpenSteer versi terbaru
-
-		\item Mengimplementasikan keseluruhan algoritma dan struktur data yang dirancang, dengan menggunakan framework OpenSteer \\
+		\item Menulis dokumen skripsi
 		{\bf status :} Ada sejak rencana kerja skripsi.\\
-		{\bf hasil :}
-
-		\item Melakukan pengujian (dan eksperimen) yang melibatkan responde untuk menilai hasil simulasi secara kualitatif\\
-		{\bf status :} Ada sejak rencana kerja skripsi.\\
-		{\bf hasil :}
-
-		\item Menulis dokumen skripsi\\
-		{\bf status :} Ada sejak rencana kerja skripsi.\\
-		{\bf hasil :} \lipsum[1]
-		
-		\item Mempelajari cara menggunakan fitur manipulasi obstacle yang disediakan oleh framework Opensteer versi terbaru\\
-		{\bf status :} baru ditambahkan pada semester ini\\
-		{\bf hasil :} baru direncanakan karena framework Opensteer versi paling akhir baru selesai diinstall dan dilihat-lihat bagian contoh-contoh simulasinya
-		
-
+		{\bf hasil :} Penulisan dokumen yang dilakukan pada skripsi 1 berakhir pada bab 1, karena pada skripsi 1 ini lebih ditargetkan kepada penyelesaian program daripada dokumen, untuk mengejar pengujian pada sidang skripsi 2 yang berlangsung di akhir semester 39 ganjil tahun 2015/2016. 
+	
 	\end{enumerate}
 
 \section{Pencapaian Rencana Kerja}
@@ -114,17 +100,13 @@ Persentase penyelesaian skripsi sampai dengan dokumen ini dibuat dapat dilihat p
   \begin{tabular}{ | c | c | c | c | l | c |}
     \hline
     1*  & 2*(\%) & 3*(\%) & 4*(\%) &5* &6*(\%)\\ \hline \hline
-    1   & 5  & 5  &  &  & 3 \\ \hline
-    2   & 5 & 5  &   &  & 3 \\ \hline
-    3   & 10  & 7  & 3 & {\footnotesize sebagian kecil teknik {\it flow tiles} di S2} & 5 \\ \hline
-    4   & 15  & 10  &  5 & {\footnotesize teknik lanjut OOP di C++ di S2} & 12 \\ \hline
-    5   & 20  & 5  & 15 & {\footnotesize perancangan awal SFM, pathway dan waypoint di S1} & 5 \\ \hline
-    6   & 0 &   & 0  &  {\footnotesize dihapus karena tidak diperlukan} & \\\hline
-    7   & 20  & 5  & 15 &  {\footnotesize implementasi denah dan rancangan awal SFM di S1} & 3 \\ \hline
-    8   & 5  &   &  5  &  &\\ \hline
-    9   & 15  & 3  & 12  & {\footnotesize sebagian bab 1 dan 2, serta bagian awal analisis di S1} & 5\\ \hline
-    10   & 5  &   & 5  & {\footnotesize tambahan baru} &\\ \hline
-    Total  & 100  & 40  & 60 &  & 36\\ \hline
+    1   & 20  & 20  &  & & 20 \\ \hline
+    2   & 15 & 5  & 10  & & 5 \\ \hline
+    3   & 10  & 10  &  &  & 10 \\ \hline
+    4   & 15  & 15  &   &  & 3 \\ \hline
+    5   & 20 &   & 20 & & 0 \\ \hline
+    6   & 20 & 	5 & 15  & {\footnotesize penulisan bab 1 pada S1}  & 5 \\\hline
+    Total  & 100  & 55  & 45 &  & 43\\ \hline
                           \end{tabular}
 \end{center}
 
@@ -136,15 +118,17 @@ Keterangan (*)\\
 5 : Penjelasan singkat apa yang dilakukan di S1 (Skripsi 1) atau S2 (skripsi 2)\\
 6 : Persentase yang sidah diselesaikan sampai saat ini 
 
-\section{Kendala yang dihadapi}
-%TULISKAN BAGIAN INI JIKA DOKUMEN ANDA TIPE A ATAU C
-Kendala - kendala yang dihadapi selama mengerjakan skripsi :
-\begin{itemize}
-	\item Terlalu banyak melakukan prokratinasi
-	\item Terlalu banyak godaan berupa hiburan (game, film, dll)
-	\item Skripsi diambil bersamaan dengan kuliah ASD karena selama 5 semester pertama kuliah tersebut sangat dihindari dan tidak diambil, dan selama 4 semester terakhir kuliah tersebut selalu mendapat nilai E
-	\item Mengalami kesulitan pada saat sudah mulai membuat program komputer karena selama ini selalu dibantu teman
-\end{itemize}
+%\section{Kendala yang dihadapi}
+%%TULISKAN BAGIAN INI JIKA DOKUMEN ANDA TIPE A ATAU C
+%Kendala - kendala yang dihadapi selama mengerjakan skripsi :
+%\begin{itemize}
+%	\item Terlalu banyak melakukan prokratinasi
+%	\item Terlalu banyak godaan berupa hiburan (game, film, dll)
+%	\item Skripsi diambil bersamaan dengan kuliah ASD karena selama 5 semester pertama kuliah tersebut sangat dihindari dan tidak diambil, dan selama 4 semester terakhir kuliah tersebut selalu mendapat nilai E
+%	\item Mengalami kesulitan pada saat sudah mulai membuat program komputer karena selama ini selalu dibantu teman
+%\end{itemize}
+
+\pagebreak
 
 \vspace{1cm}
 \centering Bandung, \tanggal\\
