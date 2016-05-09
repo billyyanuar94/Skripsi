@@ -36,33 +36,3 @@ of those sections to manage the look and feel of the site. */
     padding-top: 80px;
     background: #fff;
 }
-
-.rekAnggota-section {
-    height: 100%;
-    padding-top: 80px;
-    background: #fff;
-}
-
-.rekKetua-section {
-    height: 100%;
-    padding-top: 80px;
-    background: #fff;
-}
-
-.rekPembimbing-section {
-    height: 100%;
-    padding-top: 80px;
-    background: #fff;
-}
-
-/* My Custom CSS */
-.form-nilai{
-  width: 45px;
-}
-
-.page-header{
-    text-align: center;
-}
-tr{
-    height:30px;
-}
