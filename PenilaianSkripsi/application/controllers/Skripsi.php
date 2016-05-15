@@ -25,22 +25,4 @@ class Skripsi extends CI_Controller {
 		$this->load->helper('form');
 		$this->load->view('skripsi'); 
 	}
-
-	public function submit(){
-
-		$this->load->helper('form');
-		$this->load->library('form_validation');
-
-		$this->form_validation->set_rules('tahun', 'Tahun', 'required');
-		$this->form_validation->set_rules('npm', 'Npm', 'required');
-		$this->form_validation->set_rules('nama', 'Nama', 'required');
-
-		if($this->form_validation->run() === FALSE){
-			$this->load->view('skripsi');	
-		}else{
-			$this->skirpsi_model->set_data();
-			redirect('skripsi');
-		}
-		
-	}
 }

@@ -61,7 +61,7 @@ and open the template in the editor.
 
         
 
-        <form role="form" ng-controller="DefaultValue">
+        <form role="form" method="post" accept-charset="utf-8" action="database.php" ng-controller="DefaultValue">
         <!-- Berita Acara Sidang Skripsi -->
         <section id="intro" class="intro-section">
             <!-- Page Heading -->
@@ -157,36 +157,36 @@ and open the template in the editor.
                                 <tr>
                                     <td>1</td>
                                     <td><label for="nKetua">Ketua Tim Penguji</label></td>
-                                    <td><input type="number" id="nKetua" max="100" ng-model="nilai_ketua" class="form-nilai" value="{{nTotalKetua}}" /></td>
+                                    <td><input type="number" id="nKetua" max="100" ng-model="nilai_ketua" class="form-nilai" value="{{nilai_TTLaporanK * TTLaporanK.value / 100 + nilai_KMateriK * KMateriK.value / 100 + nilai_PMateriK * PMateriK.value / 100 + nilai_PresentasiK * presentasiK.value / 100 + nilai_PTujuanK * PTujuanK.value / 100}}" disabled="disabled" /></td>
                                     <td><input type="number" name="input" ng-model="ketua.value" min="0" max="100" class="form-nilai"/></td>
-                                    <td><input type="number" value="{{nilai_ketua * ketua.value / 100}}" ng-model="total_ketua" class="form-nilai"/></td>
+                                    <td><input type="number" value="{{(nilai_TTLaporanK * TTLaporanK.value / 100 + nilai_KMateriK * KMateriK.value / 100 + nilai_PMateriK * PMateriK.value / 100 + nilai_PresentasiK * presentasiK.value / 100 + nilai_PTujuanK * PTujuanK.value / 100)*ketua.value / 100}}" ng-model="total_ketua" class="form-nilai" disabled="disabled" /></td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td><label for="nAnggota">Anggota Tim Penguji</label></td>
-                                    <td><input id="nAnggota" type="number" max="100" ng-model="nilai_anggota" class="form-nilai" value="{{nTotalAnggota}}" /></td>
+                                    <td><input id="nAnggota" type="number" max="100" ng-model="nilai_anggota" class="form-nilai" value="{{nilai_TTLaporanA * TTLaporanA.value / 100 + nilai_KMateriA * KMateriA.value / 100 + nilai_PMateriA * PMateriA.value / 100 + nilai_PresentasiA * presentasiA.value / 100 + nilai_PTujuanA * PTujuanA.value / 100}}" disabled="disabled" /></td>
                                     <td><input type="number" name="input" ng-model="anggota.value" min="0" max="100" class="form-nilai"/></td>
-                                    <td><input type="number" value="{{nilai_anggota * anggota.value / 100}}" ng-model="total_anggota" class="form-nilai"/></td>
+                                    <td><input type="number" value="{{(nilai_TTLaporanA * TTLaporanA.value / 100 + nilai_KMateriA * KMateriA.value / 100 + nilai_PMateriA * PMateriA.value / 100 + nilai_PresentasiA * presentasiA.value / 100 + nilai_PTujuanA * PTujuanA.value / 100) * anggota.value / 100}}" ng-model="total_anggota" class="form-nilai" disabled="disabled" /></td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
                                     <td><label for="nPembimbing">Pembimbing</label></td>
-                                    <td><input id="nPembimbing" type="number" max="100" ng-model="nilai_pembimbing" class="form-nilai" min=0 value="{{nTotalPembimbing}}" /></td>
+                                    <td><input id="nPembimbing" type="number" max="100" ng-model="nilai_pembimbing" class="form-nilai" min=0 value="{{nilai_TTLaporanP * TTLaporanP.value / 100 + nilai_KMateriP * KMateriP.value / 100 + nilai_PMateriP * PMateriP.value / 100 + nilai_PBimbinganP * PBimbinganP.value / 100}}" disabled="disabled" /></td>
                                     <td><input type="number" name="input" ng-model="pembimbing.value" min="0" max="100" class="form-nilai"/></td>
-                                    <td><input type="number" value={{nilai_pembimbing*pembimbing.value/100}} ng-model="total_pembimbing" class="form-nilai"/></td>
+                                    <td><input type="number" value="{{(nilai_TTLaporanP * TTLaporanP.value / 100 + nilai_KMateriP * KMateriP.value / 100 + nilai_PMateriP * PMateriP.value / 100 + nilai_PBimbinganP * PBimbinganP.value / 100)*pembimbing.value/100}}" ng-model="total_pembimbing" class="form-nilai" disabled="disabled" /></td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
                                     <td><label for="nKoordinator">Koordinator Skripsi</label></td>
                                     <td><input id="nKoordinator" type="number" max="100" ng-model="nilai_koordinator" class="form-nilai" min=0/></td>
                                     <td><input type="number" name="input" ng-model="koordinator.value" min="0" max="100" class="form-nilai"/></td>
-                                    <td><input type="number" value={{nilai_koordinator*koordinator.value/100}} ng-model="total_koodinator" class="form-nilai"/></td>
+                                    <td><input type="number" value={{nilai_koordinator*koordinator.value/100}} ng-model="total_koodinator" class="form-nilai" disabled="disabled" /></td>
                                 </tr>
                                 <tr>
                                     <td></td>
                                     <td colspan="2" ><label for="nTotal">Total</label></td>
                                     <td><input type="number" id="nTotal" max="100" disabled="disabled" value={{ketua.value+anggota.value+pembimbing.value+koordinator.value}} class="form-nilai"/></td>
-                                    <td><input type="number" id="nTotalAkhir" max="100" disabled="disabled" value={{total_ketua+total_anggota+total_pembimbing+total_koordinator}} class="form-nilai"/></td>
+                                    <td><input type="number" id="nTotalAkhir" name="" max="100" disabled="disabled" value= "{{nilai_TTLaporanK * TTLaporanK.value / 100 + nilai_KMateriK * KMateriK.value / 100 + nilai_PMateriK * PMateriK.value / 100 + nilai_PresentasiK * presentasiK.value / 100 + nilai_PTujuanK * PTujuanK.value / 100 * ketua.value / 100 + nilai_TTLaporanA * TTLaporanA.value / 100 + nilai_KMateriA * KMateriA.value / 100 + nilai_PMateriA * PMateriA.value / 100 + nilai_PresentasiA * presentasiA.value / 100 + nilai_PTujuanA * PTujuanA.value / 100 * anggota.value / 100 + nilai_TTLaporanP * TTLaporanP.value / 100 + nilai_KMateriP * KMateriP.value / 100 + nilai_PMateriP * PMateriP.value / 100 + nilai_PBimbinganP * PBimbinganP.value / 100 * pembimbing.value/100 + nilai_koordinator*koordinator.value/100}}" class="form-nilai"/></td>
                                 </tr>
                             </table>
 
@@ -282,7 +282,7 @@ and open the template in the editor.
                             <tr>
                                 <td colspan="2" ><label for="nTotalBobotA">Total</label></td>
                                 <td><input type="number" id="nTotalBobotA" max="100" disabled="disabled" value={{TTLaporanA.value+KMateriA.value+PMateriA.value+presentasiA.value+PTujuanA.value}} class="form-nilai"/></td>
-                                <td><input type="number" id="nTotalAnggota" ng-model="nTotalAnggota" max="100" class="form-nilai"/></td>
+                                <td><input type="number" id="nTotalAnggota" ng-model="nTotalAnggota" max="100" class="form-nilai" value= "{{nilai_TTLaporanA * TTLaporanA.value / 100 + nilai_KMateriA * KMateriA.value / 100 + nilai_PMateriA * PMateriA.value / 100 + nilai_PresentasiA * presentasiA.value / 100 + nilai_PTujuanA * PTujuanA.value / 100}}" disabled="disabled" /></td>
                             </tr>
                         </table>
 
@@ -352,7 +352,7 @@ and open the template in the editor.
                            <tr>
                                 <td colspan="2" ><label for="nTotalBobotK">Total</label></td>
                                 <td><input type="number" id="nTotalBobotK" max="100" disabled="disabled" value={{TTLaporanK.value+KMateriK.value+PMateriK.value+presentasiK.value+PTujuanK.value}} class="form-nilai"/></td>
-                                <td><input type="number" id="nTotalKetua" ng-model="nTotalKetua" max="100" value={{total_TTLaporanK+total_KMateriK+total_PMateriK+total_PresentasiK+total_PTujuanK}} class="form-nilai"/></td>
+                                <td><input type="number" id="nTotalKetua" ng-model="nTotalKetua" max="100" value= "{{nilai_TTLaporanK * TTLaporanK.value / 100 + nilai_KMateriK * KMateriK.value / 100 + nilai_PMateriK * PMateriK.value / 100 + nilai_PresentasiK * presentasiK.value / 100 + nilai_PTujuanK * PTujuanK.value / 100}}" class="form-nilai" disabled="disabled" /></td>
                             </tr>
                         </table>
                     </div>
@@ -416,13 +416,14 @@ and open the template in the editor.
                             <tr>
                                 <td colspan="2" ><label for="nTotalBobotP">Total</label></td>
                                 <td><input type="number" id="nTotalBobotP" max="100" disabled="disabled" value={{TTLaporanP.value+KMateriP.value+PMateriP.value+PBimbinganP.value}} class="form-nilai"/></td>
-                                <td><input type="number" id="nTotalPembimbing" ng-model="nTotalPembimbing" max="100"  value={{total_TTLaporanP+total_KMateriP+total_PMateriP+total_PBimbinganP}} class="form-nilai"/></td>
+                                <td><input type="number" id="nTotalPembimbing" ng-model="nTotalPembimbing" max="100"  value= "{{nilai_TTLaporanP * TTLaporanP.value / 100 + nilai_KMateriP * KMateriP.value / 100 + nilai_PMateriP * PMateriP.value / 100 + nilai_PBimbinganP * PBimbinganP.value / 100}}" class="form-nilai" disabled="disabled" /></td>
                             </tr>
                         </table>
                     </div>
                 </div>
             </div>
         </section>
+        <input type="submit" value="Submit" />
     </form>
     <!-- Set Default Value pada ng-model type number -->
     <script>
