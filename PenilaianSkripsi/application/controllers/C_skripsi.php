@@ -57,7 +57,7 @@ class C_skripsi extends CI_Controller {
                 $bobotKelengkapanMateriPembimbing = $_POST['bobotKelengkapanMateriPembimbing'];
                 $bobotPenguasaanMateriPembimbing = $_POST['bobotPenguasaanMateriPembimbing'];
                 $prosesBimbinganPembimbing = $_POST['prosesBimbinganPembimbing'];
-                $nilaiAkhirMahasiswa = $_POST['nilaiAkhirMahasiswa'];
+                //$nilaiAkhirMahasiswa = $_POST['nilaiAkhirMahasiswa'];
                 $data_insert = array(
                         'semester' => $semester,
                         'tahun' => $tahun,
@@ -87,7 +87,7 @@ class C_skripsi extends CI_Controller {
                         'bobotKelengkapanMateriPembimbing' => $bobotKelengkapanMateriPembimbing,
                         'bobotPenguasaanMateriPembimbing' => $bobotPenguasaanMateriPembimbing,
                         'prosesBimbinganPembimbing' => $prosesBimbinganPembimbing,
-                        'nilaiAkhirMahasiswa' => $nilaiAkhirMahasiswa,
+                        //'nilaiAkhirMahasiswa' => $nilaiAkhirMahasiswa,
                         
                 );
                 $res = $this->skripsi_model->insertDataMahasiswa('beritaacarasidangskripsi',$data_insert);
