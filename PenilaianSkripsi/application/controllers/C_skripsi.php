@@ -91,7 +91,7 @@ class C_skripsi extends CI_Controller {
                         
                 );
                 $res = $this->skripsi_model->insertDataMahasiswa('beritaacarasidangskripsi',$data_insert);
-                redirect('/c_skripsi/index', 'refresh');
+                redirect(base_url(), 'refresh');
         }
         
 }
