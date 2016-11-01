@@ -1,6 +1,55 @@
 \chapter{Dasar Teori}
 \label{chap: dasarTeori}
 
+\section{Sistem Informasi}
+\label{sec: sistemInformasi}
+
+	Sistem informasi adalah kombinasi dari teknologi informasi dan aktivitas orang yang menggunakan teknologi itu untuk mendukung operasi dan manajemen. Dalam arti yang sangat luas, istilah sistem informasi yang sering digunakan merujuk kepada interaksi antara orang, proses algoritmik, data, dan teknologi. 
+	
+	\subsection{Tujuan Sistem Informasi}
+	\label{sub: tujuanSI}
+	
+		Tujuan dari sistem informasi adalah menghasilkan informasi. Sistem informasi adalah data yang diolah menjadi bentuk yang berguna bagi para pemakainya. Data yang diolah saja tidak cukup dapat dikatakan sebagai suatu informasi. Untuk dapat berguna, maka informasi harus didukung oleh tiga pilar sebagai berikut: tepat kepada orangnya atau relevan (\textit{relevance}), tepat waktu (timeliness), dan tepat nilainya atau akurat (\textit{accurate}). Keluaran yang tidak didukung oleh tiga pilar ini tidak dapat dikatakan sebagai informasi yang berguna, tetapi merupakan sampah (\textit{garbage}).
+	
+	\subsection{Komponen Sistem Informasi}
+	\label{sub: komponenSI}
+	
+		Komponen prosedur dalam SI berkaitan dengan prosedur manual dan prosedur berbasis komputer serta standar untuk mengolah data menjadi informasi yang berguna. Suatu prosedur adalah urutan langkah yang dilakukan untuk menyelesaikan satu atau lebih aktivitas pengolahan informasi. Pengolahan informasi ini dapat dikerjakan dengan pengguna, atau kombinasi pengguna dan staff TI. Suatu bisnis terdiri dari berbagai macam prosedur yang digabungkan secara logis untuk membentuk suatu sistem. 
+		
+		SI dapat dikategorikan dalam empat bagian:
+		
+		\begin{enumerate}
+			\item Sistem Informasi Manajemen
+			\item Sistem Pendukung Keputusan
+			\item Sistem Informasi Eksekutif
+			\item Sistem Pemrosesan Transaksi
+		\end{enumerate}
+		
+		\subsubsection{Sistem Informasi Manajemen}
+		\label{subsub: SIManajemen}
+		Sistem informasi manajemen atau SIM adalah sistem perencanaan bagian dari pengendalian internal suatu bisnis yang meliputi pemanfaatan manusia, dokumen, teknologi, dan prosedur oleh akuntansi manajemen untuk memecahkan masalah bisnis seperti biaya produk, layanan, atau suatu strategi bisnis. Secara akademis, istilah ini umumnya digunakan untuk merujuk pada kelompok metode manajemen informasi yang bertalian dengan otomasi atau dukungan terhadap pengambilan keputusan manusia, misalnya sistem pendukung keputusan, sistem pakar, dan sistem informasi eksekutif.
+		
+		\subsubsection{Sistem Pendukung Keputusan}
+		\label{subsub: sistemPendukungKeputusan}
+		Sistem pendukung keputusan adalah bagian dari sistem informasi berbasis komputer (termasuk sistem berbasis pengetahuan (manajemen pengetahuan)) yang dipakai untuk mendukung pengambilan keputusan dalam suatu organisasi atau perusahaan. 
+		
+		Tahapan SPK:
+		\begin{enumerate}
+			\item Definisi masalah
+			\item Pengumpulan data atau informasi yang relevan
+			\item Pengolahan data menjadi informasi baik dalam bentuk laporan grafik maupun tulisan
+			\item Menentukan alternatif-alternatif solusi (bisa dalam persentase)
+		\end{enumerate}
+		
+		\subsubsection{Sistem Informasi Eksekutif}
+		\label{subsub: SIEksekutif}
+		Sistem Informasi Eksekutif (EIS) adalah salah satu jenis manajemen sistem informasi untuk memudahkan dan mendukung keterangan dan pembuatan keputusan yang dibutuhkan eksekutif senior dengan menyediakan kemudahan akses terhadap informasi baik dari dalam maupun dari luar yang relevan dengan tujuan organisasi. Ini biasanya dipertimbangkan sebagai bentuk dari sistem pendukung keputusan (SPK).
+		
+		\subsubsection{Sistem Pemrosesan Transaksi}
+		\label{subsub: sistemPemrosesanTransaksi}
+		
+		Sistem Pemrosesan Transaksi atau \textit{Transaction Processing System} adalah bagian dari sistem informasi yang merupakan sebuah sistem yang menjalankan dan mencatat transaksi rutin harian yang diperlukan untuk menjalankan bisnis. Contohnya adalah seperti memasukkan pesanan penjualan, pemesanan hotel,penggajian , pencatatan karyawan dan pengiriman. Tujuan utama dari sistem pada tingkat ini adalah untuk menjawab pertanyaan rutin dan melacak arus transaksi yang melalui organisasi.
+		
 \section{CodeIgniter}
 \label{sec: codeigniter}
 
@@ -52,31 +101,26 @@
 	
 	HTML merupakan alat yang digunakan untuk membangun web statik sehingga membutuhkan bantuan dari alat lain untuk membuat sebuah aplikasi web pada HTML ini. Oleh sebab minat dan banyaknya permintaan dari developer web untuk membuat aplikasi web dengan mudah, maka Google meresmikan AngularJS pada tahun 2009 yang lalu.
 	
-	AngularJS bukan merupakan pustaka (library) javascript melainkan sebuah framework yang solid untuk membangun web app, seperti framework javascript pada umumnya AngularJS mengadopsi konsep MVC (Model, View, Controller), meskipun menggunakan implementasi yang berbeda dengan konsep asli MVC.
+	AngularJS bukan merupakan pustaka (\textit{library}) javascript melainkan sebuah framework yang solid untuk membangun web app, seperti \textit{framework} javascript pada umumnya AngularJS mengadopsi konsep MVC (\textit{Model}, \textit{View}, \textit{Controller}), meskipun menggunakan implementasi yang berbeda dengan konsep asli MVC.
 	
 \subsection{Keistimewaan AngularJS}
 \label{sub: keistimewaanAngularJS}
-	Keistimewaan penggunaan AngularJS sangatlah banyak. Berikut beberapa diantaranya:
+	Berikut beberapa keistimewaan dari pemakaian AngularJS:
 	
 \subsubsection{Two way data-binding}
 \label{sub: twoWayDataBinding}
 
-	Two way data-binding merupakan mekanisme sinkronisasi otomatis antara Controller dan View. Gampangnya, ketika ada perubahan pada Model yang berasal dari View, Angular secara otomatis membuat perubahan pada Controller. Begitu pula sebaliknya. Hal ini terjadi secara otomatis, jadi kita tidak perlu menuliskan kode secara manual untuk mencapai mekanisme ini.
-
-\subsubsection{Mengajari browsers dengan sintak HTML baru}
-\label{subsub: mengajariBrowsersDenganSintakHTMLBaru}
-
-	HTML5 menawarkan sejumlah elemen baru semisal <video>, <section>, <article>, dsb. Nah dengan AngularJS, Kita bahkan dapat menambahkan lebih banyak lagi elemen-elemen baru yang akan dimengerti oleh browser, misal <draggable> membuat elemen bisa didrag, <zippy> membuat elemen semisal akordion, atau bahkan menggunakan bahasa indonesia seperti <sembunyikan> jika diklik akan menyembunyikan elemen (contoh saja, pada praktik gunakanlah bahasa inggris sebagai bahasa internasional). Fungsi ini disebut dengan istilah Directive. Kitalah yang bertanggungjawab membuat Directive tersebut bisa ditafsirkan oleh browser dengan menuliskan kode pada deklarasi Directive itu sendiri. Atau dengan kata lain, kita mengajari browser sintak HTML baru. Bahkan tidak terbatas pada elemen, kita bisa membuat Directive menggunakan attribute, HTML comment atau class.
+	\textit{Two way data-binding} merupakan mekanisme sinkronisasi otomatis antara \textit{Controller} dan \textit{View}. Ketika ada perubahan pada \textit{Model} yang berasal dari \textit{View}, AngularJS secara otomatis membuat perubahan pada \textit{Controller}. Begitu pula sebaliknya. Hal ini terjadi secara otomatis, jadi tidak diperlukan penulisan kode secara manual untuk mencapai mekanisme tersebut.
 
 \subsubsection{HTML Template}
 \label{subsub: HTMLTemplate}
 
-	Template yang digunakan AngularJS hanyalah HTML biasa dengan penambahan ekspresi (expression), sehingga kita tidak perlu menggunakan template engine khusus.
+	\textit{Template} yang digunakan AngularJS hanyalah HTML biasa dengan penambahan ekspresi (\textit{expression}), sehingga tidak diperlukan penggunaan \textit{template engine} khusus.
 
 \subsubsection{Dependecy Injection (DI)}
 \label{subsub: DI}
 
-	Dependency Injection memungkinkan developer menulis beberapa komponen kode yang terpisah satu sama lain. Ketika memerlukan salah satu komponen, developer dapat memanggil komponen yang dibutuhkan tersebut dan dapat menggunakan fungsi yang tersedia. Fitur ini memudahkan developer dalam membuat komponen yang dapat dipakai berulang kali (reusable component)
+	\textit{Dependency Injection} memungkinkan \textit{developer} menulis beberapa komponen kode yang terpisah satu sama lain. Ketika memerlukan salah satu komponen, \textit{developer} dapat melakukan pemanggilan komponen yang dibutuhkan dan dapat menggunakan fungsi komponen tersebut. Fitur ini memudahkan \textit{developer} dalam membuat komponen yang dapat dipakai berulang kali (reusable component)
 
 \subsection{Komponen AngularJS}
 \label{sub: komponenAngularJS}
@@ -86,27 +130,27 @@
 \subsubsection{Model}
 \label{subsub: model}
 
-	Dalam pola MVC, Model merepresentasikan suatu set data yang digunakan oleh Controller dan View.Model dapat mendeteksi perubahan data dan memberikan notifikasi perubahan tersebut ke Controller dan View. Pada implementasi pasif, notifikasi perubahan dapat diabaikan. Untuk membuat Model di beberapa framework selain AngularJS diperlukan konstruktor khusus. Sedangkan Model pada AngularJS tidak memiliki konstruktor tersendiri dan tidak memerlukan inheritance dari Object Class tertentu. Model tidak memerlukan setter atau getter method khusus. Model bisa berupa primitive, object hash, atau full object. Dengan kata lain Model hanyalah javascript object biasa.
+	Dalam pola MVC, \textit{Model} merepresentasikan suatu set data yang digunakan oleh \textit{Controlle}r dan \textit{View}. \textit{Model} dapat mendeteksi perubahan data dan memberikan notifikasi perubahan tersebut ke \textit{Controller} dan \textit{View}. Untuk membuat \textit{Model} di beberapa framework selain AngularJS diperlukan konstruktor khusus, sedangkan \textit{Model} pada AngularJS tidak memiliki konstruktor tersendiri dan tidak memerlukan pemanggilan fungsi \textit{inheritance} dari \textit{Object Class} tertentu, tidak memerlukan metode \textit{setter} atau \textit{getter} khusus, dan bisa berupa \textit{primitive}, \textit{object hash}, atau \textit{full object} yang berarti \textit{Model} hanyalah javascript \textit{object} biasa.
 
 \subsubsection{Scope}
 \label{sub: Scope}
 
-	Scope merupakan perekat (glue) atau perantara antara Controller dengan View. Masing-masing controller memiliki scope atau lingkup sendiri.
+	\textit{Scope} merupakan perekat (\textit{glue}) atau perantara antara \textit{Controller} dengan \textit{View}. Masing-masing \textit{controller} memiliki \textit{scope} atau lingkup masing - masing.
 	
 \subsubsection{Controller}
 \label{subsub: controller}
 
-	Controller merupakan kode dibalik View. Kode pemrosesan dan logika ditaruh pada controller yang akan menghasilkan Model untuk ditampilkan pada View.
+	\textit{Controller} merupakan kode dibalik \textit{View}. Isi dari \textit{controller} merupakan kode pemrosesan dan logika yang akan menghasilkan \textit{Model} untuk ditampilkan pada \textit{View}.
 
 \subsubsection{View}
 \label{subsub: view}
 
-	View adalah apa yang terlihat oleh pengguna. Dimulai dari sebuah template kemudian digabungkan dengan Model lalu browser melakukan proses rendering dan hasilnya ditampilkan ke pengguna. Template yang digunakan hanyalah sintak HTML (bukan HTML diselingi dengan markup khusus seperti pada template engine pada umumnya).
+	\textit{View} adalah apa yang terlihat oleh pengguna, yang dimulai dari sebuah \textit{template}, digabungkan dengan \textit{Model}, dan \textit{browser} melakukan proses \textit{rendering} hingga hasil keseluruhan proses tersebut ditampilkan ke pengguna. \textit{Template} yang digunakan hanyalah sintak HTML (bukan HTML diselingi dengan \textit{markup} khusus seperti pada template engine pada umumnya).
 
 \subsubsection{Expression}
 \label{subsub: expression}
 
-	Expression merupakan kode snippet yang dapat kita tulis pada View. Expression berkaitan dengan mekanisme binding pada AngularJS, formatnya adalah sebagai berikut \{\{ expression \}\} Contoh :
+	\textit{Expression} merupakan kode \textit{snippet} yang dapat kita tulis pada \textit{View}. \textit{Expression} berkaitan dengan mekanisme \textit{binding} pada AngularJS, formatnya adalah sebagai berikut \{\{ expression \}\} Contoh :
 	
 	\begin{enumerate}
 		\item "\{\{ 1+2 \}\}" , akan menampilkan angka 3 ke pengguna.
@@ -117,7 +161,7 @@
 \subsubsection{Directive}
 \label{subsub: directive}
 
-	Directive merupakan cara untuk membuat sintak HTML baru yang akan dimengerti oleh browser. Directive dapat berupa elemen, attribute, HTML comment atau Class. Angular telah menyediakan beberapa directive bawaan yang penting dalam pengembangan web app. Beberepa directive bawaan Angular diantaranya ng-controller, ng-model, ng-repeat, ng-click dll. Kita dapat pula membuat custom directive dengan perilaku (behavior) tertentu seperti yang telah dijelaskan pada pembahasan Apa yang membuat AngularJS istimewa.
+	\textit{Directive} merupakan cara untuk membuat sintak HTML baru yang akan dimengerti oleh \textit{browser}. \textit{Directive} dapat berupa elemen, \textit{attribute}, \textit{HTML comment} atau \textit{Class}. Angular telah menyediakan beberapa \textit{directive} bawaan yang penting dalam pengembangan aplikasi berbasis \textit{web}. Beberepa \textit{directive} bawaan Angular diantaranya adalah ng-controller, ng-model, ng-repeat, ng-click.
 	
 \section{Twitter Bootstrap}
 \label{sec: bootstrap}
