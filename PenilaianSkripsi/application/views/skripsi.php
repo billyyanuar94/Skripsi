@@ -6,6 +6,9 @@ and open the template in the editor.
 -->
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title> Berita Acara Sidang Skripsi </title>
 
         <!-- Bootstrap Core CSS -->
@@ -19,6 +22,9 @@ and open the template in the editor.
 
         <!-- AngularJS -->
         <script src="public/js/angularJS/angular.min.js"></script>
+
+        <!-- Mobile friendly bootstrap -->
+
 
     </head>
     <body ng-app="penilaian" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -36,7 +42,7 @@ and open the template in the editor.
                     </button>
                 </div>
 
-                <form role="form" method="post" accept-charset="utf-8" action="<?php echo base_url() . "/index.php/c_skripsi/tambahDataMahasiswa" ?>" ng-controller="DefaultValue">
+                <form role="form" method="post" accept-charset="utf-8" action="<?php echo base_url() . "index.php/c_skripsi/tambahDataMahasiswa" ?>" ng-controller="DefaultValue">
 
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -125,26 +131,26 @@ and open the template in the editor.
 
                         <div id="pengenalPembimbing">
                             <p>
-                                <label class="col-md-3 col-xs-6" for="pembimbing">Pembimbing:</label>
+                                <label class="col-md-3 col-xs-8" for="pembimbing">Pembimbing:</label>
                                 <!-- 6 -->
-                                <input class="col-md-9 col-xs-6" id="pembimbing" name="namaPembimbing"/>
+                                <input class="col-md-9 col-xs-4" id="pembimbing" name="namaPembimbing"/>
                             </p>
                         </div>
                         <br/>
 
                         <div id="pengenalPembimbingPendamping">
                             <p>
-                                <label class="col-md-3 col-xs-6" for="pembimbing2">Pembimbing Pendamping:</label>
+                                <label class="col-md-3 col-xs-8" for="pembimbing2">Pembimbing Pendamping:</label>
                                 <!-- 7 -->
-                                <input class="col-md-9 col-xs-6" id="pembimbing2" name="namaPembimbingPendamping"/>
+                                <input class="col-md-9 col-xs-4" id="pembimbing2" name="namaPembimbingPendamping"/>
                             </p>
                         </div>
                         <br/>
                         <div id="pengenalKetua">
                             <p>
-                                <label class="col-md-3 col-xs-6" for="ketua">Ketua Tim Penguji:</label>
+                                <label class="col-md-3 col-xs-8" for="ketua">Ketua Tim Penguji:</label>
                                 <!-- 8 -->
-                                <input class="col-md-9 col-xs-6" id="ketua" name="namaKetuaTimPenguji"/>
+                                <input class="col-md-9 col-xs-4" id="ketua" name="namaKetuaTimPenguji"/>
 
                             </p>
                         </div>
@@ -152,9 +158,9 @@ and open the template in the editor.
 
                         <div id="pengenalAnggota">
                             <p>
-                                <label class="col-md-3 col-xs-6" for="anggota">Anggota Tim Penguji:</label>
+                                <label class="col-md-3 col-xs-8" for="anggota">Anggota Tim Penguji:</label>
                                 <!-- 9 -->
-                                <input class="col-md-9 col-xs-6" id="anggota" name="namaAnggotaTimPenguji" />
+                                <input class="col-md-9 col-xs-4" id="anggota" name="namaAnggotaTimPenguji" />
 
                             </p>
                         </div>

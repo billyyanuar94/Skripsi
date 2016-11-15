@@ -1,192 +1,124 @@
 \chapter{Dasar Teori}
 \label{chap: dasarTeori}
-
-\section{Sistem Informasi}
-\label{sec: sistemInformasi}
-
-	Sistem informasi adalah kombinasi dari teknologi informasi dan aktivitas orang yang menggunakan teknologi itu untuk mendukung operasi dan manajemen. Dalam arti yang sangat luas, istilah sistem informasi yang sering digunakan merujuk kepada interaksi antara orang, proses algoritmik, data, dan teknologi. 
-	
-	\subsection{Tujuan Sistem Informasi}
-	\label{sub: tujuanSI}
-	
-		Tujuan dari sistem informasi adalah menghasilkan informasi. Sistem informasi adalah data yang diolah menjadi bentuk yang berguna bagi para pemakainya. Data yang diolah saja tidak cukup dapat dikatakan sebagai suatu informasi. Untuk dapat berguna, maka informasi harus didukung oleh tiga pilar sebagai berikut: tepat kepada orangnya atau relevan (\textit{relevance}), tepat waktu (timeliness), dan tepat nilainya atau akurat (\textit{accurate}). Keluaran yang tidak didukung oleh tiga pilar ini tidak dapat dikatakan sebagai informasi yang berguna, tetapi merupakan sampah (\textit{garbage}).
-	
-	\subsection{Komponen Sistem Informasi}
-	\label{sub: komponenSI}
-	
-		Komponen prosedur dalam SI berkaitan dengan prosedur manual dan prosedur berbasis komputer serta standar untuk mengolah data menjadi informasi yang berguna. Suatu prosedur adalah urutan langkah yang dilakukan untuk menyelesaikan satu atau lebih aktivitas pengolahan informasi. Pengolahan informasi ini dapat dikerjakan dengan pengguna, atau kombinasi pengguna dan staff TI. Suatu bisnis terdiri dari berbagai macam prosedur yang digabungkan secara logis untuk membentuk suatu sistem. 
-		
-		SI dapat dikategorikan dalam empat bagian:
-		
-		\begin{enumerate}
-			\item Sistem Informasi Manajemen
-			\item Sistem Pendukung Keputusan
-			\item Sistem Informasi Eksekutif
-			\item Sistem Pemrosesan Transaksi
-		\end{enumerate}
-		
-		\subsubsection{Sistem Informasi Manajemen}
-		\label{subsub: SIManajemen}
-		Sistem informasi manajemen atau SIM adalah sistem perencanaan bagian dari pengendalian internal suatu bisnis yang meliputi pemanfaatan manusia, dokumen, teknologi, dan prosedur oleh akuntansi manajemen untuk memecahkan masalah bisnis seperti biaya produk, layanan, atau suatu strategi bisnis. Secara akademis, istilah ini umumnya digunakan untuk merujuk pada kelompok metode manajemen informasi yang bertalian dengan otomasi atau dukungan terhadap pengambilan keputusan manusia, misalnya sistem pendukung keputusan, sistem pakar, dan sistem informasi eksekutif.
-		
-		\subsubsection{Sistem Pendukung Keputusan}
-		\label{subsub: sistemPendukungKeputusan}
-		Sistem pendukung keputusan adalah bagian dari sistem informasi berbasis komputer (termasuk sistem berbasis pengetahuan (manajemen pengetahuan)) yang dipakai untuk mendukung pengambilan keputusan dalam suatu organisasi atau perusahaan. 
-		
-		Tahapan SPK:
-		\begin{enumerate}
-			\item Definisi masalah
-			\item Pengumpulan data atau informasi yang relevan
-			\item Pengolahan data menjadi informasi baik dalam bentuk laporan grafik maupun tulisan
-			\item Menentukan alternatif-alternatif solusi (bisa dalam persentase)
-		\end{enumerate}
-		
-		\subsubsection{Sistem Informasi Eksekutif}
-		\label{subsub: SIEksekutif}
-		Sistem Informasi Eksekutif (EIS) adalah salah satu jenis manajemen sistem informasi untuk memudahkan dan mendukung keterangan dan pembuatan keputusan yang dibutuhkan eksekutif senior dengan menyediakan kemudahan akses terhadap informasi baik dari dalam maupun dari luar yang relevan dengan tujuan organisasi. Ini biasanya dipertimbangkan sebagai bentuk dari sistem pendukung keputusan (SPK).
-		
-		\subsubsection{Sistem Pemrosesan Transaksi}
-		\label{subsub: sistemPemrosesanTransaksi}
-		
-		Sistem Pemrosesan Transaksi atau \textit{Transaction Processing System} adalah bagian dari sistem informasi yang merupakan sebuah sistem yang menjalankan dan mencatat transaksi rutin harian yang diperlukan untuk menjalankan bisnis. Contohnya adalah seperti memasukkan pesanan penjualan, pemesanan hotel,penggajian , pencatatan karyawan dan pengiriman. Tujuan utama dari sistem pada tingkat ini adalah untuk menjawab pertanyaan rutin dan melacak arus transaksi yang melalui organisasi.
 		
 \section{CodeIgniter}
 \label{sec: codeigniter}
 
-	\textit{CodeIgniter} merupakan sebuah \textit{framework} pemrograman \textit{web} dengan menggunakan bahasa php. \textit{CodeIgniter} (CI) akan membantu mengurangi jumlah pengerjaan kode yang harus diketik, mempermudah pembacaan dan pembaharuan \textit{script}, membantu penyusunan struktur yang jelas dan rinci, mendisiplinkan diri dalam pengerjaan \textit{coding} dan memperkuat hasil tanpa disadari.
+	CodeIgniter merupakan sebuah peralatan bagi orang-orang yang ingin membuat sebuah \textit{web} dengan menggunakan bahasa PHP. CodeIgniter sendiri dibuat dengan tujuan memungkinkan pengembangan proyek-proyek lebih cepat daripada menuliskan kode dari awal. Tujuan tersebut di wujudkan dengan tersedianya \textit{library} yang berisi \textit{task} yang biasa dibutuhkan dalam pengembangan program dibarengi dengan antarmuka yang sederhana serta struktur logika untuk mengakses \textit{library} tersebut. Dengan begitu dapat disimpulkan bahwa CodeIgniter membuat pemrogram fokus pada kreativitas pembuatan program dengan meminimalkan jumlah kode yang dituliskan.
 	
+	\subsection{Flowchart Aplikasi CodeIgniter}
+	\label{sub: FlowAppCI}
 	
-	\subsection{Keistimewaan CI}
-	\label{sub: KeistimewaanCI}
-	CodeIgniter memiliki beberapa keistimewaan antara lain:
+	Pada gambar \ref{fig:flowchartCI} menunjukkan \textit{flowchart} aliran data pada CodeIgniter:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.75]{Gambar/flowChartCI}
+		\caption{Flowchart CodeIgniter}
+		\label{fig:flowchartCI}
+	\end{figure}
+	
+	Keterangan:
 	\begin{enumerate}
-		\item Menghemat waktu pengembangan
-		\item \textit{Reuse of code} (pemakaian kembali kode yang sudah ada)
-		\item Adanya bantuan dari komunitas CI
-	\end{enumerate}	
+		\item Index.php berfungsi sebagai pengontrol utama, yang menginisialisasikan sumber-sumber yang diperlukan untuk menjalankan CodeIgniter.
+		\item \textit{Router} akan memeriksa permintaan HTTP untuk menentukan apa yang harus dilakukan selanjutnya
+		\item Jika terdapat \textit{cache}, maka cache tersebut akan dikirim langsung ke browser dengan menjalankan sistem eksekusi normal.
+		\item  HTTP \textit{request} dan data yang diserahkan oleh \textit{user} akan disaring oleh sistem keamanan terlebih dahulu oleh bagian keamanan(\textit{security}) dari CodeIgniter yang dijalankan sebelum \textit{controller} dari aplikasi diisi.
+		\item \textit{Application Controller} akan mengambil isi dari \textit{model, libraries, helpers, plugins, scripts}, dan sumber lain yang diperlukan untuk menjalankan perintah-perintah spesifik.
+		\item Kemudian \textit{View} akan diterjemahkan dari \textit{Application Controller} dan dikirim ke \textit{web browser} untuk kemudian ditampilkan. Jika pada view final terdapat \textit{file cache}, maka view tersebut akan terlebih dahulu dilakukan \textit{cached} sehingga permintaan berikutnya dapat dilayani.
+	\end{enumerate}
 	
+	\subsection{Model-View-Controller}
+	\label{sub: MVC}
 	
-	\subsection{Model, View, dan Controller(MVC) pada CI}
-	\label{sub: mvc}
+	CodeIgniter menggunakan dasar pola pengembangan \textit{Model-View-Controller}(MVC). Pola pengembangan MVC ini merupakan suatu pendekatan yang memisahkan antara pengerjaan logika dan tampilan dari aplikasi.
 	
-	Konsep MVC adalah konsep pemisahan antara logic dengan tampilan dan database. Manfaat konsep ini adalah, membuat coding logic lebih simple, karena sudah di pisah dengan code untuk tampilan dan membuat programmer dapat bekerja secara terpisah dengan designer.
-	CodeIgniter sendiri dibangun menggunakan konsep \textit{Model-View-Controller development pattern}. Manfaat konsep MVC ini adalah memudahkan logika dalam \textit{coding} aplikasi tersebut dan memudahkan pengembangan sistem yang sudah ada.
-	\begin{itemize}
-		\item \textit{Model} = \textit{Model} berhubungan dengan data dan interaksi ke \textit{database} atau \textit{webservice}. \textit{Model} juga merepresentasikan struktur data dari aplikasi yang bisa berupa basis data maupun data lain, misalnya dalam bentuk file teks, \textit{file} XML maupun webservice. Biasanya di dalam model akan berisi class dan fungsi untuk mengambil, melakukan update dan menghapus data website. Sebuah
-		aplikasi web biasanya menggunakan basis data dalam menyimpan data, maka pada bagian \textit{Model} biasanya akan berhubungan dengan perintah-perintah \textit{query} SQL.
-		\item \textit{View} = \textit{View} berhubungan dengan segala sesuatu yang akan ditampilkan ke \textit{end-user}. Bisa berupa halaman web, rss, javascript dan lain-lain. Di dalam \textit{view} hanya berisi variabel-variabel yang berisi data yang siap ditampilkan. View dapat dikatakan sebagai halaman website yang dibuat dengan	menggunakan HTML dan bantuan CSS atau JavaScript. \textit{View} hanya dikhususkan untuk menampilkan data-data hasil dari \textit{model} dan \textit{controller}
-		\item \textit{Controller} = \textit{Controller} bertindak sebagai penghubung data dan \textit{view}. Di dalam \textit{Controller} inilah terdapat kelas-kelas dan fungsi-fungsi yang memproses permintaan dari View ke dalam struktur data di dalam \textit{Model}. \textit{Controller} juga tidak boleh berisi kode untuk mengakses basis data karena tugas mengakses data telah diserahkan kepada \textit{model}. Tugas \textit{controller} adalah menyediakan berbagai variabel yang akan ditampilkan di \textit{view}, memanggil \textit{model} untuk melakukan akses ke basis data, menyediakan penanganan kesalahan/\textit{error}, mengerjakan proses logika dari aplikasi serta melakukan validasi atau cek terhadap \textit{input}.
+	MVC sendiri terdiri dari 3 bagian, yaitu:
+	\begin{enumerate}
+		\item \textit{Model} merepresentasikan struktur data. Secara khusus, \textit{model} merupakan kelas yang membantu menangani kueri-kueri sql seperti \textit{insert, update,}dan \textit{delete} pada basis data.
+		\item \textit{View} merepresentasikan informasi yang ditunjukkan kepada pengguna. Sebuah \textit{view} biasanya berbentuk \textit{web page}, tetapi dalam CodeIgniter \textit{view} bisa berbentuk \textit{header, footer,} dan berbagai jenis \textit{page} lainnya.
+		\item \textit{Controller} berfungsi sebagai perantara antara \textit{Model}, \textit{View}, dan sumber daya lain yang diperlukan untuk memproses HTTP \textit{request} dan menghasilkan halaman web.
+	\end{enumerate}
 	
-	\end{itemize}
-	
-	Berikut ini adalah alur proses konsep MVC:
-	
-	\includegraphics[scale=1.00]{Gambar/konsepMVC}
-	
-	CI menerapkan pola MVC yang flexible, karena model dapat tidak di gunakan. Anda dapat hanya menggunakan Controller dan View saja dalam menggunakan CI
-	tanpa Model. Jika anda tidak memerlukan pemisahan di dalam struktur data dan database atau menganggap penggunaan model hanya menambah kompleks aplikasi dengan keuntungan yang kurang sebanding, maka anda dapat tidak menggunakan model.
-	
-	\subsection{Struktur CI}
-	\label{sub: strukturCI}
-	CI adalah sebuah php framework yang berupa kumpulan folder dan file php, java script,css,txt dan file berbasis web lainnya dengan setting tertentu untuk menggunakannya dan menyediakan library dan helper yang dapat di manfaatkan di dalam pemrograman php. CI di jalankan under web dan harus dengan web server. Program CI cukup di letakkan di bawah folder directory web server anda.
-	Berikut adalah struktur file CI :
-	
-	\includegraphics[scale=1]{Gambar/strukturCI}
-		
 
+	
 \section{AngularJS}
 \label{sec: angularJS}
 	
-	AngularJS merupakan \textit{framework javascript} berbasis \textit{open-source} yang dirilis oleh Google pada tahun 2009. AngularJS sendiri merupakan jawaban dari banyak tantangan pemakaian web yang memerlukan pengaplikasian suatu fungsi tanpa berganti halaman. Jika anda merujuk pada situs resmi AngularJS yaitu http://angularjs.org maka anda akan dapat membaca sebuah tagline "HTML Enchanced for Web Apps". Tag line tersebut mengartikan bahwa pemakaian angularJS merupakan pemakaian HTML yang telah ditingkatkan fungsinya untuk membangun sebuah aplikasi dalam web.
-	
-	HTML merupakan alat yang digunakan untuk membangun web statik sehingga membutuhkan bantuan dari alat lain untuk membuat sebuah aplikasi web pada HTML ini. Oleh sebab minat dan banyaknya permintaan dari developer web untuk membuat aplikasi web dengan mudah, maka Google meresmikan AngularJS pada tahun 2009 yang lalu.
-	
-	AngularJS bukan merupakan pustaka (\textit{library}) javascript melainkan sebuah framework yang solid untuk membangun web app, seperti \textit{framework} javascript pada umumnya AngularJS mengadopsi konsep MVC (\textit{Model}, \textit{View}, \textit{Controller}), meskipun menggunakan implementasi yang berbeda dengan konsep asli MVC.
-	
-\subsection{Keistimewaan AngularJS}
-\label{sub: keistimewaanAngularJS}
-	Berikut beberapa keistimewaan dari pemakaian AngularJS:
-	
-\subsubsection{Two way data-binding}
-\label{sub: twoWayDataBinding}
-
-	\textit{Two way data-binding} merupakan mekanisme sinkronisasi otomatis antara \textit{Controller} dan \textit{View}. Ketika ada perubahan pada \textit{Model} yang berasal dari \textit{View}, AngularJS secara otomatis membuat perubahan pada \textit{Controller}. Begitu pula sebaliknya. Hal ini terjadi secara otomatis, jadi tidak diperlukan penulisan kode secara manual untuk mencapai mekanisme tersebut.
-
-\subsubsection{HTML Template}
-\label{subsub: HTMLTemplate}
-
-	\textit{Template} yang digunakan AngularJS hanyalah HTML biasa dengan penambahan ekspresi (\textit{expression}), sehingga tidak diperlukan penggunaan \textit{template engine} khusus.
-
-\subsubsection{Dependecy Injection (DI)}
-\label{subsub: DI}
-
-	\textit{Dependency Injection} memungkinkan \textit{developer} menulis beberapa komponen kode yang terpisah satu sama lain. Ketika memerlukan salah satu komponen, \textit{developer} dapat melakukan pemanggilan komponen yang dibutuhkan dan dapat menggunakan fungsi komponen tersebut. Fitur ini memudahkan \textit{developer} dalam membuat komponen yang dapat dipakai berulang kali (reusable component)
-
-\subsection{Komponen AngularJS}
-\label{sub: komponenAngularJS}
-	
-
-
-\subsubsection{Model}
-\label{subsub: model}
-
-	Dalam pola MVC, \textit{Model} merepresentasikan suatu set data yang digunakan oleh \textit{Controlle}r dan \textit{View}. \textit{Model} dapat mendeteksi perubahan data dan memberikan notifikasi perubahan tersebut ke \textit{Controller} dan \textit{View}. Untuk membuat \textit{Model} di beberapa framework selain AngularJS diperlukan konstruktor khusus, sedangkan \textit{Model} pada AngularJS tidak memiliki konstruktor tersendiri dan tidak memerlukan pemanggilan fungsi \textit{inheritance} dari \textit{Object Class} tertentu, tidak memerlukan metode \textit{setter} atau \textit{getter} khusus, dan bisa berupa \textit{primitive}, \textit{object hash}, atau \textit{full object} yang berarti \textit{Model} hanyalah javascript \textit{object} biasa.
-
-\subsubsection{Scope}
-\label{sub: Scope}
-
-	\textit{Scope} merupakan perekat (\textit{glue}) atau perantara antara \textit{Controller} dengan \textit{View}. Masing-masing \textit{controller} memiliki \textit{scope} atau lingkup masing - masing.
-	
-\subsubsection{Controller}
-\label{subsub: controller}
-
-	\textit{Controller} merupakan kode dibalik \textit{View}. Isi dari \textit{controller} merupakan kode pemrosesan dan logika yang akan menghasilkan \textit{Model} untuk ditampilkan pada \textit{View}.
-
-\subsubsection{View}
-\label{subsub: view}
-
-	\textit{View} adalah apa yang terlihat oleh pengguna, yang dimulai dari sebuah \textit{template}, digabungkan dengan \textit{Model}, dan \textit{browser} melakukan proses \textit{rendering} hingga hasil keseluruhan proses tersebut ditampilkan ke pengguna. \textit{Template} yang digunakan hanyalah sintak HTML (bukan HTML diselingi dengan \textit{markup} khusus seperti pada template engine pada umumnya).
-
-\subsubsection{Expression}
-\label{subsub: expression}
-
-	\textit{Expression} merupakan kode \textit{snippet} yang dapat kita tulis pada \textit{View}. \textit{Expression} berkaitan dengan mekanisme \textit{binding} pada AngularJS, formatnya adalah sebagai berikut \{\{ expression \}\} Contoh :
-	
+	AngularJS merupakan sebuah \textit{framework} terstruktur yang digunakan untuk aplikasi web yang bersifat dinamis. Hal tersebut memungkinkan \textit{programmer} untuk mempergunakan HTML sebagai template bahasa pemrograman dan memperluas sintaks HTML agar dapat mengekspresikan komponen aplikasi dengan jelas dan ringkas. Sifat AngularJS yang mengikat data dan mempunyai ketergantungan injeksi akan menghilangkan banyak kode yang seharusnya dituliskan oleh \textit{programmer}, dan semua itu terjadi pada \textit{browser} sehingga dapat disimpulkan bahwa AngularJS merupakan pasangan yang sangat ideal bagi penggunaan teknologi server. 
+	Dalam pembuatannya, ketidakcocokkan halaman statik dan dinamik biasanya diselesaikan dengan pendekatan sebagai berikut:
 	\begin{enumerate}
-		\item "\{\{ 1+2 \}\}" , akan menampilkan angka 3 ke pengguna.
-		\item \{\{ user.name \}\} , akan menampilkan nilai properti 'name' dari model 'user'
-		\item \{\{ 1000 | currency \}\} , akan menampilkan angka 1000 dalam format mata uang (currency), keyword setelah tanda pipa ( | ) merupakan filter.
+		\item \textit{Library}: merupakan sebuah koleksi dari berbagai macam fungsi yang berguna dalam pembuatan aplikasi \textit{web}, contoh: JQuery.
+		\item \textit{Frameworks}: merupakan suatu implementasi dari sebuah aplikasi \textit{web} yang menempatkan kode yang dituliskan secara detail. \textit{Framework} akan berperan melakukan pemanggilan ke kode yang dituliskan \textit{programmer} ketika aplikasi membutuhkan sesuatu yang spesifik, contoh: durandal, ember, dll.
 	\end{enumerate}
-
-\subsubsection{Directive}
-\label{subsub: directive}
-
-	\textit{Directive} merupakan cara untuk membuat sintak HTML baru yang akan dimengerti oleh \textit{browser}. \textit{Directive} dapat berupa elemen, \textit{attribute}, \textit{HTML comment} atau \textit{Class}. Angular telah menyediakan beberapa \textit{directive} bawaan yang penting dalam pengembangan aplikasi berbasis \textit{web}. Beberepa \textit{directive} bawaan Angular diantaranya adalah ng-controller, ng-model, ng-repeat, ng-click.
 	
+	Dalam pembentukannya, AngularJS memiliki pendekatan yang berbeda. AngularJS berupaya untuk meminimalkan ketidakcocokan antara dokumen utama dari HTML dengan apa yang dibutuhkan oleh aplikasi untuk membuat konstruksi HTML baru. AngularJS mengajarkan \textit{browser} sintaks baru yang disebut \textit{directives}. Contoh contoh \textit{directives} adalah:
+	\begin{enumerate}
+		\item Keterikatan data di dalam \{\{\}\};
+		\item Dukungan untuk \textit{Form} dan \textit{Form Validation}
+		\item Pengelompokkan HTMl menjadi komponen - komponen yang dapat dipakai kembali.
+	\end{enumerate}
+	
+	\subsection{Gambaran Konseptual}
+	\label{sub: gambaranKonsep}
+		Berikut ini adalah beberapa bagian-bagian terpenting dalam AngularJS.
+		\begin{center}
+			\begin{tabular}{| m{5cm} | m{10cm} |}
+				\hline
+				Konsep & Deskripsi \\
+				\hline
+				Template & HTML dengan tambahan markup \\
+				\hline
+				Directives & Pengembangan HTML dengan atribut dan elemen yang dibuat khusus \\
+				\hline
+				Model & Data yang ditunjukan kepada pengguna pada tampilan dan bagaimana penguna berinteraksi \\
+				\hline
+				Scope & Konteks dimana model disimpan, sehingga controller, directives dan expression dapat mengaksesnya \\
+				\hline
+				Expression & Mengakses variabel dan fungsi dari scope \\
+				\hline
+				Compiler & Menguraikan template, directives, dan expression \\
+				\hline
+				Filter & Mengatur nilai dari sebuah expression untuk di tunjukkan kepada pengguna \\
+				\hline
+				View & Apa yang akan dilihat oleh pengguna (DOM) \\
+				\hline
+				Data Binding & Menyelaraskan data yang ada pada \textit{model} dan view \\
+				\hline
+				Controller & Mengatur logika dibalik tampilan \\
+				Dependency Injection & Membuat dan menyambungkan objek dan fungsi \\
+				\hline
+				Injector & Tempat penyimpanan dependency Injection \\
+				\hline
+				Module & Tempat penyimpanan untuk bagian-bagian yang berbeda dalam sebuah aplikasi, yang mencakup: controllers, services, filters, directives yang mengkonfigurasika injector \\
+				\hline
+				Services & Logika bisnis independen dari views yang bisa dipakai kembali  \\
+				\hline
+				\end{tabular}
+			\end{center}
+	
+	\subsection{Data Binding}
+	\label{sub: dataBinding}
+		
+		\textit{Data Binding} pada AngularJS merupakan penyelarasan data antara \textit{model} dan komponen - komponen \textit{view}. Ketika \textit{model} berubah, maka \textit{view} pun akan berubah, begitu juga dengan sebaliknya.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.75]{Gambar/Dabin1}
+			\caption{Data Binding Classical Templates System}
+			\label{fig:dabin1}
+		\end{figure}
+		Pada gambar \ref{fig:dabin1} menjelaskan bahwa kebanyakan \textit{data binding} adalah proses satu arah. Hal itu dilakukan dengan menyatukan \textit{template} dan \textit{model} menjadi \textit{view}. Setelah penyatuan, pergantian pada \textit{model} tidak secara otomatis mengganti \textit{view} yang sudah ditampilkan.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.75]{Gambar/Dabin2}
+			\caption{Data Binding pada Angular}
+			\label{fig:dabin2}
+		\end{figure}
+		Pada gambar \ref{fig:dabin2} menjelaskan perbedaan yang diberikan oleh pelaksanaan \textit{data binding} pada AngularJS. Pertama, \textit{template} akan di \textit{compile} pada browser. Hasil dari \textit{compile} tersebut adalah \textit{live view}. Pada tahap ini perubahan yang terjadi di \textit{view} akan disampaikan kepada \textit{model}, dan perubahan yang terjadi pada \textit{model} akan mengubah \textit{view}.
+		
+		Karena \textit{view} merupakan proyeksi dari \textit{model}, menyebabkan \textit{controller} benar-benar terpisahkan dari \textit{view} tanpa disadari. Hal ini mempermudah pengujian \textit{controller}, karena terisolasi tanpa adanya \textit{view} dan DOM( \textit{browser dependency}).
+		
 \section{Twitter Bootstrap}
-\label{sec: bootstrap}
+\label{sec: Bootrstrap}
 
-	Twitter Bootstrap adalah sebuah alat bantu untuk membuat sebuah tampilan halaman \textit{website} yang dapat mempercepat pekerjaan seorang pengembang \textit{website} ataupun pendesain halaman \textit{website}. Sesuai namanya, website yang dibuat dengan alat bantu ini memiliki tampilan halaman yang sama / mirip dengan tampilan halaman \textit{Twitter} atau desainer juga dapat mengubah tampilan halaman \textit{website} sesuai dengan kebutuhan.
-
-	Twitter Bootstrap dibangun dengan teknologi HTML dan CSS yang dapat	membuat layout halaman website, tabel, tombol, form, navigasi, dan komponen	lainnya dalam sebuah website hanya dengan memanggil fungsi CSS (class) dalam berkas HTML yang telah didefinisikan. Selain itu juga terdapat komponen-komponen lainnya yang dibangun menggunakan JavaScript.
-	
-	\subsection{Struktur direktori Bootstrap}
-	\label{sub: struturDirektoriBootstrap}
-	
-	Berikut adalah gambar struktur direktori dari \textit{Bootstrap}:
-	
-	\includegraphics[scale= 1.0]{Gambar/strukturBootstrap}
-	
-	\subsection{Keuntungan menggunakan Bootstrap}
-	\label{sub: keuntunganBootstrap}
-	
-	Penggunaan \textit{Twitter Bootstrap} tentu saja memiliki banyak keuntungan, diantaranya adalah:
-	
-	\begin{itemize}
-		\item Memudahkan dalam mendesain website
-		\item Responsif (mendukung segala macam layar dan \textit{device})
-		\item Adanya dokumentasi yang cukup lengkap
-		\item Mempunyai tampak yang elegan
-	\end{itemize} 
-	
-	
+		
