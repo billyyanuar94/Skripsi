@@ -39,8 +39,211 @@
 		\item \textit{Controller} berfungsi sebagai perantara antara \textit{Model}, \textit{View}, dan sumber daya lain yang diperlukan untuk memproses HTTP \textit{request} dan menghasilkan halaman web.
 	\end{enumerate}
 	
-
+	\subsection{Controller}
+	\label{sub: controller}
 	
+		\textit{Controller} merupakan sebuah kelas simple dengan penerapan seperti URL. Seperti kelas pada umumnya, ketika nama kelas dari \textit{controller} dan nama kelas dari \textit{file controller} tersebut cocok, maka kelas dapat dijalankan dengan baik. Nama kelas suatu \textit{controller} dikatakan sah jika diawali dengan huruf besar. Untuk lebih jelasnya, perhatikan gambar \ref{fig:controller}.
+		
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=1]{Gambar/controller}
+				\caption{Contoh Kode Controller}
+				\label{fig:controller}
+			\end{figure}
+	
+		Nama \textit{file} pada gambar \ref{fig:controller} haruslah  "Blog.php" dengan B besar dan disimpan pada \textit{application/controllers} sehingga url dapat berjalan dengan baik.
+		
+	\subsubsection{Method}
+	\label{subsub: method}
+	
+		\textit{Method} merupakan nama fungsi dari suatu kelas. Nama \textit{method} pada gambar \ref{fig:controller} adalah \textit{index()}. \textit{Method} bernama "index" akan selalu dijalankan jika tidak ada arahan ke metode pada URL. Cara lain untuk menjalankan \textit{method} pada gambar \ref{fig:controller} adalah "example.com/index.php/blog/index/" dimana bagian terakhir adalah nama method yang ingin dijalankan.
+		
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{Gambar/methode}
+			\caption{Contoh Method ber-Parameter}
+			\label{fig:method}
+		\end{figure}
+		
+		Jika \textit{method} yang dituju memiliki parameter, diperlukan tambahan pada URL pemanggilannya. Sebagai contoh, pemanggilan \textit{method}	pada gambar \ref{fig:method} dilakukan dengan URL "example.com/index.php/products/shoes/sandals/123" dimana "sandals" dan "123" merupakan isi dari \textit{parameter 1} dan 2 dari \textit{method} "shoes".
+		
+	\subsubsection{Mendefinisikan Controller Default}
+	\label{subsub: defaulController}
+	
+		CodeIgniter dapat menjalankan \textit{default controller} sehingga tidak diperlukannya penulisan URL yang lengkap untuk pemanggilan, melainkan \textit{controller} dapat dipanggil secara otomatis dengan URL "example.com" saja. Namun, untuk dapat menjalankan fungsi ini, diperlukan sedikit pengaturan pada \textit{file} "application/config/routes.php" yaitu perubahan variabel pada gambar \ref{fig:route}.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{Gambar/route}
+			\caption{Penggantian Variable pada Route}
+			\label{fig:route}
+		\end{figure}
+		
+		Pada gambar \ref{fig:route}, "blog" merupakan nama \textit{file} \textit{controller} yang telah dibuat pada direktori "application/controllers/". Setelah pengaturan tersebut, maka pengguna bisa menjalankan aplikasi tanpa URL yang terspesifikasi menjalankan \textit{controller}.
+		
+		\subsection{Views}
+		\label{sub: views}
+		
+		Sebuah \textit{views} merupakan bagian yang mengatur tampilan aplikasi yang akan ditunjukkan kepada pengguna. \textit{Views} meliputi \textit{footer, header, sidebar,} dll.
+		Pada CodeIgniter, \textit{Views} tidak dapat dijalankan secara langsung dari URL, tapi \textit{views} harus dijalankan melalui file \textit{controller} yang ada. Hal ini dilakukan guna memudahkan \textit{programmer} dan mewujudkan \textit{framework MVC} pada CodeIgniter.
+		
+		\subsubsection{Pembuatan Views}
+		\label{subsub: pembuatanView}
+		
+		Pembuatan \textit{file view} pada dasarnya sama seperti pembuatan \textit{file} berbasis PHP biasa. Gambar \ref{fig:view} merupakan salah satu contoh \textit{file view} sederhana.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{Gambar/view}
+			\caption{Contoh File View}
+			\label{fig:view}
+		\end{figure}
+		
+		Setelah selesai membuat \textit{file view} yang diinginkan, maka penyimpanan \textit{file} tersebut harus diletakkan di direktori "application/views/".
+		
+		\subsubsection{Menjalankan View}
+		\label{subsub: menjalankanView}
+		
+		Menjalankan \textit{view} pada CodeIgniter dilakukan di \textit{file controller}. Gambar \ref{fig:controllerView} menunjukkan kode yang harus ditulis di dalam \textit{method controller}.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{Gambar/controllerView}
+			\caption{Contoh Pemanggilan File View pada Controller}
+			\label{fig:controllerView}
+		\end{figure}
+		
+		\subsection{Models}
+		\label{sub: models}
+		
+		\textit{Model} merupakan \textit{file} berbasis PHP yang didesain sebagai penghubung aplikasi dengan basis data. \textit{Model} berfungsi menjalankan kueri-kueri sql seperti \textit{insert, update, delete, select,} dll.
+		Pada CodeIgniter terdapat fungsi \textit{Query builder} yang memudahkan \textit{programmer} dalam membuat kueri. Gambar \ref{fig:insert} dan gambar \ref{fig:update} merupakan contoh penggunaan \textit{Query builder} untuk kueri sql \textit{insert} dan \textit{update}.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{Gambar/insert}
+			\caption{Contoh Query Builder insert}
+			\label{fig:insert}
+		\end{figure}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{Gambar/update}
+			\caption{Contoh Query Builder Update}
+			\label{fig:update}
+		\end{figure}
+		
+		\subsubsection{Menjalankan Model}
+		\label{subsub: menjalankanModel}
+			
+		Sama seperti menjalankan \textit{file view}, \textit{model} pun tidak bisa dijalankan secara langsung menggunakan URL. Untuk menjalankan \textit{model} perlu dilakukan pemanggilan pada \textit{controller}.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{Gambar/model}
+			\caption{Contoh Pemanggilan File Model pada Controller}
+			\label{fig:controllermodel}
+		\end{figure}
+		
+		Gambar \ref{fig:controllermodel} menunjukkan bahwa \textit{file controller} melakukan pemanggilan \textit{model} yang diikuti dengan inisialisasi \textit{array data} dari basis data yang dimasukkan ke pemanggilan \textit{view}.
+		
+		\subsection{Helper}
+		\label{sub: helper}
+		
+		\textit{Helper} merupakan kelas yang membantu \textit{programmer} dalam menjalankan \textit{task}. CodeIgniter memiliki banyak kelas \textit{helper}, seperti \textit{URL Helper} yang membantu dalam membuat \textit{link}, \textit{Form Helper} yang membantu dalam pembuatan elemen-elemen di dalam form, \textit{Text Helper} yang membantu dalam menjalankan berbagai \textit{text formatting routines}, \textit{Cookies Helper} yang membantu dalam mengatur dan membaca \textit{cookies} yang ada, dll. \textit{Helper} pada CodeIgniter umumnya ada pada direktori "application/helpers directory" atau "system/helpers". 
+		
+		\subsubsection{Menjalankan Helper}
+		\label{subsub: menjalnkanHelper}
+		
+		Cara menjalankan \textit{helper} pada CodeIgniter cukup dengan menambahkan kode pada gambar \ref{fig:kodeHelper} di dalam \textit{kdoeHelper} atau \textit{view}.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{Gambar/helperLoad}
+			\caption{Kode yang ditambahkan untuk menjalankan helper}
+			\label{fig:kodeHelper}
+		\end{figure}
+		
+		Penulisan "name" pada gambar \ref{fig:kodeHelper} diisi dengan \textit{part helper} yang diinginkan. Contoh jika pada aplikasi perlu \textit{URL Helper} maka "name" diganti dengan "url". Helper juga dapat dijalankan secara otomatis dengan cara mengisi variable 'helper' pada \textit{file autoload} yang berada di direktori "application/config/autoload.php".
+		
+		\subsection{Basis data}
+		\label{sub: database}
+		
+		\subsubsection{Menyambungkan ke Basis Data}
+		\label{subsub: connectDatabase}
+		
+		Perlu diingat bahwa kelas \textit{model} tidak menjalankan basis data secara otomatis. Untuk membuat aplikasi terkoneksi dengan basis data, diperlukan beberapa tambahan kode pada \textit{file model} atau \textit{file controller}.
+		CodeIgniter memiliki fitur \textit{automatically connecting} yang membuat seluruh aplikasi tersambung dengan basis data pada setiap \textit{page load}. untuk mengaktifkan fitur ini cukup mengetikkan "database" pada variabel autoload['libraries'] di "application/config/autoload.php" seperti gambar \ref{fig:autoload}.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{Gambar/autoload}
+			\caption{Kode yang ditambahkan untuk autoload basis data}
+			\label{fig:autoload}
+		\end{figure}
+		
+		Selain \textit{autoload}, CodeIgniter juga mendukung koneksi ke basis data dengan cara manual, dengan cara menambahkan "\$this->load->database();" pada \textit{method} atau kelas basis data ingin dijalankan.
+		
+		\subsection{Konfigurasi Basis Data}
+		\label{sub: databaseConf}
+		
+		Konfigurasi basis data pada CodeIgniter disimpan dengan cara \textit{multi-dimensional array}.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{Gambar/database}
+			\caption{Konfigurasi Basis Data}
+			\label{fig:database}
+		\end{figure}
+		
+		Keterangan gambar \ref{fig:database}:
+		\begin{center}
+		\begin{tabular}{| m{5cm} | m{10cm} |}
+			\hline
+			Nama Konfigurasi & Deskripsi\\
+			\hline
+			dsn & membuat koneksi string(\textit{an all-in-one configuration sequence})\\
+			\hline
+			hostname & nama host dari server basis data yang dipakai.(umumnya bernama "localhost")\\
+			\hline
+			username & username yang dipakai untuk menyambungkan basis data\\
+			\hline
+			password & password yang cocok dengan username yang dipakai untuk menyambungkan basis data\\
+			\hline
+			database & nama basis data yang ingin di sambungkan\\
+			\hline
+			dbdriver & tipe basis data (mysqli, postgre, odbc, dll). Perlu ditulis dengan huruf kecil secara spesifik.\\
+			\hline
+			dbprefix & dbprefix tidak harus terisi, berguna untuk menambahkan awalan nama tabel pada saat dijalankan Query Builder.\\
+			\hline
+			pconnect & berisi TRUE atau FALSE untuk perlunya koneksi yang tetap\\
+			\hline
+			db\_debug & berisi TRUE atau FALSE untuk perlunya menampilkan error dari basis data\\
+			\hline
+			cache\_on & berisi TRUE atau FALSE untuk diperbolehkannya database query caching\\
+			\hline
+			cachedir & server path yang mutlak untuk direktori database query cache\\
+			\hline
+			char\_set & set karakter yang digunakan untuk komunikasi dengan basis data\\
+			\hline
+			dbcollat & pemeriksaan karakter yang digunakan dalam berkomunikasi dengan basis data(hanya dipakai di driver 'mysqli' dan 'mysql').\\
+			\hline
+			swap\_pre & sebuah tabel default yang harus bertukar dengan dbprefix.\\
+			\hline
+			schema & skema basis data yang nilai defaultnya adalah 'public'. Digunakan untuk driver PostgreSQL and ODBC.\\
+			\hline
+			encrypt &  berisi TRUE atau FALSE perlu tidaknya memakai koneksi yang ter-enkripsi.\\
+			\hline
+			compress & perlu tidaknya memakai client compression (hanya untuk MYSQl)\\
+			\hline
+			stricton &  berisi TRUE atau FALSE untuk perlu tidaknya memakai koneksi "Strict Mode" \\
+			\hline
+			port & nomor port dari basis data. Untuk menggunakannya diperlukan penambahan di config array database.\\
+			\hline
+		\end{tabular}
+	\end{center}
+		
 \section{AngularJS}
 \label{sec: angularJS}
 	
@@ -85,6 +288,7 @@
 				Data Binding & Menyelaraskan data yang ada pada \textit{model} dan view \\
 				\hline
 				Controller & Mengatur logika dibalik tampilan \\
+				\hline
 				Dependency Injection & Membuat dan menyambungkan objek dan fungsi \\
 				\hline
 				Injector & Tempat penyimpanan dependency Injection \\
@@ -95,6 +299,15 @@
 				\hline
 				\end{tabular}
 			\end{center}
+			
+	\subsection{Directives}
+	\label{sub: directives}
+	
+		\textit{Directives} merupakan penanda pada \textit{DOM elements} (seperti attribut, nama elemen, \textit{comment},  dan kelas CSS) yang memberitahukan kepada \textit{AngularJS HTML compiler} untuk melampirkan perilaku yang di inginkan kepada \textit{DOM element}(contohnya memakai \textit{event listener}), atau bahkan mengubah \textit{DOM element} yang dituju beserta dengan peranakannya.
+		
+		
+		
+	
 	
 	\subsection{Data Binding}
 	\label{sub: dataBinding}
@@ -117,6 +330,7 @@
 		Pada gambar \ref{fig:dabin2} menjelaskan perbedaan yang diberikan oleh pelaksanaan \textit{data binding} pada AngularJS. Pertama, \textit{template} akan di \textit{compile} pada browser. Hasil dari \textit{compile} tersebut adalah \textit{live view}. Pada tahap ini perubahan yang terjadi di \textit{view} akan disampaikan kepada \textit{model}, dan perubahan yang terjadi pada \textit{model} akan mengubah \textit{view}.
 		
 		Karena \textit{view} merupakan proyeksi dari \textit{model}, menyebabkan \textit{controller} benar-benar terpisahkan dari \textit{view} tanpa disadari. Hal ini mempermudah pengujian \textit{controller}, karena terisolasi tanpa adanya \textit{view} dan DOM( \textit{browser dependency}).
+		
 		
 \section{Twitter Bootstrap}
 \label{sec: Bootrstrap}
