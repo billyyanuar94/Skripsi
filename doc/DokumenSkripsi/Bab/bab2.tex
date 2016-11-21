@@ -305,7 +305,7 @@
 	
 		\textit{Directives} merupakan penanda pada \textit{DOM elements} (seperti attribut, nama elemen, \textit{comment},  dan kelas CSS) yang memberitahukan kepada \textit{AngularJS HTML compiler} untuk melampirkan perilaku yang di inginkan kepada \textit{DOM element}(contohnya memakai \textit{event listener}), atau bahkan mengubah \textit{DOM element} yang dituju beserta dengan peranakannya.
 		
-		
+		AngularJS menyediakan sekumpulan \textit{directives built-in} seperti ng-Model, ng-Bind, dan ng-Class. 
 		
 	
 	
@@ -335,4 +335,34 @@
 \section{Twitter Bootstrap}
 \label{sec: Bootrstrap}
 
+	\textit{Twitter Bootstrap} atau yang lebih dikenal dengan \textit{Bootstrap} adalah \textit{framework} HTML, CSS, dan JS terpopuler dalam hal pengembangan tampilan yang responsif \textit{mobile} pertama dalam hal aplikasi berbasis web. 
+	
+	\subsection{Grid System}
+	\label{sub: gridSystem}
+	
+	\textit{Bootstrap} merupakan responsif \textit{mobile} pertama yang mempunyai sistem skala (\textit{grid system}). Sistem skala tersebut membagi layar perangkat menjadi 12 kolom yang berukuran sama, dimana besar ukuran masing-masing kolom mengikuti besar layar perangkat. Ketika layar semakin besar, maka ukuran masing-masing kolom pun akan semakin besar, begitu juga sebaliknya. Cara sistem skala \textit{Bootstrap} bekerja adalah:
+	
+	\begin{enumerate}
+		\item \textit{Rows} harus ditempatkan diantara \textit{.container(fixed-width)} atau \textit{.container-fluid (full-width)} untuk mendapatkan keselarasan ukuran
+		\item \textit{Rows} dipergunakan untuk membuat grup kolom secara \textit{horizontal}.
+		\item Konten tampilan harus berada diantara kelas \textit{columns} atau peranakan dari kelas \textit{columns}.
+		\item Kelas-kelas yang telah ditetapkan seperti ".row" dan ".col-xs-4" dapat digunakan dengan segera untuk membentuk \textit{layout}.
+		\item Kelas \textit{columns} membuat \textit{gutters}(jarak antara kolum konten) menggunakan kelas \textit{padding}.
+		\item \textit{Grid columns} dibuat dengan menyesuaikan ke-12 kolom yang sudah disediakan. Contohnya jika ingin membuat 3 kolom sama rata, maka diperlukan 3 buah kelas ".col-xs-4".
+		\item Jika ada lebih dari 12 kolom dalam 1 baris, maka kolom yang lebih tersebut akan dipindahkan ke baris baru sebagai satu kesatuan.
+		\item Kelas \textit{grid} mempunyai fungsi untuk menyesuaikan ukuran sesuai dengan patokan ukuran yang sudah diberikan oleh \textit{bootstrap} atau lebih besar dari angka patokan yang ada. Oleh karena itu ketika sebuah kelas ".col-md-*" tidak memiliki kelas yang lebih besar darinya seperti kelas ".col-lg-*", maka kelas md akan mengambil alih pada saat aplikasi dijalankan di ukuran perangkat yang lebih besar. 
+	\end{enumerate}
 		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.75]{Gambar/gridOption}
+			\caption{Grid Option pada Bootstrap}
+			\label{fig:gridOpt}
+		\end{figure}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.75]{Gambar/kolom}
+			\caption{Contoh Pembagian Grid Columns}
+			\label{fig:gridCol}
+		\end{figure}
