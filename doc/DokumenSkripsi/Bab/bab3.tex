@@ -4,7 +4,49 @@
 \section{Analisis Data Penilaian Skripsi}
 \label{sec: analisisData}
 
-	Berdasarkan analisa dari contoh form penilaian skripsi yang ada, dapat disimpulkan bahwa penilaian skripsi membutuhkan data-data sebagai berikut:
+	Pada bab ini akan dijelaskan mengenai analisis kode dari sistem kini, analisis tampilan sistem kini, analisis \textit{database} sistem kini.
+	
+	\subsection{Analisis Kode Sistem Kini}
+	\label{sec: analisisKode}
+	
+		Berdasarkan hasil analisis kode yang telah dibuat, berikut ini adalah penjelasan secara umum mengenai struktur kode Sistem Informasi Penilaian Skripsi 2 \ref{fig:strukturFile}:
+		
+		\begin{enumerate}
+			\item \textit{Folder} "application" merupakan tempat penyimpanan \textit{Model, View, Controller} dan fungsi-fungsi penting pada \textit{codeigniter}
+			\item \textit{Folder} "nbproject" merupakan tempat yang dibutuhkan agar sistem yang tersedia dapat dipakai pada \textit{platform netbeans}. 
+			\item \textit{Folder} "public" merupakan tempat penyimpanan \textit{file-file} Javascript dan css yang diperlukan oleh program.
+			\item \textit{Folder} "system" merupakan inti dari semua sistem \textit{codeigniter}.
+			\item \textit{Folder} "user\_guide" merupakan tempat penyimpanan instruksi-instruksi yang menjadi bantuan bagi pengguna \textit{codeigniter}.
+		\end{enumerate}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale= 1.0]{Gambar/strukturFile}
+			\caption {Struktur penyimpanan data program}
+			\label{fig:strukturFile}
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale= 1.0]{Gambar/strukturFileApp}
+			\caption {Struktur penyimpanan data program pada folder application}
+			\label{fig:strukturFileApp}
+		\end{figure}
+		
+		Pembuatan sistem informasi penilaian skripsi 2 berfokus pada \textit{folder "application"} \ref{fig:strukturFileApp} yang merupakan tempat penyimpanan \textit{file-file} MVC yang menjadi dasar dari sistem ini.
+		
+		\begin{enumerate}
+			\item \textit{Folder} "config" merupakan tempat penyimpanan \textit{file} yang berguna untuk mengatur berbagai fungsi yang terdapat pada codeigniter.
+			\item \textit{Folder} "controller" merupakan tempat penyimpanan \textit{file} yang berfungsi untuk menyambungkan \textit{view} dengan \textit{model} dan mengatur \textit{routing}.
+			\item \textit{Folder} "models" merupakan tempat penyimpanan \textit{file model} yang menyambungkan program dengan perintah-perintah sql untuk \textit{database}.
+			\item \textit{Folder} "views" merupakan tempat penyimpanan \textit{file-file} yang mengatur tampilan program.
+		\end{enumerate}
+		
+		
+		
+	\subsection{Analisis Database Sistem Kini}
+	\label{sub: analisisDatabase}
+	
+	Berdasarkan analisa dari contoh form penilaian skripsi yang ada (gambar \ref{fig: skripsiAsli} dan gambar \ref{fig: rekapAsli}), dapat disimpulkan bahwa penilaian skripsi membutuhkan data-data sebagai berikut:
 		
 		\begin{enumerate}
 			\item Semester
