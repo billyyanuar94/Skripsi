@@ -4,7 +4,7 @@
 \section{Analisis Data Penilaian Skripsi}
 \label{sec: analisisData}
 
-	Pada bab ini akan dijelaskan mengenai analisis kode dari sistem kini, analisis tampilan sistem kini, analisis \textit{database} sistem kini.
+	Pada bab ini akan dijelaskan mengenai analisis kode dari sistem kini, analisis tampilan sistem kini, analisis \textit{database} sistem kini, dan analisis sistem usulan.
 	
 	\subsection{Analisis Kode Sistem Kini}
 	\label{sec: analisisKode}
@@ -26,8 +26,15 @@
 			\label{fig:strukturFile}
 		\end{figure}
 		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1.0]{Gambar/strukturFileApp}
+			\caption{Struktur file application}
+			\label{fig: strukturFileApp}
+		\end{figure}
 		
-		Pembuatan sistem informasi penilaian skripsi 2 berfokus pada \textit{folder "application"} \ref{fig:strukturFileApp} yang merupakan tempat penyimpanan \textit{file-file} MVC yang menjadi dasar dari sistem ini.
+		
+		Pembuatan sistem informasi penilaian skripsi 2 berfokus pada \textit{folder "application"} (Gambar \ref{fig: strukturFileApp}) yang merupakan tempat penyimpanan \textit{file-file} MVC yang menjadi dasar dari sistem ini.
 		
 		\begin{enumerate}
 			\item \textit{Folder} "config" merupakan tempat penyimpanan \textit{file} yang berguna untuk mengatur berbagai fungsi yang terdapat pada codeigniter.
@@ -36,7 +43,41 @@
 			\item \textit{Folder} "views" merupakan tempat penyimpanan \textit{file-file} yang mengatur tampilan program.
 		\end{enumerate}
 		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.75]{Gambar/diagKelas}
+			\caption{Diagram kelas}
+			\label{fig: diagramKelas}
+		\end{figure}
 		
+		Berdasarkan diagram kelas dari sistem kini (Gambar \ref{fig: diagramKelas}), maka selanjutnya akan dijelaskan fungsi dari masing-masing metode yang ada:\\
+		Kelas C\_Skripsi:
+			\begin{itemize}
+				\item public function index() \\
+				Berfungsi untuk mengarahkan pengguna ke halaman "application/views/"\\
+				Nilai kembalian: halaman sistem kini
+				\item public function tambahDataMahasiswa() \\
+				Berfungsi untuk menerjemahkan \textit{input data} yang telah dimasukkan pengguna pada \textit{view} sehingga dapat diterima oleh \textit{model} sistem kini, yang pada akhirnya akan diproses untuk dimasukkan ke dalam \textit{database} sistem kini.\\
+				Nilai kembalian: data yang diperlukan oleh model dalam fungsi insertData.
+			\end{itemize}
+		Kelas Skripsi\_model:
+			\begin{itemize}
+				\item public function insertDataMahasiswa(\$tablename, \$data)\\
+				Berfungsi untuk memproses \textit{input data} yang sudah diproses oleh \textit{controller} untuk dimasukkan ke dalam \textit{database}\\
+				Parameter:\dots{}
+					\begin{itemize}
+						\item tablename adalah nama tabel.
+						\item data adalah kumpulan \textit{input} yang sudah diolah sehingga dapat dimasukkan ke dalam fungsi sql.
+					\end{itemize}
+			\end{itemize}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1.00]{Gambar/usecase}
+			\caption{\textit{Use case} diagram}
+			\label{fig: usecase}
+		\end{figure}
+	
 		
 	\subsection{Analisis Database Sistem Kini}
 	\label{sub: analisisDatabase}
