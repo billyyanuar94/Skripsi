@@ -1,85 +1,212 @@
 \chapter{Analisis}
 \label{chap: analisis}
+	
+\section{Analisis Sistem Usulan}
+\label{sec: analisisKode}
 
-\section{Analisis Data Penilaian Skripsi}
-\label{sec: analisisData}
+Analisis sistem usulan dibagi menjadi beberapa tahap, yaitu analisis \textit{back end}, analisis \textit{front end}, dan analisis \textit{database}. Berikut ini penjelasannya:
+	
+	\subsection{Analisis Back End}
+	\label{sub: backEnd}
+	
+	Analisis tahap \textit{back end} merupakan analisis pada lapisan data akses dan kode-kode yang bekerja secara tidak terlihat pada suatu aplikasi. Pada sistem informasi penilaian sidang skripsi 2, analisis tahap ini membahas tentang pembuatan kode \textit{model, view, controller} dari \textit{codeigniter}. Berikut ini adalah penjelasan lengkapnya:
+	
+	\subsubsection{Model}
+	\label{subsub: modelCI}
+	
+	Pada bagian ini akan dijelaskan tentang penggunaan \textit{model} pada \textit{codeigniter}. \textit{Model} mempunyai fungsi untuk membuat sambungan dari aplikasi ke basis data. Pada \textit{codeigniter} pemanggilan \textit{model} dilakukan pada file \textit{controller} dengan menggunakan fungsi khusus \textit{codeigniter} yaitu:
+	\begin{lstlisting}
+	$data = $this->skripsi_model->getAllMahasiswa();
+	\end{lstlisting}
+	
+	Kode di atas merupakan fungsi dari \textit{codeigniter} yang melakukan pemanggilan terhadap \textit{file model} yang akan dipakai. Pada kasus sistem usulan, nama \textit{file model} yang digunakan adalah "skripsi\_model". \textit{Model} sendiri berisi kode-kode sebagai berikut:
+	\begin{lstlisting}
+		<?php
+		defined('BASEPATH') OR exit('No direct script access allowed');
+		
+		class Skripsi_model extends CI_Model {
+		
+			public function insertDataMahasiswa($tableName, $data){
+				$res = $this->db->insert($tableName, $data);
+			}
+		}
+	\end{lstlisting}
+	
+	Berikut adalah \textit{method} yang dimiliki oleh kelas \textit{model}:
+	\begin{itemize}
+		\item public function insertDataMahasiswa(\$tablename, \$data)\\
+		Berfungsi untuk melakukan fungsi \textit{insert} pada basis data.\\
+		Parameter: 
+		\begin{itemize}
+			\item tablename merepresentasikan nama tabel basis data.
+			\item data merepresentasikan data dari controller yang sudah diubah dan ingin dimasukkan kedalam basis data.
+		\end{itemize}
+	\end{itemize}
+	
+	\subsubsection{Controller}
+	\label{subsub: controllerCI}
+	
+	Pada bagian ini akan dijelaskan tentang kode dan kegunaannya pada kelas \textit{controller}. \textit{Controller} merupakan kelas yang mengatur hubungan antara kelas \textit{model} dan \textit{view} pada \textit{codeigniter}. Dengan memanfaatkan fungsi-fungsi dari \textit{codeigniter}, maka kelas \textit{controller} dapat dipersingkat dan dipermudah dalam pembuatannya. Berikut ini adalah kode pada kelas \textit{C\_Skripsi}:
+\begin{lstlisting}
+	<?php
+	defined('BASEPATH') OR exit('No direct script access allowed');
+	
+	class C_skripsi extends CI_Controller {
+	
+	/**
+	* Index Page for this controller.
+	*
+	* Maps to the following URL
+	*              http://example.com/index.php/welcome
+	*      - or -
+	*              http://example.com/index.php/welcome/index
+	*      - or -
+	* Since this controller is set as the default controller in
+	* config/routes.php, it's displayed at http://example.com/
+	*
+	* So any other public methods not prefixed with an underscore will
+	* map to /index.php/welcome/<method_name>
+	* @see https://codeigniter.com/user_guide/general/urls.html
+	*/
+		public function index()
+		{
+			$this->load->view('skripsi');
+		}
+		//Check database
+		public function view_cekMahasiswa(){
+			$data = $this->skripsi_model->getAllMahasiswa();
+			$this->load->view('cek_mahasiswa', array('data' => $data));
+		}
+		
+		public function tambahDataMahasiswa(){
+			$semester = $_POST['semester'];
+			$tahun = $_POST['tahun'];
+			$npm = $_POST['npm'];
+			$nama = $_POST['nama'];
+			$judul = $_POST['judul'];
+			$namaPembimbing = $_POST['namaPembimbing'];
+			$namaPembimbingPendamping = $_POST['namaPembimbingPendamping'];
+			$namaKetuaTimPenguji = $_POST['namaKetuaTimPenguji'];
+			$namaAnggotaTimPenguji = $_POST['namaAnggotaTimPenguji'];
+			$bobotKetuaTimPenguji = $_POST['bobotKetuaTimPenguji'];
+			$bobotAnggotaTimPenguji = $_POST['bobotAnggotaTimPenguji'];
+			$bobotPembimbing = $_POST['bobotPembimbing'];
+			$nilaiKoordinatorSkripsi = $_POST['nilaiKoordinatorSkripsi'];
+			$bobotKoordinatorSkripsi = $_POST['bobotKoordinatorSkripsi'];
+			$bobotTataTulisLaporanAnggota = $_POST['bobotTataTulisLaporanAnggota'];
+			$bobotKelengkapanMateriAnggota = $_POST['bobotKelengkapanMateriAnggota'];
+			$bobotPenguasaanMateriAnggota = $_POST['bobotPenguasaanMateriAnggota'];
+			$bobotPresentasiAnggota = $_POST['bobotPresentasiAnggota'];
+			$bobotPencapaianTujuanAnggota = $_POST['bobotPencapaianTujuanAnggota'];
+			$bobotTataTulisLaporanKetua = $_POST['bobotTataTulisLaporanKetua'];
+			$bobotKelengkapanMateriKetua = $_POST['bobotKelengkapanMateriKetua'];
+			$bobotPenguasaanMateriKetua = $_POST['bobotPenguasaanMateriKetua'];
+			$bobotPresentasiKetua = $_POST['bobotPresentasiKetua'];
+			$bobotPencapaianTujuanKetua = $_POST['bobotPencapaianTujuanKetua'];
+			$bobotTataTulisLaporanPembimbing = $_POST['bobotTataTulisLaporanPembimbing'];
+			$bobotKelengkapanMateriPembimbing = $_POST['bobotKelengkapanMateriPembimbing'];
+			$bobotPenguasaanMateriPembimbing = $_POST['bobotPenguasaanMateriPembimbing'];
+			$prosesBimbinganPembimbing = $_POST['prosesBimbinganPembimbing'];
+			$nilaiAkhirMahasiswa = $_POST['nilaiAkhirMahasiswa'];
+			$data_insert = array(
+				'semester' => $semester,
+				'tahun' => $tahun,
+				'npm' => $npm,
+				'nama' => $nama,
+				'judul' => $judul,
+				'namaPembimbing' => $namaPembimbing,
+				'namaPembimbingPendamping' => $namaPembimbingPendamping,
+				'namaKetuaTimPenguji' => $namaKetuaTimPenguji,
+				'namaAnggotaTimPenguji' => $namaAnggotaTimPenguji,
+				'bobotKetuaTimPenguji' => $bobotKetuaTimPenguji,
+				'bobotAnggotaTimPenguji' => $bobotAnggotaTimPenguji,
+				'bobotPembimbing' => $bobotPembimbing,
+				'nilaiKoordinatorSkripsi' => $nilaiKoordinatorSkripsi,
+				'bobotKoordinatorSkripsi' =>$bobotKoordinatorSkripsi,
+				'bobotTataTulisLaporanAnggota' => $bobotTataTulisLaporanAnggota,
+				'bobotKelengkapanMateriAnggota' => $bobotKelengkapanMateriAnggota,
+				'bobotPenguasaanMateriAnggota' => $bobotPenguasaanMateriAnggota,
+				'bobotPresentasiAnggota' => $bobotPresentasiAnggota,
+				'bobotPencapaianTujuanAnggota' => $bobotPencapaianTujuanAnggota,
+				'bobotTataTulisLaporanKetua' => $bobotTataTulisLaporanKetua,
+				'bobotKelengkapanMateriKetua' => $bobotKelengkapanMateriKetua,
+				'bobotPenguasaanMateriKetua' => $bobotPenguasaanMateriKetua,
+				'bobotPresentasiKetua' => $bobotPresentasiKetua,
+				'bobotPencapaianTujuanKetua' => $bobotPencapaianTujuanKetua,
+				'bobotTataTulisLaporanPembimbing' => $bobotTataTulisLaporanPembimbing,
+				'bobotKelengkapanMateriPembimbing' => $bobotKelengkapanMateriPembimbing,
+				'bobotPenguasaanMateriPembimbing' => $bobotPenguasaanMateriPembimbing,
+				'prosesBimbinganPembimbing' => $prosesBimbinganPembimbing,
+				'nilaiAkhirMahasiswa' => $nilaiAkhirMahasiswa,
+			
+			);
+			$res = $this->skripsi_model->insertDataMahasiswa('beritaacarasidangskripsi',$data_insert);
+			redirect(base_url(), 'refresh');
+		}
+	
+	}
+	
+\end{lstlisting}
 
-	Pada bab ini akan dijelaskan mengenai analisis kode dari sistem kini, analisis tampilan sistem kini, analisis \textit{database} sistem kini, dan analisis sistem usulan.
+Berikut adalah \textit{method-method} yang dimiliki oleh kelas \textit{controller}:
+\begin{itemize}
+	\item view\_cekMahasiswa\\
+	Berfungsi untuk memilih \textit{file view} dan \textit{model} yang akan dipakai pada sistem informasi.
+	\item tambahDataMahasiswa\\
+	Berfungsi untuk mengambil data yang telah terisi dari \textit{view} sistem dan mengubahnya menjadi \textit{compatible} sehingga dapat diproses kedalam \textit{method} insertDataMahasiswa pada kelas \textit{model} yang kemudian akan diproses ke dalam bahasa sql.
+\end{itemize}
 	
-	\subsection{Analisis Kode Sistem Kini}
-	\label{sec: analisisKode}
+	\subsubsection{View}
+	\label{subsub: viewCI}
 	
-		Berdasarkan hasil analisis kode yang telah dibuat, berikut ini adalah penjelasan secara umum mengenai struktur kode Sistem Informasi Penilaian Skripsi 2 Gambar \ref{fig:strukturFile}:
-		
-		\begin{enumerate}
-			\item \textit{Folder} "application" merupakan tempat penyimpanan \textit{Model, View, Controller} dan fungsi-fungsi penting pada \textit{codeigniter}
-			\item \textit{Folder} "nbproject" merupakan tempat yang dibutuhkan agar sistem yang tersedia dapat dipakai pada \textit{platform netbeans}. 
-			\item \textit{Folder} "public" merupakan tempat penyimpanan \textit{file-file} Javascript dan css yang diperlukan oleh program.
-			\item \textit{Folder} "system" merupakan inti dari semua sistem \textit{codeigniter}.
-			\item \textit{Folder} "user\_guide" merupakan tempat penyimpanan instruksi-instruksi yang menjadi bantuan bagi pengguna \textit{codeigniter}.
-		\end{enumerate}
-		
-		\begin{figure}[H]
-			\centering
-			\includegraphics[scale= 1.0]{Gambar/strukturFile}
-			\caption {Struktur penyimpanan data program}
-			\label{fig:strukturFile}
-		\end{figure}
-		
-		\begin{figure}[H]
-			\centering
-			\includegraphics[scale=1.0]{Gambar/strukturFileApp}
-			\caption{Struktur file application}
-			\label{fig: strukturFileApp}
-		\end{figure}
-		
-		
-		Pembuatan sistem informasi penilaian skripsi 2 berfokus pada \textit{folder "application"} (Gambar \ref{fig: strukturFileApp}) yang merupakan tempat penyimpanan \textit{file-file} MVC yang menjadi dasar dari sistem ini.
-		
-		\begin{enumerate}
-			\item \textit{Folder} "config" merupakan tempat penyimpanan \textit{file} yang berguna untuk mengatur berbagai fungsi yang terdapat pada codeigniter.
-			\item \textit{Folder} "controller" merupakan tempat penyimpanan \textit{file} yang berfungsi untuk menyambungkan \textit{view} dengan \textit{model} dan mengatur \textit{routing}.
-			\item \textit{Folder} "models" merupakan tempat penyimpanan \textit{file model} yang menyambungkan program dengan perintah-perintah sql untuk \textit{database}.
-			\item \textit{Folder} "views" merupakan tempat penyimpanan \textit{file-file} yang mengatur tampilan program.
-		\end{enumerate}
-		
-		\begin{figure}[H]
-			\centering
-			\includegraphics[scale=0.75]{Gambar/diagKelas}
-			\caption{Diagram kelas}
-			\label{fig: diagramKelas}
-		\end{figure}
-		
-		Berdasarkan diagram kelas dari sistem kini (Gambar \ref{fig: diagramKelas}), maka selanjutnya akan dijelaskan fungsi dari masing-masing metode yang ada:\\
-		Kelas C\_Skripsi:
-			\begin{itemize}
-				\item public function index() \\
-				Berfungsi untuk mengarahkan pengguna ke halaman "application/views/"\\
-				Nilai kembalian: halaman sistem kini
-				\item public function tambahDataMahasiswa() \\
-				Berfungsi untuk menerjemahkan \textit{input data} yang telah dimasukkan pengguna pada \textit{view} sehingga dapat diterima oleh \textit{model} sistem kini, yang pada akhirnya akan diproses untuk dimasukkan ke dalam \textit{database} sistem kini.\\
-				Nilai kembalian: data yang diperlukan oleh model dalam fungsi insertData.
-			\end{itemize}
-		Kelas Skripsi\_model:
-			\begin{itemize}
-				\item public function insertDataMahasiswa(\$tablename, \$data)\\
-				Berfungsi untuk memproses \textit{input data} yang sudah diproses oleh \textit{controller} untuk dimasukkan ke dalam \textit{database}\\
-				Parameter:\dots{}
-					\begin{itemize}
-						\item tablename adalah nama tabel.
-						\item data adalah kumpulan \textit{input} yang sudah diolah sehingga dapat dimasukkan ke dalam fungsi sql.
-					\end{itemize}
-			\end{itemize}
-		
-		\begin{figure}[H]
-			\centering
-			\includegraphics[scale=1.00]{Gambar/usecase}
-			\caption{\textit{Use case} diagram}
-			\label{fig: usecase}
-		\end{figure}
+	Pada bagian ini, akan dijelaskan proses pembuatan \textit{view} pada sistem usulan. \textit{View} dibuat dengan bahasa php yang digabungkan dengan \textit{framework} AngularJS dan bootstrap untuk fungsi tampilan dan otomatisasi perhitungan nilai. \textit{File-file} css dan javascript bootstrap berada pada \textit{folder public}.
 	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.75]{Gambar/strukturFile}
+		\includegraphics[scale=0.75]{Gambar/strukturFilePublic}
+		\caption{Struktur File public}
+		\label{fig:public}
+	\end{figure}
+	
+	\textit{Views} sendiri dijalankan dengan pemanggilan pada kelas controller seperti yang telah dijelaskan sebelumnya. Hasil pada proses \textit{view} merupakan tampilan yang akan dijelaskan lebih lanjut di \ref{sec: perancanganTampilan}.
+	
+	\subsection{Analisis Front End}
+	\label{sub: frontEnd}
+	
+	Pada subbab ini akan dijelaskan bagaimana pembuatan dan fungsi otomatisasi dari AngularJS di sistem usulan. Berikut ini adalah contoh proses otomatisasi pada sistem usulan:
+	
+\begin{lstlisting}
+<body ng-app="penilaian" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+	<form role="form" method="post" accept-charset="utf-8" action="<?php echo base_url() . "index.php/c_skripsi/tambahDataMahasiswa" ?>" ng-controller="DefaultValue">
+	
+	</form>
+	
+	<script>
+	angular.module('penilaian', [])
+	.controller('DefaultValue', ['$scope', function ($scope) {
+	
+	}]);
+	</script>
+</body>
+\end{lstlisting}
+	
+	Contoh diatas adalah inisialisasi dari AngularJS dengan menggunakan fungsi ng-app dan ng-controller yang mengatur keseluruhan fungsi otomatisasi pada sistem usulan. Pada baris pertama dilakukan inisialisasi ng-app yang berfungsi menginisialisasi nama app yang digunakan pada sistem. Setelah ng-app diinisialisasi, baru sistem usulan dapat menggunakan fungsi-fungsi AngularJS seperti menginisialisasi ng-controller pada baris ke-2 dengan nama "Default Value".\\
+	Agar \textit{controller} dapat berfungsi, perlu dilakukan pemanggilan terhadap ng-controller dengan memanfaatkan fungsi "angular.module". Baris ke-7 bekerja dengan \textit{parameter} ng-app("penilaian"). Setelah melakukan inisialisasi modul, maka kita dapat memanggil fungsi-fungsi daripada AngularJS untuk dijalankan, seperti \textit{controller("DefaultValue")} ke dalam aplikasi AngularJS.
+	
+\begin{lstlisting}
+<tr>
+	<td><label for="nTTLaporanK">Tata Tulis Laporan</label></td>
+	<td><input type="number" id="nTTLaporanK" max="100" ng-model="nilai_TTLaporanK" class="form-nilai"/></td>
+	<!-- 20 -->
+	<td><input type="number" name="bobotTataTulisLaporanKetua" ng-model="TTLaporanK.value" ng-init="TTLaporanK.value = 15" min="0" max="100" class="form-nilai" readonly="readonly" /></td>
+	<td><input type="number" disabled="disabled" value="{{nilai_TTLaporanK * TTLaporanK.value / 100}}" ng-model="total_TTLaporanK" class="form-nilai"/></td>
+</tr>
+\end{lstlisting}
+	
+	Contoh diatas diambil dari kode \textit{file view} untuk mengatur otomatisasi pada kolom tata tulis laporan milik ketua tim penguji. Pada baris ke-3 dan baris ke-5 adalah contoh kode diatas merupakan contoh inisialisasi fungsi ng-model dari AngularJS, sementar baris ke-6 dilakukan perhitungan otomatis dari ng-model baris ke-3 dikalikan dengan ng-model baris ke-5 dan hasilnya ditampung di nilai \textit{value} yang kemudian akan muncul ke layar \textit{user} secara otomatis.
 		
-	\subsection{Analisis Database Sistem Kini}
+	\subsection{Analisis Database}
 	\label{sub: analisisDatabase}
 	
 	Sistem informasi penilaian sidang skripsi 2 menggunakan perangkat lunak phpmyadmin sebagai sarana penyimpanan dan pengolahan \textit{database}. Seperti yang dijelaskan pada subbab \ref{sec: analisisKode}, didalam \textit{folder} "application" terdapat \textit{folder} "models" (Gambar\ref{fig:strukturFileApp}) yang berfungsi menghubungkan \textit{database} dengan sistem. 
@@ -120,38 +247,35 @@
 	
 	Berdasarkan diskusi dengan dosen pembimbing, disimpulkan bahwa sistem penilaian sidang skripsi 2 ini hanya memerlukan penyimpanan untuk bobot masing-masing penilaian dan nilai akhir mahasiswa untuk tahap perhitungan. Hal ini dikarenakan nilai-nilai lainnya dapat dihasilkan dengan melakukan perhitungan pada  nilai akhir mahasiswa dan bobot nilai yang diinginkan. Begitu pula dengan nilai dari masing-masing penguji.
 	
-		\begin{figure}[H]
-			\centering
-			\includegraphics[scale= 1.0]{Gambar/database1}
-			\includegraphics[scale= 1.0]{Gambar/database2}
-			\caption {Data yang disimpan di database}
-			\label{fig:tabeldata}
-		\end{figure}
-	
-\section{Analisis Tampilan Sistem Informasi Penilaian Skripsi}
-\label{sec: analisisTampilan}
-	
-	Tampilan pada sistem informasi penilaian skripsi haruslah dibuat semirip mungkin dengan form penilaian skripsi yang sudah ada seperti pada lampiran gambar \ref{fig: skripsiAsli} dan gambar \ref{fig: rekapAsli}.
-	
-	Perbedaan yang akan ditampilkan adalah dengan adanya otomatisasi penghitungan nilai sesuai dengan bobot yang diberikan kepada penilai. Hal ini akan memberikan kemudahan penilai untuk melakukan penilaian.
-	
-	Gambar \ref{fig:tampilan} adalah bayangan awal tampilan untuk sistem informasi penilaian skripsi:
+\section{Use Case Diagram}
+\label{sec: usecaseDiagram}
+
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.75]{Gambar/tampilan1}
-		\includegraphics[scale=0.75]{Gambar/tampilan2}
-		\caption{Perkiraan Tampilan}
-		\label{fig:tampilan}
+		\includegraphics[scale=0.75]{Gambar/usecase}
+		\caption{Use case diagram}
+		\label{fig:usecase}
 	\end{figure}
 	
-	Dari bayangan awal itulah, saya mendesain tampilan dari aplikasi sistem informasi penilaian skripsi 2 ini. Gambar \ref{fig:tampilanapp} merupakan tampilan pada aplikasi sistem informasi penilaian skripsi 2.
+	\begin{enumerate}
+		\item Skenario memasukkan nilai\\
+			Deskripsi: Kegiatan memasukkan nilai ke dalam kotak input yang ada.\\
+			Aktor: Pengguna\\
+			Prakondisi: - \\
+			Skenario:
+			\begin{itemize}
+				\item Pengguna memilih tempat/kolom yang sudah tersedia di tampilan
+				\item Pengguna memasukkan nilai yang diinginkan pada tempat/kolom yang telah dipilih.
+			\end{itemize}
+		\item Skenario melakukan perhitungan otomatis\\
+			Deskripsi: Kegiatan melakukan perhitungan secara otomatis pada tampilan\\
+			Aktor: Sistem\\
+			Prakondisi: Tempat atau kolom nilai yang ingin dihitung sudah terisi\\
+			Skenario:
+			\begin{itemize}
+				\item Pengguna mengisi kolom nilai yang sudah disediakan
+				\item Dengan ng-model, sistem mengambil nilai dari tempat/kolom yang sudah diisi dan melakukan perhitungan
+				\item Sistem menampilkan hasil perhitungan ke dalam kolom yang disediakan untuk hasil perhitungan.
+			\end{itemize}
+	\end{enumerate}
 	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=0.5]{Gambar/tampilanapp1}
-		\includegraphics[scale=0.5]{Gambar/tampilanapp2}
-		\includegraphics[scale=0.5]{Gambar/tampilanapp3}
-		\includegraphics[scale=0.5]{Gambar/tampilanapp4}
-		\caption{Perkiraan Tampilan}
-		\label{fig:tampilanapp}
-	\end{figure}
