@@ -40,7 +40,7 @@
 	\section{Models}
 	\label{sec: models}
 	
-	\textit{Models} mempunyai fungsi menghubungkan \textit{views} dan \textit{controllers} pada \textit{database}. Pada penggunaan \textit{codeigniter}, \textit{model} dibuat dengan sangat sederhana. Berikut adalah isi dari kelas model:
+	\textit{Models} mempunyai fungsi menghubungkan \textit{views} dan \textit{controllers} pada basis data. Pada penggunaan \textit{codeigniter}, \textit{model} dibuat dengan sangat sederhana. Berikut adalah isi dari kelas model:
 	\begin{lstlisting}
 		<?php
 			defined('BASEPATH') OR exit('No direct script access allowed');
@@ -59,10 +59,10 @@
 		Berfungsi untuk mengolah data yang sudah diolah oleh \textit{controllers} menjadi kueri sql \textit{insert data}.
 	\end{itemize}
 	
-	\section{Perancangan Database}
+	\section{Perancangan Basis Data}
 	\label{sec: perancanganDatabase}
 	
-	Berdasarkan analisis \textit{database} pada bab \ref{sub: analisisDatabase}, maka dibuat tabel \textit{database} berisi:
+	Berdasarkan analisis basis data pada bab \ref{sub: analisisDatabase}, maka dibuat tabel basis data berisi:
 	
 	\begin{tabular}{| m{0.75cm} | m{7cm} | m{3cm} |}
 		\hline
@@ -144,16 +144,4 @@
 		\includegraphics[scale=0.75]{Gambar/tampilan2}
 		\caption{Perkiraan Tampilan}
 		\label{fig:tampilan}
-	\end{figure}
-	
-	Dari bayangan awal itulah, saya mendesain tampilan dari aplikasi sistem informasi penilaian skripsi 2 ini. Gambar \ref{fig:tampilanapp} merupakan tampilan pada aplikasi sistem informasi penilaian skripsi 2.
-	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=0.45]{Gambar/tampilanapp1}
-		\includegraphics[scale=0.45]{Gambar/tampilanapp2}
-		\includegraphics[scale=0.45]{Gambar/tampilanapp3}
-		\includegraphics[scale=0.45]{Gambar/tampilanapp4}
-		\caption{Tampilan Sistem Informasi}
-		\label{fig:tampilanapp}
 	\end{figure}

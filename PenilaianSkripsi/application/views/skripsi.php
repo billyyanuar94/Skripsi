@@ -262,7 +262,7 @@ and open the template in the editor.
                                 <td><input type="number" id="nKMateriK" max="100" ng-model="nilai_KMateriK" class="form-nilai"/></td>
                                 <!-- 21 -->
                                 <td><input type="number" name="bobotKelengkapanMateriKetua" ng-model="KMateriK.value" ng-init="KMateriK.value = 10" min="0" max="100" class="form-nilai" readonly="readonly" /></td>
-                                <td><input type="number" disabled="disabled" value="{{nilai_KMateriK * KMateriK.value / 100}}" ng-model="total_ketua" class="form-nilai"/></td>
+                                <td><input type="number" disabled="disabled" value="{{nilai_KMateriK * KMateriK.value / 100}}" ng-model="total_KMateriK" class="form-nilai"/></td>
                             </tr>
                             <tr>
                                 <td><label for="nPMateriK">Penguasaan Materi</label></td>
