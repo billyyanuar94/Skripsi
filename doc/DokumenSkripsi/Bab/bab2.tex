@@ -4,7 +4,7 @@
 \section{CodeIgniter}
 \label{sec: codeigniter}
 
-CodeIgniter\cite{ciDocs} merupakan sebuah peralatan bagi orang-orang yang ingin membuat sebuah \textit{web} dengan menggunakan bahasa PHP. CodeIgniter sendiri dibuat dengan tujuan memungkinkan pengembangan proyek-proyek lebih cepat daripada menuliskan kode dari awal. Tujuan tersebut di wujudkan dengan tersedianya \textit{library} yang berisi \textit{task} yang biasa dibutuhkan dalam pengembangan program dibarengi dengan antarmuka yang sederhana serta struktur logika untuk mengakses \textit{library} tersebut. Dengan begitu dapat disimpulkan bahwa CodeIgniter membuat pemrogram fokus pada kreativitas pembuatan program dengan meminimalkan jumlah kode yang dituliskan.
+CodeIgniter\cite{ciDocs} merupakan sebuah \textit{framework} bagi \textit{programmer} yang ingin membuat sebuah \textit{web} dengan menggunakan bahasa PHP. Penggunaan CodeIgniter sendiri mempunyai tujuan mempercepat pengembangan proyek-proyek bersangkutan jika dibandingkan dengan menuliskan kode dari awal. Tujuan tersebut diwujudkan dengan tersedianya \textit{library} berisi \textit{task} yang biasa dibutuhkan dalam pengembangan \textit{program}, dibarengi dengan antarmuka yang sederhana serta struktur logika khusus untuk mengakses \textit{library} tersebut. Dengan begitu dapat disimpulkan bahwa CodeIgniter membuat pemrogram fokus pada kreativitas pembuatan \textit{program} dengan meminimalkan jumlah kode yang dituliskan.
 
 \subsection{Flowchart Aplikasi CodeIgniter}
 \label{sub: FlowAppCI}
@@ -21,10 +21,10 @@ Keterangan:
 \begin{enumerate}
 	\item Index.php berfungsi sebagai pengontrol utama, yang menginisialisasikan sumber-sumber yang diperlukan untuk menjalankan CodeIgniter.
 	\item \textit{Router} akan memeriksa permintaan HTTP untuk menentukan apa yang harus dilakukan selanjutnya
-	\item Jika terdapat \textit{cache}, maka cache tersebut akan dikirim langsung ke browser dengan menjalankan sistem eksekusi normal.
-	\item  HTTP \textit{request} dan data yang diserahkan oleh \textit{user} akan disaring oleh sistem keamanan terlebih dahulu oleh bagian keamanan(\textit{security}) dari CodeIgniter yang dijalankan sebelum \textit{controller} dari aplikasi diisi.
+	\item Jika terdapat \textit{cache}, maka \textit{cache} tersebut akan dikirim langsung ke \textit{browser} dengan menjalankan sistem eksekusi \textit{normal}.
+	\item  HTTP \textit{request} dan data yang diserahkan oleh \textit{user} akan disaring terlebih dahulu oleh bagian keamanan(\textit{security}) dari CodeIgniter, yang dijalankan sebelum \textit{controller} dari aplikasi diisi.
 	\item \textit{Application Controller} akan mengambil isi dari \textit{model, libraries, helpers, plugins, scripts}, dan sumber lain yang diperlukan untuk menjalankan perintah-perintah spesifik.
-	\item Kemudian \textit{View} akan diterjemahkan dari \textit{Application Controller} dan dikirim ke \textit{web browser} untuk kemudian ditampilkan. Jika pada view final terdapat \textit{file cache}, maka view tersebut akan terlebih dahulu dilakukan \textit{cached} sehingga permintaan berikutnya dapat dilayani.
+	\item Kemudian \textit{View} akan diterjemahkan dari \textit{Application Controller} dan dikirim ke \textit{web browser} untuk kemudian ditampilkan. Jika pada \textit{view} akhir terdapat \textit{file cache}, maka \textit{view} tersebut akan terlebih dahulu dilakukan fungsi \textit{cached} sehingga permintaan berikutnya dapat dilayani.
 \end{enumerate}
 
 \subsection{Model-View-Controller}
@@ -36,51 +36,55 @@ MVC sendiri terdiri dari 3 bagian, yaitu:
 \begin{enumerate}
 	\item \textit{Model} merepresentasikan struktur data. Secara khusus, \textit{model} merupakan kelas yang membantu menangani kueri-kueri sql seperti \textit{insert, update,}dan \textit{delete} pada basis data.
 	\item \textit{View} merepresentasikan informasi yang ditunjukkan kepada pengguna. Sebuah \textit{view} biasanya berbentuk \textit{web page}, tetapi dalam CodeIgniter \textit{view} bisa berbentuk \textit{header, footer,} dan berbagai jenis \textit{page} lainnya.
-	\item \textit{Controller} berfungsi sebagai perantara antara \textit{Model}, \textit{View}, dan sumber daya lain yang diperlukan untuk memproses HTTP \textit{request} dan menghasilkan halaman web.
+	\item \textit{Controller} berfungsi sebagai perantara antara \textit{Model}, \textit{View}, dan sumber daya lain yang diperlukan untuk memproses HTTP \textit{request} dan menghasilkan halaman \textit{web}.
 \end{enumerate}
 
 \subsection{Controller}
 \label{sub: controller}
 
-	\textit{Controller} merupakan sebuah kelas simple dengan penerapan seperti URL. Seperti kelas pada umumnya, ketika nama kelas dari \textit{controller} dan nama kelas dari \textit{file controller} tersebut cocok, maka kelas dapat dijalankan dengan baik. Nama kelas suatu \textit{controller} dikatakan sah jika diawali dengan huruf besar. Untuk lebih jelasnya, perhatikan gambar \ref{fig:controller}.
+	\textit{Controller} merupakan sebuah kelas simple dengan penerapan seperti URL. Seperti kelas pada umumnya, ketika nama kelas dari \textit{controller} dan nama kelas dari \textit{file controller} tersebut cocok, maka kelas dapat dijalankan dengan baik. Nama kelas suatu \textit{controller} dikatakan sah jika diawali dengan huruf besar. Untuk lebih jelasnya, perhatikan kode di bawah ini:
 	
-		\begin{figure}[H]
-			\centering
-			\includegraphics[scale=1]{Gambar/controller}
-			\caption{Contoh Kode Controller}
-			\label{fig:controller}
-		\end{figure}
+\begin{lstlisting}
+<?php
+class Blog extends CI_Controller{
+	
+	public function index{
+		echo 'Hello World';
+	}
+}
+\end{lstlisting}
 
-	Nama \textit{file} pada gambar \ref{fig:controller} haruslah  "Blog.php" dengan B besar dan disimpan pada \textit{application/controllers} sehingga url dapat berjalan dengan baik.
+	Nama \textit{file} pada kode di atas haruslah  "Blog.php" dengan B besar dan disimpan pada \textit{application/controllers} sehingga URL dapat berjalan dengan baik.
 	
 \subsubsection{Method}
 \label{subsub: method}
 
-	\textit{Method} merupakan nama fungsi dari suatu kelas. Nama \textit{method} pada gambar \ref{fig:controller} adalah \textit{index()}. \textit{Method} bernama "index" akan selalu dijalankan jika tidak ada arahan ke metode pada URL. Cara lain untuk menjalankan \textit{method} pada gambar \ref{fig:controller} adalah "example.com/index.php/blog/index/" dimana bagian terakhir adalah nama method yang ingin dijalankan.
+	\textit{Method} merupakan nama fungsi dari suatu kelas. Nama \textit{method} pada kode subab \ref{sub: controller} adalah \textit{index()}. \textit{Method} bernama "index" akan selalu dijalankan jika tidak ada arahan ke metode pada URL. Cara lain untuk menjalankan \textit{method} pada kode subbab \ref{sub: controller} adalah "example.com/index.php/blog/index/" dimana bagian terakhir adalah nama \textit{method} yang ingin dijalankan.
 	
 	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=1]{Gambar/methode}
-		\caption{Contoh Method ber-Parameter}
-		\label{fig:method}
-	\end{figure}
+	\begin{lstlisting}
+<?php
+class Products extends CI_Controller{
+
+	public function shoes($sandals, $id){
+		echo $sandas;
+		echo $id;
+	}
+}
+	\end{lstlisting}
 	
-	Jika \textit{method} yang dituju memiliki parameter, diperlukan tambahan pada URL pemanggilannya. Sebagai contoh, pemanggilan \textit{method}	pada gambar \ref{fig:method} dilakukan dengan URL "example.com/index.php/products/shoes/sandals/123" dimana "sandals" dan "123" merupakan isi dari \textit{parameter 1} dan 2 dari \textit{method} "shoes".
+	Jika \textit{method} yang dituju memiliki parameter, diperlukan tambahan pada URL pemanggilannya. Sebagai contoh, pemanggilan \textit{method}	pada kode di atas dilakukan dengan URL "example.com/index.php/products/shoes/sandals/123" dimana "sandals" dan "123" merupakan isi dari \textit{parameter 1} dan 2 dari \textit{method} "shoes".
 	
 \subsubsection{Mendefinisikan Controller Default}
 \label{subsub: defaulController}
 
-	CodeIgniter dapat menjalankan \textit{default controller} sehingga tidak diperlukannya penulisan URL yang lengkap untuk pemanggilan, melainkan \textit{controller} dapat dipanggil secara otomatis dengan URL "example.com" saja. Namun, untuk dapat menjalankan fungsi ini, diperlukan sedikit pengaturan pada \textit{file} "application/config/routes.php" yaitu perubahan variabel pada gambar \ref{fig:route}.
+	CodeIgniter dapat menjalankan \textit{default controller} sehingga tidak diperlukannya penulisan URL yang lengkap untuk pemanggilan, melainkan \textit{controller} dapat dipanggil secara otomatis dengan URL "example.com" saja. Namun, untuk dapat menjalankan fungsi ini, diperlukan sedikit pengaturan pada \textit{file} "application/config/routes.php" yaitu perubahan variabel yang ditunjukkan kode di bawah ini:
 	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=1]{Gambar/route}
-		\caption{Penggantian Variable pada Route}
-		\label{fig:route}
-	\end{figure}
+	\begin{lstlisting}
+	$route['default_controller'] = 'blog';
+	\end{lstlisting}
 	
-	Pada gambar \ref{fig:route}, "blog" merupakan nama \textit{file} \textit{controller} yang telah dibuat pada direktori "application/controllers/". Setelah pengaturan tersebut, maka pengguna bisa menjalankan aplikasi tanpa URL yang terspesifikasi menjalankan \textit{controller}.
+	"blog" merupakan nama \textit{file} \textit{controller} yang telah dibuat pada direktori "application/controllers/". Setelah pengaturan tersebut, maka pengguna bisa menjalankan aplikasi tanpa URL yang terspesifikasi menjalankan \textit{controller}.
 	
 	\subsection{Views}
 	\label{sub: views}
@@ -91,62 +95,77 @@ MVC sendiri terdiri dari 3 bagian, yaitu:
 	\subsubsection{Pembuatan Views}
 	\label{subsub: pembuatanView}
 	
-	Pembuatan \textit{file view} pada dasarnya sama seperti pembuatan \textit{file} berbasis PHP biasa. Gambar \ref{fig:view} merupakan salah satu contoh \textit{file view} sederhana.
+	Pembuatan \textit{file view} pada dasarnya sama seperti pembuatan \textit{file} berbasis PHP biasa. Berikut ini merupakan salah satu contoh kode sebuah \textit{file view} sederhana.
 	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=1]{Gambar/view}
-		\caption{Contoh File View}
-		\label{fig:view}
-	\end{figure}
+	\begin{lstlisting}
+<html>
+<head>
+	<title> My Blog </title>
+</head>
+<body>
+	<h1> Welcome to my Blog</h1>
+</body>
+</html>
+	\end{lstlisting}
 	
 	Setelah selesai membuat \textit{file view} yang diinginkan, maka penyimpanan \textit{file} tersebut harus diletakkan di direktori "application/views/".
 	
 	\subsubsection{Menjalankan View}
 	\label{subsub: menjalankanView}
 	
-	Menjalankan \textit{view} pada CodeIgniter dilakukan di \textit{file controller}. Gambar \ref{fig:controllerView} menunjukkan kode yang harus ditulis di dalam \textit{method controller}.
+	Menjalankan \textit{view} pada CodeIgniter dilakukan di \textit{file controller}. Kode di bawah ini menunjukkan kode yang harus ditulis di dalam \textit{method controller}.
 	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=1]{Gambar/controllerView}
-		\caption{Contoh Pemanggilan File View pada Controller}
-		\label{fig:controllerView}
-	\end{figure}
+	\begin{lstlisting}
+	<?php
+	class Blog extends CI_Controller{
+		
+		public function index(){
+			$this->load->view('blogview');
+		}
+	}
+	\end{lstlisting}
 	
 	\subsection{Models}
 	\label{sub: models}
 	
 	\textit{Model} merupakan \textit{file} berbasis PHP yang didesain sebagai penghubung aplikasi dengan basis data. \textit{Model} berfungsi menjalankan kueri-kueri sql seperti \textit{insert, update, delete, select,} dll.
-	Pada CodeIgniter terdapat fungsi \textit{Query builder} yang memudahkan \textit{programmer} dalam membuat kueri. Gambar \ref{fig:insert} dan gambar \ref{fig:update} merupakan contoh penggunaan \textit{Query builder} untuk kueri sql \textit{insert} dan \textit{update}.
+	Pada CodeIgniter terdapat fungsi \textit{Query builder} yang memudahkan \textit{programmer} dalam membuat kueri. Berikut ini adalah contoh penggunaan \textit{Query builder} untuk kueri sql \textit{insert} dan \textit{update}.
 	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=1]{Gambar/insert}
-		\caption{Contoh Query Builder insert}
-		\label{fig:insert}
-	\end{figure}
+	\begin{lstlisting}
+public function insert_entry(){
+	$this->title	= $_POST['title'];
+	$this->content	= $_POST['content'];
+	$this->date	= time();
 	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=1]{Gambar/update}
-		\caption{Contoh Query Builder Update}
-		\label{fig:update}
-	\end{figure}
+	$this->db->insert('entries',$this);
+}
+
+public function update_entry(){
+	$this->title	= $_POST['title'];
+	$this->content	= $_POST['content'];
+	$this->date	= time();
+	
+	$this->db->update('entries',$this, array('id') => $POST['id']);
+}
+	\end{lstlisting}
 	
 	\subsubsection{Menjalankan Model}
 	\label{subsub: menjalankanModel}
 		
 	Sama seperti menjalankan \textit{file view}, \textit{model} pun tidak bisa dijalankan secara langsung menggunakan URL. Untuk menjalankan \textit{model} perlu dilakukan pemanggilan pada \textit{controller}.
 	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=1]{Gambar/model}
-		\caption{Contoh Pemanggilan File Model pada Controller}
-		\label{fig:controllermodel}
-	\end{figure}
+	\begin{lstlisting}
+class Blog_controller extends CI_Controller {
+
+	public function blog(){
+		$this->load->model('blog');
+		$data['query'] = $this->blog->get_last_ten_entries();
+		$this->load->view('blog',$data);
+	}
+}
+	\end{lstlisting}
 	
-	Gambar \ref{fig:controllermodel} menunjukkan bahwa \textit{file controller} melakukan pemanggilan \textit{model} yang diikuti dengan inisialisasi \textit{array data} dari basis data yang dimasukkan ke pemanggilan \textit{view}.
+	Kode di atas menunjukkan bahwa \textit{file controller} melakukan pemanggilan \textit{model} yang diikuti dengan inisialisasi \textit{array data} dari basis data yang dimasukkan ke pemanggilan \textit{view}.
 	
 	\subsection{Helper}
 	\label{sub: helper}
@@ -156,16 +175,13 @@ MVC sendiri terdiri dari 3 bagian, yaitu:
 	\subsubsection{Menjalankan Helper}
 	\label{subsub: menjalnkanHelper}
 	
-	Cara menjalankan \textit{helper} pada CodeIgniter cukup dengan menambahkan kode pada gambar \ref{fig:kodeHelper} di dalam \textit{kdoeHelper} atau \textit{view}.
+	Cara menjalankan \textit{helper} pada CodeIgniter cukup dengan menambahkan kode di dalam \textit{file Helper} atau \textit{view}.
 	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=1]{Gambar/helperLoad}
-		\caption{Kode yang ditambahkan untuk menjalankan helper}
-		\label{fig:kodeHelper}
-	\end{figure}
+	\begin{lstlisting}
+$this->load->helper('name');
+	\end{lstlisting}
 	
-	Penulisan "name" pada gambar \ref{fig:kodeHelper} diisi dengan \textit{part helper} yang diinginkan. Contoh jika pada aplikasi perlu \textit{URL Helper} maka "name" diganti dengan "url". Helper juga dapat dijalankan secara otomatis dengan cara mengisi variable 'helper' pada \textit{file autoload} yang berada di direktori "application/config/autoload.php".
+	Penulisan "name" pada kode diatas diisi dengan \textit{part helper} yang diinginkan. Contoh jika pada aplikasi perlu \textit{URL Helper} maka "name" diganti dengan "url". Helper juga dapat dijalankan secara otomatis dengan cara mengisi variable 'helper' pada \textit{file autoload} yang berada di direktori "application/config/autoload.php".
 	
 	\subsection{Basis data}
 	\label{sub: database}
@@ -174,14 +190,11 @@ MVC sendiri terdiri dari 3 bagian, yaitu:
 	\label{subsub: connectDatabase}
 	
 	Perlu diingat bahwa kelas \textit{model} tidak menjalankan basis data secara otomatis. Untuk membuat aplikasi terkoneksi dengan basis data, diperlukan beberapa tambahan kode pada \textit{file model} atau \textit{file controller}.
-	CodeIgniter memiliki fitur \textit{automatically connecting} yang membuat seluruh aplikasi tersambung dengan basis data pada setiap \textit{page load}. untuk mengaktifkan fitur ini cukup mengetikkan "database" pada variabel autoload['libraries'] di "application/config/autoload.php" seperti gambar \ref{fig:autoload}.
+	CodeIgniter memiliki fitur \textit{automatically connecting} yang membuat seluruh aplikasi tersambung dengan basis data pada setiap \textit{page load}. untuk mengaktifkan fitur ini cukup mengetikkan "database" pada variabel autoload['libraries'] di "application/config/autoload.php" seperti kode dibawah ini.
 	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=1]{Gambar/autoload}
-		\caption{Kode yang ditambahkan untuk autoload basis data}
-		\label{fig:autoload}
-	\end{figure}
+	\begin{lstlisting}
+$autoload['libraries'] =array('database');
+	\end{lstlisting}
 	
 	Selain \textit{autoload}, CodeIgniter juga mendukung koneksi ke basis data dengan cara manual, dengan cara menambahkan "\$this->load->database();" pada \textit{method} atau kelas basis data ingin dijalankan.
 	
@@ -190,14 +203,30 @@ MVC sendiri terdiri dari 3 bagian, yaitu:
 	
 	Konfigurasi basis data pada CodeIgniter disimpan dengan cara \textit{multi-dimensional array}.
 	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=1]{Gambar/database}
-		\caption{Konfigurasi Basis Data}
-		\label{fig:database}
-	\end{figure}
+	\begin{lstlisting}
+$db['default'] = array(
+		'dsn'		=> '',
+		'hostname'	=> 'localhost',
+		'usernmae'	=> 'root',
+		'password'	=> '',
+		'database'	=> 'database_name',
+		'dbdriver'	=> 'mysqli',
+		'dbprefix'	=> '',
+		'pconnect'	=> TRUE,
+		'db_debug'	=> TRUE,
+		'cache_on'	=> FALSE,
+		'cachedir'	=> '',
+		'char_set'	=> 'utf8',
+		'dbcollat'	=> 'utf_general_ci',
+		'swap_pre'	=> '',
+		'encrypt'	=> FALSE,
+		'compress'	=> FALSE,
+		'striction'	=> FALSE,
+		'failover'	=> array()
+	);
+	\end{lstlisting}
 	
-	Keterangan gambar \ref{fig:database}:
+	Keterangan:
 	\begin{center}
 	\begin{tabular}{| m{5cm} | m{10cm} |}
 		\hline
@@ -247,14 +276,14 @@ MVC sendiri terdiri dari 3 bagian, yaitu:
 \section{AngularJS}
 \label{sec: angularJS}
 
-AngularJS\cite{AngularJSDocs} merupakan sebuah \textit{framework} terstruktur yang digunakan untuk aplikasi web yang bersifat dinamis. Hal tersebut memungkinkan \textit{programmer} untuk mempergunakan HTML sebagai template bahasa pemrograman dan memperluas sintaks HTML agar dapat mengekspresikan komponen aplikasi dengan jelas dan ringkas. Sifat AngularJS yang mengikat data dan mempunyai ketergantungan injeksi akan menghilangkan banyak kode yang seharusnya dituliskan oleh \textit{programmer}, dan semua itu terjadi pada \textit{browser} sehingga dapat disimpulkan bahwa AngularJS merupakan pasangan yang sangat ideal bagi penggunaan teknologi server. 
+AngularJS\cite{AngularJSDocs} merupakan sebuah \textit{framework} terstruktur yang digunakan untuk aplikasi \textit{web} yang bersifat dinamis. Hal tersebut memungkinkan \textit{programmer} untuk mempergunakan HTML sebagai \textit{template} bahasa pemrograman dan memperluas sintaks HTML agar dapat mengekspresikan komponen aplikasi dengan jelas dan ringkas. Sifat AngularJS yang mengikat data dan mempunyai ketergantungan injeksi akan menghilangkan banyak kode yang seharusnya dituliskan oleh \textit{programmer}, dan semua itu terjadi pada \textit{browser} sehingga dapat disimpulkan bahwa AngularJS merupakan pasangan yang sangat ideal bagi penggunaan teknologi server. 
 Dalam pembuatannya, ketidakcocokkan halaman statik dan dinamik biasanya diselesaikan dengan pendekatan sebagai berikut:
 \begin{enumerate}
 	\item \textit{Library}: merupakan sebuah koleksi dari berbagai macam fungsi yang berguna dalam pembuatan aplikasi \textit{web}, contoh: JQuery.
 	\item \textit{Frameworks}: merupakan suatu implementasi dari sebuah aplikasi \textit{web} yang menempatkan kode yang dituliskan secara detail. \textit{Framework} akan berperan melakukan pemanggilan ke kode yang dituliskan \textit{programmer} ketika aplikasi membutuhkan sesuatu yang spesifik, contoh: durandal, ember, dll.
 \end{enumerate}
 
-Dalam pembentukannya, AngularJS memiliki pendekatan yang berbeda. AngularJS berupaya untuk meminimalkan ketidakcocokan antara dokumen utama dari HTML dengan apa yang dibutuhkan oleh aplikasi untuk membuat konstruksi HTML baru. AngularJS mengajarkan \textit{browser} sintaks baru yang disebut \textit{directives}. Contoh contoh \textit{directives} adalah:
+Dalam pembentukannya, AngularJS memiliki pendekatan yang berbeda. AngularJS berupaya untuk meminimalkan ketidakcocokan antara dokumen utama dari HTML dengan apa yang dibutuhkan oleh aplikasi untuk membuat konstruksi HTML baru. AngularJS mengajarkan \textit{browser} sintaks baru yang disebut \textit{directives}. Contoh \textit{directives} adalah:
 \begin{enumerate}
 	\item Keterikatan data di dalam \{\{\}\};
 	\item Dukungan untuk \textit{Form} dan \textit{Form Validation}
@@ -327,14 +356,14 @@ Dalam pembentukannya, AngularJS memiliki pendekatan yang berbeda. AngularJS beru
 		\caption{Data Binding pada Angular}
 		\label{fig:dabin2}
 	\end{figure}
-	Pada gambar \ref{fig:dabin2} menjelaskan perbedaan yang diberikan oleh pelaksanaan \textit{data binding} pada AngularJS. Pertama, \textit{template} akan di \textit{compile} pada browser. Hasil dari \textit{compile} tersebut adalah \textit{live view}. Pada tahap ini perubahan yang terjadi di \textit{view} akan disampaikan kepada \textit{model}, dan perubahan yang terjadi pada \textit{model} akan mengubah \textit{view}.
+	Pada gambar \ref{fig:dabin2} menjelaskan perbedaan yang diberikan oleh pelaksanaan \textit{data binding} pada AngularJS. Pertama, \textit{template} akan di \textit{compile} pada \textit{browser}. Hasil dari \textit{compile} tersebut adalah \textit{live view}. Pada tahap ini perubahan yang terjadi di \textit{view} akan disampaikan kepada \textit{model}, dan perubahan yang terjadi pada \textit{model} akan mengubah \textit{view}.
 	
 	Karena \textit{view} merupakan proyeksi dari \textit{model}, menyebabkan \textit{controller} benar-benar terpisahkan dari \textit{view} tanpa disadari. Hal ini mempermudah pengujian \textit{controller}, karena terisolasi tanpa adanya \textit{view} dan DOM( \textit{browser dependency}).
 	
 \subsection{Model-View-Controller(MVC)}
 \label{sub: mvcAngular}
 
-	AngularJS\cite{green2013angularjs} juga merupakan salah satu \textit{framework} yang menggunakan  \textit{Model-View-Controller} sebagai patokan desain aplikasi. Walaupun AngularJS mempunyai banyak flexibilitas dalam membangun aplikasi, tetapi akan ada beberapa hal yang selalu dijumpai dalam mendesain sbuah aplikasi, diantaranya:
+	AngularJS\cite{green2013angularjs} juga merupakan salah satu \textit{framework} yang menggunakan  \textit{Model-View-Controller} sebagai patokan desain aplikasi. Walaupun AngularJS mempunyai banyak flexibilitas dalam membangun aplikasi, tetapi akan ada beberapa hal yang selalu dijumpai dalam mendesain sebuah aplikasi, diantaranya:
 	\begin{itemize}
 		\item Sebuah \textit{model} selalu menampung data yang merepresentasikan keadaan aplikasi.
 		\item \textit{Views} yang menyajikan data tersebut.
@@ -376,7 +405,7 @@ function TextController($scope){
 </html>
 \end{lstlisting}
 	
-	Hasil dari kode diatas adalah tulisan "You have started your journey". Walaupun cara ini dapat dilakukan dengan mudah pada aplikasi sederhana seperti contoh diatas, tetapi untuk kebanyakan aplikasi sebaiknya dibuat objek model untuk menyimpan \textit{data} yang ada. Untuk itu, daripada membuat model seperti:
+	Hasil dari kode diatas adalah tulisan "You have started your journey". Walaupun cara ini dapat dilakukan dengan mudah pada aplikasi sederhana seperti contoh diatas, tetapi untuk kebanyakan aplikasi sebaiknya dibuat objek \textit{model} untuk menyimpan data yang ada. Untuk itu, daripada membuat \textit{model} seperti:
 	
 \begin{lstlisting}
 function TextController($scope){
@@ -423,7 +452,7 @@ function TextController($scope){
 \section{Twitter Bootstrap}
 \label{sec: Bootrstrap}
 
-\textit{Twitter Bootstrap}\cite{bootstrap} atau yang lebih dikenal dengan \textit{Bootstrap} adalah \textit{framework} HTML, CSS, dan JS terpopuler dalam hal pengembangan tampilan yang responsif \textit{mobile} pertama dalam hal aplikasi berbasis web. 
+\textit{Twitter Bootstrap}\cite{bootstrap} atau yang lebih dikenal dengan \textit{Bootstrap} adalah \textit{framework} HTML, CSS, dan JS terpopuler dalam hal pengembangan tampilan yang responsif \textit{mobile} pertama dalam hal aplikasi berbasis \textit{web}. 
 
 \subsection{Grid System}
 \label{sub: gridSystem}
@@ -459,12 +488,29 @@ function TextController($scope){
 \label{sub: formClass}
 	Masing-masing form akan memiliki bentuk otomatis yang diatur secara global. Dengan memakai kelas ".form-control", pengaturan ukuran dari kelas <input>, <textarea>, dan <select> akan otomatis memiliki variabel \textit{width} 100\% secara \textit{default}. Untuk mendapatkan jarak \textit{spacing} yang maksimal, \textit{Bootstrap} memiliki kelas ".form-group" yang membungkus kelas \textit{form} menjadi grup-grup.
 	
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.75]{Gambar/formCode}
-	\caption{Contoh Penggunaan Kelas Form}
-	\label{fig:formCode}
-\end{figure}
+\begin{lstlisting}
+<form>
+	<div class="form-group">
+		<label for="exampleInputEmail1">Email Address</label>
+		<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+	</div>
+	<div>
+		<label for=exampleInputPassword1">Password</label>
+		<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+	</div>
+	<div class="form-group">
+		<label for="exampleInputFile">File</label>
+		<input type="file" id="exampleInputFile">
+		<p class="help-block"> Example block-level help text here.</p>
+	</div>
+	<div class="checkbox">
+		<label>
+			<input type="checkbox"> Check me out
+		</label>
+	</div>
+	<button type="submit" class="btn bt-default">Submit</button>
+</form>
+\end{lstlisting}
 
 \begin{figure}[H]
 	\centering
