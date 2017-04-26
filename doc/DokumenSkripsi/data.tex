@@ -1,30 +1,16 @@
 %_____________________________________________________________________________
 %=============================================================================
-% data.tex v6 (13-04-2015) \ldots dibuat oleh Lionov - Informatika FTIS UNPAR
+% data.tex v8 (02-10-2016) \ldots dibuat oleh Lionov - Informatika FTIS UNPAR
 %
-% Perubahan pada versi 6 (13-04-2015)
-% - Perubahan untuk data-data ``template" menjadi lebih generik dan menggunakan
-%	tanda << dan >>
-%
-% Perubahan pada versi sebelumnya
-% 	versi 5 (10-11-2013)
-% 	- Perbaikan pada memasukkan bab : tidak perlu menuliskan apapun untuk 
-%	  memasukkan seluruh bab (bagian V)
-% 	- Perbaikan pada memasukkan lampiran : tidak perlu menuliskan apapun untuk
-%	  memasukkan seluruh lampiran atau -1 jika tidak memasukkan apapun
-%	versi 4 (21-10-2012)
-%	- Data dosen dipindah ke dosen.tex agar jika ada perubahan/update data dosen
-%   mahasiswa tidak perlu mengubah data.tex
-%	- Perubahan pada keterangan dosen	
-% 	versi 3 (06-08-2012)
-% 	- Perubahan pada beberapa keterangan 
-% 	versi 2 (09-07-2012):
-% 	- Menambahkan data judul dalam bahasa inggris
-% 	- Membuat bagian khusus untuk judul (bagian VIII)
-% 	- Perbaikan pada gelar dosen
+% Perubahan pada versi 8 (02-10-2016)
+%	- Perubahan keterangan pada spacing: Otomatis spasi 1 untuk buku skripsi 
+%	  final dan 1.5 untuk buku sidang
+%	- Penggunaan kantlipsum
 %_____________________________________________________________________________
 %=============================================================================
-% 								BAGIAN -
+
+%=============================================================================
+% 								PETUNJUK
 %=============================================================================
 % Ini adalah file data (data.tex)
 % Masukkan ke dalam file ini, data-data yang diperlukan oleh template ini
@@ -32,16 +18,31 @@
 % Data yang WAJIB dan HARUS diisi dengan baik dan benar adalah SELURUHNYA !!
 % Hilangkan tanda << dan >> jika anda menemukannya
 %=============================================================================
+
+%_____________________________________________________________________________
+%=============================================================================
+% 								BAGIAN 0
+%=============================================================================
+% PERHATIAN!! PERHATIAN!! Bagian ini hanya ada untuk sementara saja
+% Jika "DAFTAR ISI" tidak bisa berada di bagian tengah halaman, isi dengan XXX
+% jika sudah benar posisinya, biarkan kosong (i.e. \daftarIsiError{ })
+%=============================================================================
+\daftarIsiError{ }
+%=============================================================================
+
 %_____________________________________________________________________________
 %=============================================================================
 % 								BAGIAN I
 %=============================================================================
 % Tambahkan package2 lain yang anda butuhkan di sini
 %=============================================================================
-\usepackage{booktabs}
+\usepackage{booktabs} 
 \usepackage[table]{xcolor}
 \usepackage{longtable}
-\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{todo}
+\usepackage{verbatim} 		%multilne comment
+\usepackage{pgfplots}
 %=============================================================================
 
 %_____________________________________________________________________________
@@ -53,8 +54,7 @@
 % - kosong : tidak ada halaman depan sama sekali (untuk dokumen yang 
 %            dipergunakan pada proses bimbingan)
 % - cover : cover saja tanpa daftar isi, gambar dan tabel
-% - sidang : cover, daftar isi, gambar, tabel (IT: UTS-UAS Seminar 
-%			 dan UTS TA)
+% - sidang : cover, daftar isi, gambar, tabel 
 % - sidang_akhir : mode sidang + abstrak + abstract
 % - final : seluruh halaman awal dokumen (untuk cetak final)
 % Jika tidak ingin mencetak daftar tabel/gambar (misalkan karena tidak ada 
@@ -63,7 +63,7 @@
 % \mode{kosong}
 % \mode{cover}
 % \mode{sidang}
-%\mode{sidang_akhir}
+% \mode{sidang_akhir}
 \mode{final} 
 %=============================================================================
 
@@ -76,7 +76,7 @@
 % - yes: setiap baris diberi nomor
 % - no : baris tidak diberi nomor, otomatis untuk mode final
 %=============================================================================
-\linenumber{yes}
+\linenumber{no}
 %=============================================================================
 
 %_____________________________________________________________________________
@@ -84,15 +84,16 @@
 % 								BAGIAN IV
 %=============================================================================
 % Linespacing: jarak antara baris 
-% - single: opsi yang disediakan untuk bimbingan, jika pembimbing tidak
-%            keberatan (untuk menghemat kertas)
-% - onehalf: default dan wajib (dan otomatis) jika ingin mencetak dokumen
-%            final/untuk sidang.
-% - double : jarak yang lebih lebar lagi, jika pembimbing berniat memberi 
-%            catatan yg banyak di antara baris (dianjurkan untuk bimbingan)
+% - single	: wajib (dan otomatis jika ingin mencetak buku skripsi, opsi yang 
+%			  disediakan untuk bimbingan, jika pembimbing tidak keberatan 
+%			  (untuk menghemat kertas)
+% - onehalf	: default dan wajib (dan otomatis) jika ingin mencetak dokumen
+%             untuk sidang.
+% - double 	: jarak yang lebih lebar lagi, jika pembimbing berniat memberi 
+%             catatan yg banyak di antara baris (dianjurkan untuk bimbingan)
 %=============================================================================
 \linespacing{single}
-% \linespacing{onehalf}
+%\linespacing{onehalf}
 %\linespacing{double}
 %=============================================================================
 
@@ -100,10 +101,25 @@
 %=============================================================================
 % 								BAGIAN V
 %=============================================================================
+% Tidak semua skripsi memuat gambar dan/atau tabel. Untuk skripsi yang seperti
+% itu, tidak diperlukan Daftar Gambar dan Daftar Tabel. Sayangnya hal ini 
+% sulit dilakukan secara manual karena membutuhkan kedisiplinan pengguna 
+% template.  
+% Jika tidak akan menampilkan Daftar Gambar/Tabel, isi dengan NO. Jika ingin
+% menampilkan, kosongkan parameter (i.e. \gambar{ }, \tabel{ })
+%=============================================================================
+\gambar{ }
+\tabel{ }
+%=============================================================================
+
+%_____________________________________________________________________________
+%=============================================================================
+% 								BAGIAN VI
+%=============================================================================
 % Bab yang akan dicetak: isi dengan angka 1,2,3 s.d 9, sehingga bisa digunakan
 % untuk mencetak hanya 1 atau beberapa bab saja
 % Jika lebih dari 1 bab, pisahkan dengan ',', bab akan dicetak terurut sesuai 
-% urutan bab.
+% urutan bab (e.g. \bab{1,2,3}).
 % Untuk mencetak seluruh bab, kosongkan parameter (i.e. \bab{ })  
 % Catatan: Jika ingin menambahkan bab ke-10 dan seterusnya, harus dilakukan 
 % secara manual
@@ -113,12 +129,12 @@
 
 %_____________________________________________________________________________
 %=============================================================================
-% 								BAGIAN VI
+% 								BAGIAN VII
 %=============================================================================
 % Lampiran yang akan dicetak: isi dengan huruf A,B,C s.d I, sehingga bisa 
 % digunakan untuk mencetak hanya 1 atau beberapa lampiran saja
 % Jika lebih dari 1 lampiran, pisahkan dengan ',', lampiran akan dicetak 
-% terurut sesuai urutan lampiran
+% terurut sesuai urutan lampiran (e.g. \bab{A,B,C}).
 % Jika tidak ingin mencetak lampiran apapun, isi dengan -1 (i.e. \lampiran{-1})
 % Untuk mencetak seluruh mapiran, kosongkan parameter (i.e. \lampiran{ })  
 % Catatan: Jika ingin menambahkan lampiran ke-J dan seterusnya, harus 
@@ -129,7 +145,7 @@
 
 %_____________________________________________________________________________
 %=============================================================================
-% 								BAGIAN VII
+% 								BAGIAN VIII
 %=============================================================================
 % Data diri dan skripsi/tugas akhir
 % - namanpm: Nama dan NPM anda, penggunaan huruf besar untuk nama harus benar
@@ -146,19 +162,17 @@
 %				(e.g. \pembimbing{\JND}{  } ) , \JND adalah kode dosen
 % - penguji : isi dengan para penguji anda, lihat daftar dosen di file dosen.tex
 %				(e.g. \penguji{\JHD}{\JCD} ) , \JND dan \JCD adalah kode dosen
-%
+% !!Lihat singkatan pembimbing dan penguji anda di file dosen.tex
 %=============================================================================
 \namanpm{Billy Yanuar}{2012730017}	%hilangkan tanda << & >>
-\tanggal{<<tanggal>>}{<<bulan>>}{<<tahun>>}			%hilangkan tanda << & >>
-\pembimbing{<<pembimbing utama/1>>}{<<pembimbing pendamping/2>>}     
-%Lihat singkatan pembimbing anda di file dosen.tex, hilangkan tanda << & >>
-\penguji{<<penguji 1>>}{<<penguji 2>>} 		
-%Lihat singkatan penguji anda di file dosen.tex, hilangkan tanda << & >>
+\tanggal{<<tanggal>>}{<<bulan>>}{2017}			%hilangkan tanda << & >>
+\pembimbing{<<pembimbing1>>}{<<pembimbing2>>} %hilangkan tanda << & >>    
+\penguji{<<penguji 1>>}{<<penguji 2>>} 				%hilangkan tanda << & >>
 %=============================================================================
 
 %_____________________________________________________________________________
 %=============================================================================
-% 								BAGIAN VIII
+% 								BAGIAN IX
 %=============================================================================
 % Judul dan title : judul bhs indonesia dan inggris
 % - judulINA: judul dalam bahasa indonesia
@@ -169,14 +183,11 @@
 %			 - Judul TIDAK ditulis dengan menggunakan huruf besar seluruhnya !!
 %			 - Gunakan perintah \texorpdfstring{\\}{} untuk baris baru
 %=============================================================================
-
 \judulINA{Sistem Penilaian Sidang Skripsi 2 Dengan AngularJS}
-
 \judulENG{<<Judul Bahasa Inggris>>}
-
 %_____________________________________________________________________________
 %=============================================================================
-% 								BAGIAN IX
+% 								BAGIAN X
 %=============================================================================
 % Abstrak dan abstract : abstrak bhs indonesia dan inggris
 % - abstrakINA: abstrak bahasa indonesia
@@ -184,48 +195,46 @@
 % PERHATIAN: langsung mulai setelah '{' awal, jangan mulai menulis di baris 
 %			 bawahnya
 %=============================================================================
-
-\abstrakINA{<<Tuliskan abstrak anda di sini, dalam bahasa Indonesia>> \lipsum[5]}
-
-\abstrakENG{<<Tuliskan abstrak anda di sini, dalam bahasa Inggris>> \lipsum[5]} 
-
-%=============================================================================
-
-%_____________________________________________________________________________
-%=============================================================================
-% 								BAGIAN X
-%=============================================================================
-% Kata-kata kunci dan keywords : diletakkan di bawah abstrak (ina dan eng)
-% - kunciINA: kata-kata kunci dalam bahasa indonesia
-% - kunciENG: keywords in english
-%=============================================================================
-\kunciINA{<<Tuliskan di sini kata-kata kunci yang anda gunakan, dalam bahasa Indonesia>>}
-
-\kunciENG{<<Tuliskan di sini kata-kata kunci yang anda gunakan, dalam bahasa Inggris>>}
+\abstrakINA{Sistem Penilaian Sidang Skripsi 2 merupakan situs \textit{web} yang membantu penilai dalam melakukan perhitungan dan penyimpanan nilai sidang untuk mata kuliah skripsi 2 pada program studi teknik informatika Universitas Katolik Parahyangan, Bandung. Sistem Penilaian Sidang Skripsi 2 dibuat menggunakan bahasa PHP yang diintegrasikan dengan AngularJS sehingga dapat melakukan otomatisasi perhitungan nilai akhir mahasiswa.\\
+AngularJS merupakan bahasa yang dipakai dalam pembangunan \textit{single page application}. Kemudahan pemakaian AngularJS merupakan salah satu nilai tambah tersendiri. AngularJS memiliki konsep MVC (\textit{Model, View, Controller}) yang membuatnya mudah dipahami. MVC AngularJS sendiri bekerja secara \textit{front-end} sehingga dapat diintegrasikan oleh \textit{framework} lain, seperti \textit{codeigniter}.\\
+Pengujian Sistem Penilaian Sidang Skripsi 2 dilakukan dengan membandingkan hasil perhitungan nilai akhir 5 sidang skripsi 2 mahasiswa pada semester ganjil 2016/2017 dari Sistem Penilaian dan dari sistem kini yang masih bersifat \textit{manual}. Berdasarkan hasil pengujian, sistem penilaian memiliki keunggulan dalam pehitungan dibandingkan dengan sistem kini dihitung dari jumlah kesalahan perhitungan.}
+\abstrakENG{<<Tuliskan abstrak anda di sini, dalam bahasa Inggris>> \\\kant[2]} 
 %=============================================================================
 
 %_____________________________________________________________________________
 %=============================================================================
 % 								BAGIAN XI
 %=============================================================================
-% Persembahan : kepada siapa anda mempersembahkan skripsi ini ...
+% Kata-kata kunci dan keywords : diletakkan di bawah abstrak (ina dan eng)
+% - kunciINA: kata-kata kunci dalam bahasa indonesia
+% - kunciENG: keywords in english
 %=============================================================================
-\untuk{<<kepada siapa anda mempersembahkan skripsi ini\ldots?>>}
+\kunciINA{Sistem Penilaian Skripsi 2, PHP, AngularJS}
+\kunciENG{<<Tuliskan di sini kata-kata kunci yang anda gunakan, dalam bahasa Inggris>>}
 %=============================================================================
 
 %_____________________________________________________________________________
 %=============================================================================
 % 								BAGIAN XII
 %=============================================================================
-% Kata Pengantar: tempat anda menuliskan kata pengantar dan ucapan terima 
-% kasih kepada yang telah membantu anda bla bla bla ....  
+% Persembahan : kepada siapa anda mempersembahkan skripsi ini ...
 %=============================================================================
-\prakata{\lipsum[3]}
+\untuk{Teknik Informatika UNPAR, diri sendiri}
 %=============================================================================
 
 %_____________________________________________________________________________
 %=============================================================================
 % 								BAGIAN XIII
+%=============================================================================
+% Kata Pengantar: tempat anda menuliskan kata pengantar dan ucapan terima 
+% kasih kepada yang telah membantu anda bla bla bla ....  
+%=============================================================================
+\prakata{\kant[3-4]}
+%=============================================================================
+
+%_____________________________________________________________________________
+%=============================================================================
+% 								BAGIAN XIV
 %=============================================================================
 % Tambahkan hyphen (pemenggalan kata) yang anda butuhkan di sini 
 %=============================================================================
@@ -235,5 +244,15 @@
 \hyphenation{in-for-ma-ti-ka}
 %=============================================================================
 
-
+%_____________________________________________________________________________
 %=============================================================================
+% 								BAGIAN XV
+%=============================================================================
+% Tambahkan perintah yang anda buat sendiri di sini 
+%=============================================================================
+\newcommand{\vtemplateauthor}{lionov}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{patterns}
+%=============================================================================
+
+% Copyright \textcopyright [Lionov] [09-10-2016]. All rights reserved
