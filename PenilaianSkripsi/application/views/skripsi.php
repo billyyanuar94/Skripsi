@@ -474,7 +474,8 @@ and open the template in the editor.
                         </div>
                     </div>
                 </div>
-        
+            </div>
+        </section>          
     </form>
     <!-- Set Default Value pada ng-model type number -->
     <script>

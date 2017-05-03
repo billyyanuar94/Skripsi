@@ -62,13 +62,13 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 		Bagian ini adalah bagian terakhir dari sistem informasi. Ketika formulir sudah selesai diisi, maka dengan menekan tombol selesai pada bagian ini, \textit{data} yang telah terisi akan dimasukkan ke dalam \textit{database}.
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.5]{Gambar/selesaiisi}
+			\includegraphics[scale=0.4]{Gambar/selesaiisi}
 			\caption{Ketika tombol selesai di klik}
 			\label{fig:selesaiisi}
 		\end{figure}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.5]{Gambar/hasildatabase}
+			\includegraphics[scale=0.4]{Gambar/hasildatabase}
 			\caption{Sebagian hasil pada database}
 			\label{fig:hasildatabase}
 		\end{figure}
@@ -87,86 +87,95 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 	Pada saat melakukan pengujian eksperimental, sistem kini memiliki kekurangan kecerobohan manusia yang mengakibatkan kesalahan dalam perhitungan nilai baik dari lembar rekapitulasi maupun lembar berita acara sidang skripsi. Hal tersebut diketahui pada saat membandingkan nilai perhitungan nilai akhir yang didapatkan oleh mahasiswa pada sistem kini dan sistem usulan. Pada beberapa kesalahan tersebut, penguji kembali melakukan perhitungan secara manual dengan menggunakan mesin hitung berupa kalkulator pada \textit{gadget} penguji. Setelah perhitungan dilakukan, didapatkan bahwa sistem usulan memiliki hasil yang benar.
 	
 	Percobaan eksperimental menghasilkan kesimpulan sistem usulan dapat menutupi kekurangan sistem kini yang berfokus pada perhitungan penilaian mahasiswa. Dengan menggunakan sistem usulan, perhitungan nilai dibuktikan lebih akurat dibandingkan dengan sistem kini. Berikut ini adalah salah satu hasil dari pengujian eksperimental:
-	
-	\begin{tabular}{| m{7cm} | m{5cm} |}
-		\hline
-		Jenis Data & Input Nilai\\
-		\hline
-		id & 30\\
-		\hline
-		tahun & 2016\\
-		\hline
-		semester & 1\\
-		\hline
-		npm & 2012730004\\
-		\hline
-		nama & E\\
-		\hline
-		judul & Watermarking\\
-		\hline
-		namaPembimbing & Mariskha A\\
-		\hline
-		namaPembimbingPendamping & -\\
-		\hline
-		namaKetuaTimPenguji & Husnul\\
-		\hline
-		namaAnggotaTimPenguji & Chandra\\
-		\hline
-		bobotKetuaTimPenguji & 35\\
-		\hline
-		bobotAnggotaTimPenguji & 35\\
-		\hline
-		bobotPembimbing & 20\\
-		\hline
-		nilaiKoordinatorSkripsi & 100\\
-		\hline
-		bobotKoordinatorSkripsi & 10\\
-		\hline
-		bobotTataTulisLaporanAnggota & 15\\
-		\hline
-		bobotKelengkapanMateriAnggota & 10\\
-		\hline
-		bobotPenguasaanMateriAnggota & 30\\
-		\hline
-		bobotPresentasiAnggota & 15\\
-		\hline
-		bobotPencapaianTujuanKetua & 30\\
-		\hline
-		bobotTataTulisLaporanKetua & 15\\
-		\hline
-		bobotKelengkapanMateriKetua & 10\\
-		\hline
-		bobotPenguasaanMateriKetua & 30\\
-		\hline
-		bobotPresentasiKetua & 15\\
-		\hline
-		bobotPencapaianTujuanKetua & 30\\
-		\hline
-		bobotTataTulisLaporanPembimbing & 20\\
-		\hline
-		bobotKelengkapanMateriPembimbing &20\\
-		\hline
-		bobotPenguasaanMateriPembimbing & 30\\
-		\hline
-		prosesBimbinganPembimbing & 30\\
-		\hline
-		nilaiAkhirMahasiswa & 84\\
-		\hline
-	\end{tabular}
-	
-	\subsection{Pengujian Fungsional}
-	\label{sub: PFungsional}
-	Pengujian fungsional dilakukan untuk mengetahui apakah sistem informasi dapat menjalankan seluruh fungsi-fungsi yang dimiliki dengan baik. Hasil pengujian fungsional sistem informasi akan dijabarkan pada tabel berikut:\\
-	\begin{tabular}{| m{0.75cm} | m{7cm} | m{5cm} | m{3cm} |}
-		\hline
-		No & Aksi Pengguna & Reaksi yang diharapkan & Keterangan \\
-		\hline
-		1 & Pengguna menjalankan sistem informasi & Halaman berita acara ditampilkan & Reaksi sesuai \\
-		\hline
-		2 & Pengguna memasukkan nilai & Menampilkan hasil dari perhitungan otomatis & Reaksi sesuai \\
-		\hline
-		3 & Pengguna menekan tombol selesai & Menampilkan notifikasi data telah tersimpan & Reaksi sesuai \\
-		\hline
-		4 & Pengguna menekan tombol ok pada notifikasi & Menampilkan kembali halaman lembar formulir berita acara awal sebelum terisi & Reaksi sesuai \\
-		\hline
-	\end{tabular}
+	\begin{table}[htbp]
+		\centering
+		\caption{Tabel Pengujian Eksperimental}
+		\begin{tabular}{| m{7cm} | m{5cm} |}
+			\hline
+			Jenis Data & Input Nilai\\
+			\hline
+			id & 30\\
+			\hline
+			tahun & 2016\\
+			\hline
+			semester & 1\\
+			\hline
+			npm & 2012730004\\
+			\hline
+			nama & E\\
+			\hline
+			judul & Watermarking\\
+			\hline
+			namaPembimbing & Mariskha A\\
+			\hline
+			namaPembimbingPendamping & -\\
+			\hline
+			namaKetuaTimPenguji & Husnul\\
+			\hline
+			namaAnggotaTimPenguji & Chandra\\
+			\hline
+			bobotKetuaTimPenguji & 35\\
+			\hline
+			bobotAnggotaTimPenguji & 35\\
+			\hline
+			bobotPembimbing & 20\\
+			\hline
+			nilaiKoordinatorSkripsi & 100\\
+			\hline
+			bobotKoordinatorSkripsi & 10\\
+			\hline
+			bobotTataTulisLaporanAnggota & 15\\
+			\hline
+			bobotKelengkapanMateriAnggota & 10\\
+			\hline
+			bobotPenguasaanMateriAnggota & 30\\
+			\hline
+			bobotPresentasiAnggota & 15\\
+			\hline
+			bobotPencapaianTujuanKetua & 30\\
+			\hline
+			bobotTataTulisLaporanKetua & 15\\
+			\hline
+			bobotKelengkapanMateriKetua & 10\\
+			\hline
+			bobotPenguasaanMateriKetua & 30\\
+			\hline
+			bobotPresentasiKetua & 15\\
+			\hline
+			bobotPencapaianTujuanKetua & 30\\
+			\hline
+			bobotTataTulisLaporanPembimbing & 20\\
+			\hline
+			bobotKelengkapanMateriPembimbing &20\\
+			\hline
+			bobotPenguasaanMateriPembimbing & 30\\
+			\hline
+			prosesBimbinganPembimbing & 30\\
+			\hline
+			nilaiAkhirMahasiswa & 84\\
+			\hline
+		\end{tabular}
+	\end{table}
+		
+		
+		\subsection{Pengujian Fungsional}
+		\label{sub: PFungsional}
+		Pengujian fungsional dilakukan untuk mengetahui apakah sistem informasi dapat menjalankan seluruh fungsi-fungsi yang dimiliki dengan baik. Hasil pengujian fungsional sistem informasi akan dijabarkan pada tabel berikut:\\
+		
+	\begin{table}[htbp]
+		\centering
+		\caption{Tabel Pengujian Fungsional}
+		\begin{tabular}{| m{0.75cm} | m{7cm} | m{5cm} | m{3cm} |}
+			\hline
+			No & Aksi Pengguna & Reaksi yang diharapkan & Keterangan \\
+			\hline
+			1 & Pengguna menjalankan sistem informasi & Halaman berita acara ditampilkan & Reaksi sesuai \\
+			\hline
+			2 & Pengguna memasukkan nilai & Menampilkan hasil dari perhitungan otomatis & Reaksi sesuai \\
+			\hline
+			3 & Pengguna menekan tombol selesai & Menampilkan notifikasi data telah tersimpan & Reaksi sesuai \\
+			\hline
+			4 & Pengguna menekan tombol ok pada notifikasi & Menampilkan kembali halaman lembar formulir berita acara awal sebelum terisi & Reaksi sesuai \\
+			\hline
+		\end{tabular}
+	\end{table}
