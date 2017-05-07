@@ -9,7 +9,7 @@ Analisis sistem kini akan menjelaskan bagaimana sistem penilaian sidang skripsi 
 	\subsection{Form Rekapitulasi Penilaian}
 	\label{sub: rekapPenil}
 	
-	\textit{Form} rekapitulasi dibagi menjadi 3 bagian(Gambar\ref{fig: rekapAsli}), yaitu:
+	\textit{Form} rekapitulasi dibagi menjadi 3 bagian (Gambar\ref{fig: rekapAsli}), yaitu:
 		\begin{enumerate}
 			\item Lembar Rekapitulasi Penilaian Pembimbing
 			\item Lembar Rekapitulasi Penilaian Ketua Tim Penguji
@@ -23,7 +23,7 @@ Analisis sistem kini akan menjelaskan bagaimana sistem penilaian sidang skripsi 
 	\subsection{Form Berita Acara Sidang Skripsi}
 	\label{sub: formSkripsi}
 	
-	\textit{Form} berita acara sidang skripsi(Gambar \ref{fig: skripsiAsli}) merupakan \textit{form} yang mencakup pengisian waktu sidang bersangkutan, data diri mahasiswa, nama dosen penguji dan pembimbing, nilai akhir dari masing-masing penilai, dan nilai akhir yang diterima mahasiswa. Seperti yang telah dibahas pada subbab sebelumnya(\ref{sub: rekapPenil}) \textit{form} berita acara sidang skripsi akan diisi oleh ketua tim penguji setelah seluruh form rekapitulasi dari masing masing penilai di kumpulkan kembali kepada ketua tim penguji.
+	\textit{Form} berita acara sidang skripsi (Gambar \ref{fig: skripsiAsli}) merupakan \textit{form} yang mencakup pengisian waktu sidang bersangkutan, data diri mahasiswa, nama dosen penguji dan pembimbing, nilai akhir dari masing-masing penilai, dan nilai akhir yang diterima mahasiswa. Seperti yang telah dibahas pada subbab sebelumnya (\ref{sub: rekapPenil}) \textit{form} berita acara sidang skripsi akan diisi oleh ketua tim penguji setelah seluruh form rekapitulasi dari masing masing penilai di kumpulkan kembali kepada ketua tim penguji.
 	
 	Setelah ketua tim penguji melakukan pengisian pada masing-masing kolom dari masing-masing penilai yang bersangkutan, maka ketua tim penguji akan melakukan perkalian nilai tersebut dengan bobot masing-masing penilai yang akan menghasilkan nilai akhir mahasiswa dari masing-masing penilai. Kemudian akan dihasilkan 90\% nilai akhir mahasiswa untuk diberitahukan kepada mahasiswa dan diberikan kepada koordinator skripsi untuk melengkapi 10\% dari nilai mahasiswa berdasarkan nilai kedisiplinan. Hasil dari seluruh proses tersebut adalah nilai akhir sidang skripsi 2 mahasiswa bersangkutan.
 	
@@ -204,7 +204,7 @@ Berikut adalah \textit{method-method} yang dimiliki oleh kelas \textit{controlle
 	`
 	
 	Contoh diatas adalah inisialisasi dari AngularJS dengan menggunakan fungsi ng-app dan ng-controller yang mengatur keseluruhan fungsi otomatisasi pada sistem usulan. Pada baris pertama dilakukan inisialisasi ng-app yang berfungsi menginisialisasi nama app yang digunakan pada sistem. Setelah ng-app diinisialisasi, baru sistem usulan dapat menggunakan fungsi-fungsi AngularJS seperti menginisialisasi ng-controller pada baris ke-2 dengan nama "Default Value".\\
-	Agar \textit{controller} dapat berfungsi, perlu dilakukan pemanggilan terhadap ng-controller dengan memanfaatkan fungsi "angular.module". Baris ke-7 bekerja dengan \textit{parameter} ng-app("penilaian"). Selanjutnya diikuti dengan sebuah \textit{array}(\[\]) kosong yang merupakan tempat yang menunjukkan \textit{list modules} diperlukan oleh ng-app('penilaian') Setelah melakukan inisialisasi modul, maka kita dapat memanggil fungsi-fungsi daripada AngularJS untuk dijalankan, seperti \textit{controller("DefaultValue")} ke dalam aplikasi AngularJS.
+	Agar \textit{controller} dapat berfungsi, perlu dilakukan pemanggilan terhadap ng-controller dengan memanfaatkan fungsi "angular.module". Baris ke-7 bekerja dengan \textit{parameter} ng-app ("penilaian"). Selanjutnya diikuti dengan sebuah \textit{array}([]) kosong yang merupakan tempat yang menunjukkan \textit{list modules} diperlukan oleh ng-app ('penilaian'). Setelah melakukan inisialisasi modul, maka kita dapat memanggil fungsi-fungsi daripada AngularJS untuk dijalankan, seperti \textit{controller("DefaultValue")} ke dalam aplikasi AngularJS.
 	
 \begin{lstlisting}
 <tr>
@@ -218,9 +218,9 @@ Berikut adalah \textit{method-method} yang dimiliki oleh kelas \textit{controlle
 	
 	Contoh diatas diambil dari kode \textit{file view} untuk mengatur otomatisasi pada kolom tata tulis laporan milik ketua tim penguji. Pada baris ke-3 dan baris ke-5 adalah contoh kode diatas merupakan contoh inisialisasi fungsi ng-model dari AngularJS, sementar baris ke-6 dilakukan perhitungan otomatis dari ng-model baris ke-3 dikalikan dengan ng-model baris ke-5 dan hasilnya ditampung di nilai \textit{value} yang kemudian akan muncul ke layar \textit{user} secara otomatis.
 	
-	Berikut ini adalah nama-nama dari \textit{model, view,} dan \textit{controller} AngularJS yang dipakai pada sistem penilaian sidang skripsi 2:
+	Berikut ini adalah nama-nama dari \textit{model, view,} dan \textit{controller} AngularJS yang dipakai pada Sistem Penilaian Sidang Skripsi 2:
 	\begin{itemize}
-		\item \textit{Controller}: "DevaultValue" = Controller yang dipakai di seluruh sistem
+		\item \textit{Controller}: "DefaultValue" = Controller yang dipakai di seluruh sistem
 		\item \textit{Model}:
 		\begin{itemize}
 			\item "tahun" = untuk melakukan otomatisasi tahun+1
@@ -319,9 +319,9 @@ Berikut adalah \textit{method-method} yang dimiliki oleh kelas \textit{controlle
 	\subsection{Analisis Basis Data}
 	\label{sub: analisisDatabase}
 	
-	Sistem informasi penilaian sidang skripsi 2 menggunakan perangkat lunak mysql sebagai sarana penyimpanan dan pengolahan basis data. Seperti yang dijelaskan pada subbab \ref{sec: analisisKode}, didalam \textit{folder} "application" terdapat \textit{folder} "models" (Gambar\ref{fig:strukturFileApp}) yang berfungsi menghubungkan basis data dengan sistem. 
+	Sistem Informasi Penilaian Sidang Skripsi 2 menggunakan perangkat lunak mysql sebagai sarana penyimpanan dan pengolahan basis data. Didalam \textit{folder} "application" terdapat \textit{folder} "models" yang berfungsi menghubungkan basis data dengan sistem. 
 	
-	Berdasarkan analisa dari contoh form penilaian skripsi yang ada (gambar \ref{fig: skripsiAsli} dan gambar \ref{fig: rekapAsli}), dapat disimpulkan bahwa penilaian skripsi membutuhkan data-data sebagai berikut:
+	Berdasarkan analisa dari contoh form penilaian skripsi yang ada (Gambar \ref{fig: skripsiAsli} dan Gambar \ref{fig: rekapAsli}), dapat disimpulkan bahwa penilaian skripsi membutuhkan data-data sebagai berikut:
 		
 		\begin{enumerate}
 			\item Semester

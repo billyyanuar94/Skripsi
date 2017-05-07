@@ -17,7 +17,7 @@ Pada gambar \ref{fig:flowchartCI} menunjukkan \textit{flowchart} aliran data pad
 	\label{fig:flowchartCI}
 \end{figure}
 
-Keterangan:
+Keterangan Gambar\ref{fig:flowchartCI}:
 \begin{enumerate}
 	\item Index.php berfungsi sebagai pengontrol utama, yang menginisialisasikan sumber-sumber yang diperlukan untuk menjalankan CodeIgniter.
 	\item \textit{Router} akan memeriksa permintaan HTTP untuk menentukan apa yang harus dilakukan selanjutnya
@@ -34,15 +34,15 @@ CodeIgniter menggunakan dasar pola pengembangan \textit{Model-View-Controller}(M
 
 MVC sendiri terdiri dari 3 bagian, yaitu:
 \begin{enumerate}
-	\item \textit{Model} merepresentasikan struktur data. Secara khusus, \textit{model} merupakan kelas yang membantu menangani kueri-kueri sql seperti \textit{insert, update,}dan \textit{delete} pada basis data.
-	\item \textit{View} merepresentasikan informasi yang ditunjukkan kepada pengguna. Sebuah \textit{view} biasanya berbentuk \textit{web page}, tetapi dalam CodeIgniter \textit{view} bisa berbentuk \textit{header, footer,} dan berbagai jenis \textit{page} lainnya.
+	\item \textit{Model} merepresentasikan struktur data. Secara khusus, \textit{model} merupakan kelas yang membantu menangani kueri-kueri sql seperti \textit{insert, update,} dan \textit{delete} pada basis data.
+	\item \textit{View} merepresentasikan informasi yang ditunjukkan kepada pengguna. Sebuah \textit{view} umumnya berbentuk \textit{web page}, tetapi dalam CodeIgniter \textit{view} bisa berbentuk \textit{header, footer,} dan berbagai jenis \textit{page} lainnya.
 	\item \textit{Controller} berfungsi sebagai perantara antara \textit{Model}, \textit{View}, dan sumber daya lain yang diperlukan untuk memproses HTTP \textit{request} dan menghasilkan halaman \textit{web}.
 \end{enumerate}
 
 \subsection{Controller}
 \label{sub: controller}
 
-	\textit{Controller} merupakan sebuah kelas simple dengan penerapan seperti URL. Seperti kelas pada umumnya, ketika nama kelas dari \textit{controller} dan nama kelas dari \textit{file controller} tersebut cocok, maka kelas dapat dijalankan dengan baik. Nama kelas suatu \textit{controller} dikatakan sah jika diawali dengan huruf besar. Untuk lebih jelasnya, perhatikan kode di bawah ini:
+	\textit{Controller} merupakan sebuah kelas sederhana dengan penerapan seperti URL. Seperti kelas pada umumnya, ketika nama kelas dari \textit{controller} dan nama kelas dari \textit{file controller} tersebut cocok, maka kelas dapat dijalankan dengan baik. Nama kelas suatu \textit{controller} dikatakan sah jika diawali dengan huruf besar. Untuk lebih jelasnya, perhatikan kode di bawah ini:
 	
 \begin{lstlisting}
 <?php
@@ -59,7 +59,7 @@ class Blog extends CI_Controller{
 \subsubsection{Method}
 \label{subsub: method}
 
-	\textit{Method} merupakan nama fungsi dari suatu kelas. Nama \textit{method} pada kode subab \ref{sub: controller} adalah \textit{index()}. \textit{Method} bernama "index" akan selalu dijalankan jika tidak ada arahan ke metode pada URL. Cara lain untuk menjalankan \textit{method} pada kode subbab \ref{sub: controller} adalah "example.com/index.php/blog/index/" dimana bagian terakhir adalah nama \textit{method} yang ingin dijalankan.
+	\textit{Method} merupakan nama fungsi dari suatu kelas. Nama \textit{method} pada kode subbab \ref{sub: controller} adalah "index()". \textit{Method} bernama "index" akan selalu dijalankan jika tidak ada arahan ke metode pada URL. Cara lain untuk menjalankan \textit{method} pada kode subbab \ref{sub: controller} adalah \url{example.com/index.php/blog/index/} dimana bagian terakhir adalah nama \textit{method} yang ingin dijalankan.
 	
 	
 	\begin{lstlisting}
@@ -73,12 +73,12 @@ class Products extends CI_Controller{
 }
 	\end{lstlisting}
 	
-	Jika \textit{method} yang dituju memiliki parameter, diperlukan tambahan pada URL pemanggilannya. Sebagai contoh, pemanggilan \textit{method}	pada kode di atas dilakukan dengan URL "example.com/index.php/products/shoes/sandals/123" dimana "sandals" dan "123" merupakan isi dari \textit{parameter 1} dan 2 dari \textit{method} "shoes".
+	Jika \textit{method} yang dituju memiliki parameter, diperlukan tambahan pada URL pemanggilannya. Sebagai contoh, pemanggilan \textit{method}	pada kode di atas dilakukan dengan URL \url{example.com/index.php/products/shoes/sandals/123} dimana "sandals" dan "123" merupakan isi dari \textit{parameter 1} dan 2 dari \textit{method} "shoes".
 	
 \subsubsection{Mendefinisikan Controller Default}
 \label{subsub: defaulController}
 
-	CodeIgniter dapat menjalankan \textit{default controller} sehingga tidak diperlukannya penulisan URL yang lengkap untuk pemanggilan, melainkan \textit{controller} dapat dipanggil secara otomatis dengan URL "example.com" saja. Namun, untuk dapat menjalankan fungsi ini, diperlukan sedikit pengaturan pada \textit{file} "application/config/routes.php" yaitu perubahan variabel yang ditunjukkan kode di bawah ini:
+	CodeIgniter dapat menjalankan \textit{default controller} sehingga tidak diperlukannya penulisan URL yang lengkap untuk pemanggilan, melainkan \textit{controller} dapat dipanggil secara otomatis dengan URL \url{example.com} saja. Namun, untuk dapat menjalankan fungsi ini, diperlukan sedikit pengaturan pada \textit{file} "application/config/routes.php" yaitu perubahan variabel yang ditunjukkan kode di bawah ini:
 	
 	\begin{lstlisting}
 	$route['default_controller'] = 'blog';
@@ -116,20 +116,20 @@ class Products extends CI_Controller{
 	Menjalankan \textit{view} pada CodeIgniter dilakukan di \textit{file controller}. Kode di bawah ini menunjukkan kode yang harus ditulis di dalam \textit{method controller}.
 	
 	\begin{lstlisting}
-	<?php
-	class Blog extends CI_Controller{
-		
-		public function index(){
-			$this->load->view('blogview');
-		}
+<?php
+class Blog extends CI_Controller{
+	
+	public function index(){
+		$this->load->view('blogview');
 	}
+}
 	\end{lstlisting}
 	
 	\subsection{Models}
 	\label{sub: models}
 	
 	\textit{Model} merupakan \textit{file} berbasis PHP yang didesain sebagai penghubung aplikasi dengan basis data. \textit{Model} berfungsi menjalankan kueri-kueri sql seperti \textit{insert, update, delete, select,} dll.
-	Pada CodeIgniter terdapat fungsi \textit{Query builder} yang memudahkan \textit{programmer} dalam membuat kueri. Berikut ini adalah contoh penggunaan \textit{Query builder} untuk kueri sql \textit{insert} dan \textit{update}.
+	Pada CodeIgniter terdapat fungsi \textit{query builder} yang memudahkan \textit{programmer} dalam membuat kueri. Berikut ini adalah contoh penggunaan \textit{query builder} untuk kueri sql \textit{insert} dan \textit{update}.
 	
 	\begin{lstlisting}
 public function insert_entry(){
@@ -226,15 +226,15 @@ $db['default'] = array(
 	);
 	\end{lstlisting}
 	
-	Keterangan:
+	Keterangan kode di atas:
 	\begin{center}
 	\begin{tabular}{| m{5cm} | m{10cm} |}
 		\hline
 		Nama Konfigurasi & Deskripsi\\
 		\hline
-		dsn & membuat koneksi string(\textit{an all-in-one configuration sequence})\\
+		dsn & membuat koneksi string  (\textit{an all-in-one configuration sequence})\\
 		\hline
-		hostname & nama host dari server basis data yang dipakai.(umumnya bernama "localhost")\\
+		hostname & nama host dari server basis data yang dipakai (umumnya bernama "localhost").\\
 		\hline
 		username & username yang dipakai untuk menyambungkan basis data\\
 		\hline
@@ -244,7 +244,7 @@ $db['default'] = array(
 		\hline
 		dbdriver & tipe basis data (mysqli, postgre, odbc, dll). Perlu ditulis dengan huruf kecil secara spesifik.\\
 		\hline
-		dbprefix & dbprefix tidak harus terisi, berguna untuk menambahkan awalan nama tabel pada saat dijalankan Query Builder.\\
+		dbprefix & dbprefix tidak harus terisi, berguna untuk menambahkan awalan nama tabel pada saat dijalankan \textit{query builder}.\\
 		\hline
 		pconnect & berisi TRUE atau FALSE untuk perlunya koneksi yang tetap\\
 		\hline
@@ -256,7 +256,7 @@ $db['default'] = array(
 		\hline
 		char\_set & set karakter yang digunakan untuk komunikasi dengan basis data\\
 		\hline
-		dbcollat & pemeriksaan karakter yang digunakan dalam berkomunikasi dengan basis data(hanya dipakai di driver 'mysqli' dan 'mysql').\\
+		dbcollat & pemeriksaan karakter yang digunakan dalam berkomunikasi dengan basis data (hanya dipakai di driver 'mysqli' dan 'mysql').\\
 		\hline
 		swap\_pre & sebuah tabel default yang harus bertukar dengan dbprefix.\\
 		\hline
@@ -298,21 +298,21 @@ Dalam pembentukannya, AngularJS memiliki pendekatan yang berbeda. AngularJS beru
 			\hline
 			Konsep & Deskripsi \\
 			\hline
-			Template & HTML dengan tambahan markup \\
+			Template & HTML dengan tambahan \textit{markup} \\
 			\hline
 			Directives & Pengembangan HTML dengan atribut dan elemen yang dibuat khusus \\
 			\hline
 			Model & Data yang ditunjukan kepada pengguna pada tampilan dan bagaimana penguna berinteraksi \\
 			\hline
-			Scope & Konteks dimana model disimpan, sehingga controller, directives dan expression dapat mengaksesnya \\
+			Scope & Konteks dimana model disimpan sehingga \textit{controller, directives} dan \textit{expression} dapat mengaksesnya \\
 			\hline
-			Expression & Mengakses variabel dan fungsi dari scope \\
+			Expression & Mengakses variabel dan fungsi dari \textit{scope} \\
 			\hline
-			Compiler & Menguraikan template, directives, dan expression \\
+			Compiler & Menguraikan \textit{template, directives,} dan \textit{expression} \\
 			\hline
-			Filter & Mengatur nilai dari sebuah expression untuk di tunjukkan kepada pengguna \\
+			Filter & Mengatur nilai dari sebuah \textit{expression} untuk di tunjukkan kepada pengguna \\
 			\hline
-			View & Apa yang akan dilihat oleh pengguna (DOM) \\
+			View & Apa yang akan dilihat oleh pengguna\\
 			\hline
 			Data Binding & Menyelaraskan data yang ada pada \textit{model} dan view \\
 			\hline
@@ -320,11 +320,11 @@ Dalam pembentukannya, AngularJS memiliki pendekatan yang berbeda. AngularJS beru
 			\hline
 			Dependency Injection & Membuat dan menyambungkan objek dan fungsi \\
 			\hline
-			Injector & Tempat penyimpanan dependency Injection \\
+			Injector & Tempat penyimpanan \textit{dependency injection} \\
 			\hline
-			Module & Tempat penyimpanan untuk bagian-bagian yang berbeda dalam sebuah aplikasi, yang mencakup: controllers, services, filters, directives yang mengkonfigurasika injector \\
+			Module & Tempat penyimpanan untuk bagian-bagian yang berbeda dalam sebuah aplikasi, yang mencakup: \textit{controllers, services, filters, directives} yang mengkonfigurasikan \textit{injector} \\
 			\hline
-			Services & Logika bisnis independen dari views yang bisa dipakai kembali  \\
+			Services & Logika bisnis independen dari \textit{views} yang bisa dipakai kembali  \\
 			\hline
 			\end{tabular}
 		\end{center}
@@ -332,7 +332,7 @@ Dalam pembentukannya, AngularJS memiliki pendekatan yang berbeda. AngularJS beru
 \subsection{Directives}
 \label{sub: directives}
 
-	\textit{Directives} merupakan penanda pada \textit{DOM elements} (seperti attribut, nama elemen, \textit{comment},  dan kelas CSS) yang memberitahukan kepada \textit{AngularJS HTML compiler} untuk melampirkan perilaku yang di inginkan kepada \textit{DOM element}(contohnya memakai \textit{event listener}), atau bahkan mengubah \textit{DOM element} yang dituju beserta dengan peranakannya.
+	\textit{Directives} merupakan penanda pada \textit{DOM elements} (seperti attribut, nama elemen, \textit{comment},  dan kelas CSS) yang memberitahukan kepada \textit{AngularJS HTML compiler} untuk melampirkan perilaku yang di inginkan kepada \textit{DOM element} (contohnya memakai \textit{event listener}), atau bahkan mengubah \textit{DOM element} yang dituju beserta dengan peranakannya.
 	
 	AngularJS menyediakan sekumpulan \textit{directives built-in} seperti ng-Model, ng-Bind, dan ng-Class. 
 	
@@ -341,7 +341,7 @@ Dalam pembentukannya, AngularJS memiliki pendekatan yang berbeda. AngularJS beru
 \subsection{Data Binding}
 \label{sub: dataBinding}
 	
-	\textit{Data Binding} pada AngularJS merupakan penyelarasan data antara \textit{model} dan komponen - komponen \textit{view}. Ketika \textit{model} berubah, maka \textit{view} pun akan berubah, begitu juga dengan sebaliknya.
+	\textit{Data Binding} pada AngularJS merupakan penyelarasan data antara \textit{model} dan komponen-komponen \textit{view}. Ketika \textit{model} berubah, maka \textit{view} pun akan berubah, begitu juga dengan sebaliknya.
 	
 	\begin{figure}[H]
 		\centering
@@ -358,7 +358,7 @@ Dalam pembentukannya, AngularJS memiliki pendekatan yang berbeda. AngularJS beru
 	\end{figure}
 	Pada gambar \ref{fig:dabin2} menjelaskan perbedaan yang diberikan oleh pelaksanaan \textit{data binding} pada AngularJS. Pertama, \textit{template} akan di \textit{compile} pada \textit{browser}. Hasil dari \textit{compile} tersebut adalah \textit{live view}. Pada tahap ini perubahan yang terjadi di \textit{view} akan disampaikan kepada \textit{model}, dan perubahan yang terjadi pada \textit{model} akan mengubah \textit{view}.
 	
-	Karena \textit{view} merupakan proyeksi dari \textit{model}, menyebabkan \textit{controller} benar-benar terpisahkan dari \textit{view} tanpa disadari. Hal ini mempermudah pengujian \textit{controller}, karena terisolasi tanpa adanya \textit{view} dan DOM( \textit{browser dependency}).
+	Karena \textit{view} merupakan proyeksi dari \textit{model}, menyebabkan \textit{controller} benar-benar terpisahkan dari \textit{view} tanpa disadari. Hal ini mempermudah pengujian \textit{controller}, karena terisolasi tanpa adanya \textit{view} dan DOM (\textit{browser dependency}).
 	
 \subsection{Model-View-Controller(MVC)}
 \label{sub: mvcAngular}
@@ -378,8 +378,8 @@ var someText = 'You have started your journey.'
 \begin{lstlisting}
 <p> {{someText}} </p>
 \end{lstlisting}
-	\textit{Syntax view} 2 kurung kurawal diatas disebut sebagai interlopasi(penyusupan), karena hal tersebut memasukkan konten baru ke dalam \textit{template} yang sudah ada.\\
-	Sementara kelas \textit{controllers} berguna untuk memberitahu AngularJS tentang objek atau konten primitif mana dari model yang akan dipakai dengan cara menetapkannya ke objek '\$scope ', objek '\$scope' tersebut kemudian akan diberikan kepada \textit{controller} seperti contoh berikut:
+	\textit{Syntax view} 2 kurung kurawal diatas disebut sebagai interlopasi (penyusupan), karena hal tersebut memasukkan konten baru ke dalam \textit{template} yang sudah ada.\\
+	Sementara kelas \textit{controllers} berguna untuk memberitahu AngularJS tentang objek atau konten primitif mana dari \textit{model} yang akan dipakai dengan cara menetapkannya ke objek '\$scope ', objek '\$scope' tersebut kemudian akan diberikan kepada \textit{controller} seperti contoh berikut:
 \begin{lstlisting}
 function TextController($scope){
 	$scope.someText = someText;
@@ -405,7 +405,7 @@ function TextController($scope){
 </html>
 \end{lstlisting}
 	
-	Hasil dari kode diatas adalah tulisan "You have started your journey". Walaupun cara ini dapat dilakukan dengan mudah pada aplikasi sederhana seperti contoh diatas, tetapi untuk kebanyakan aplikasi sebaiknya dibuat objek \textit{model} untuk menyimpan data yang ada. Untuk itu, daripada membuat \textit{model} seperti:
+	Hasil dari kode diatas adalah tulisan "You have started your journey". Walaupun cara ini dapat dilakukan dengan mudah pada aplikasi sederhana seperti contoh diatas, tetapi untuk kebanyakan aplikasi sebaiknya dibuat objek \textit{model} untuk menyimpan \textit{data} yang ada. Untuk itu, daripada membuat \textit{model} seperti:
 	
 \begin{lstlisting}
 function TextController($scope){
@@ -425,7 +425,7 @@ function TextController($scope){
 \begin{lstlisting}
 <p>{{message.someText}}</p>
 \end{lstlisting}
-	Perubahan yang dilakukan diatas berfungsi untuk mencegah perilaku tidak terduga yang dapat terjadi dari \textit{prototypal inheritance} dalam objek \$scope. Walaupun untuk sementara hal ini dapat berjalan dengan baik, tetapi cara yang benar dalam mendefinisikan sebuah \textit{controller} adalah dengan menggunakan sebuah kelas yang dinamakan \textit{module} yang menyediakan \textit{namespace} untuk bagian lain dari aplikasi berhubungan. Perubahan tersebut akan mengubah kode-kode diatas menjadi:
+	Perubahan yang dilakukan diatas berfungsi untuk mencegah perilaku tidak terduga yang dapat terjadi dari \textit{prototypal inheritance} dalam objek '\$scope'. Walaupun untuk sementara hal ini dapat berjalan dengan baik, tetapi cara yang benar dalam mendefinisikan sebuah \textit{controller} adalah dengan menggunakan sebuah kelas yang dinamakan \textit{module} yang menyediakan \textit{namespace} untuk bagian lain dari aplikasi berhubungan. Perubahan tersebut akan mengubah kode-kode diatas menjadi:
 	\begin{lstlisting}
 <html ng-app='myApp'>
 <body ng-controller='TextController'>
@@ -447,7 +447,7 @@ function TextController($scope){
 </body>
 </html>
 	\end{lstlisting}
-	Pada versi di atas, aplikasi memberi tahu elemen ng-app tentang nama dari modul yang dipakai di baris ke 9. Setelah itu pada baris ke 11 sampai 16 dilakukan pemanggilan objek Angular untuk membuat sebuah modul bernama myApp dan memberikan fungsi dari \textit{controller} untuk memanggil fungsi controller dari modul.
+	Pada versi di atas, aplikasi memberi tahu elemen ng-app tentang nama dari modul yang dipakai di baris ke-9. Setelah itu pada baris ke-11 sampai baris ke-16 dilakukan pemanggilan objek AngularJS untuk membuat sebuah modul bernama myApp dan memberikan fungsi dari \textit{controller} untuk memanggil fungsi \textit{controller} dari modul.
 	
 \section{Twitter Bootstrap}
 \label{sec: Bootrstrap}
@@ -464,7 +464,7 @@ function TextController($scope){
 	\item \textit{Rows} dipergunakan untuk membuat grup kolom secara \textit{horizontal}.
 	\item Konten tampilan harus berada diantara kelas \textit{columns} atau peranakan dari kelas \textit{columns}.
 	\item Kelas-kelas yang telah ditetapkan seperti ".row" dan ".col-xs-4" dapat digunakan dengan segera untuk membentuk \textit{layout}.
-	\item Kelas \textit{columns} membuat \textit{gutters}(jarak antara kolum konten) menggunakan kelas \textit{padding}.
+	\item Kelas \textit{columns} membuat \textit{gutters} (jarak antara kolum konten) menggunakan kelas \textit{padding}.
 	\item \textit{Grid columns} dibuat dengan menyesuaikan ke-12 kolom yang sudah disediakan. Contohnya jika ingin membuat 3 kolom sama rata, maka diperlukan 3 buah kelas ".col-xs-4".
 	\item Jika ada lebih dari 12 kolom dalam 1 baris, maka kolom yang lebih tersebut akan dipindahkan ke baris baru sebagai satu kesatuan.
 	\item Kelas \textit{grid} mempunyai fungsi untuk menyesuaikan ukuran sesuai dengan patokan ukuran yang sudah diberikan oleh \textit{bootstrap} atau lebih besar dari angka patokan yang ada. Oleh karena itu ketika sebuah kelas ".col-md-*" tidak memiliki kelas yang lebih besar darinya seperti kelas ".col-lg-*", maka kelas md akan mengambil alih pada saat aplikasi dijalankan di ukuran perangkat yang lebih besar. 

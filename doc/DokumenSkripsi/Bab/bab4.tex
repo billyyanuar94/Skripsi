@@ -31,9 +31,9 @@
 	\end{figure}
 	
 	\begin{itemize}
-		\item public function index()
+		\item public function index()\\
 		Berfungsi untuk mengarahkan pengguna ke \textit{file views default} dari aplikasi.
-		\item public function tambahDataMahasiswa()
+		\item public function tambahDataMahasiswa()\\
 		Berfungsi untuk mengambil data dari \textit{view} yang tersedia, untuk kemudian diolah menjadi bahasa sql oleh \textit{models}.
 	\end{itemize}
 	
@@ -55,15 +55,17 @@
 	\end{lstlisting}
 	
 	\begin{itemize}
-		\item public function insertDataMahasiswa(\$tablename, \$data)
+		\item public function insertDataMahasiswa(\$tablename, \$data)\\
 		Berfungsi untuk mengolah data yang sudah diolah oleh \textit{controllers} menjadi kueri sql \textit{insert data}.
 	\end{itemize}
 	
 	\section{Perancangan Basis Data}
 	\label{sec: perancanganDatabase}
 	
-	Berdasarkan analisis basis data pada bab \ref{sub: analisisDatabase}, maka dibuat tabel basis data berisi:
-	
+	Berdasarkan analisis basis data pada bab \ref{sub: analisisDatabase}, maka dibuat tabel basis data.
+	\begin{table}[H]
+	\centering
+	\caption{Tabel Perancangan Basis Data}
 	\begin{tabular}{| m{0.75cm} | m{7cm} | m{3cm} |}
 		\hline
 		No & Nama Tabel & Jenis Data\\
@@ -129,6 +131,7 @@
 		30 & nilaiAkhirMahasiswa & int(2)\\
 		\hline
 		\end{tabular}
+	\end{table}
 	
 	\section{Perancangan Tampilan}
 	\label{sec: perancanganTampilan}
