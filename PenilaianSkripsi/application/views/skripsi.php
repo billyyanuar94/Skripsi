@@ -93,7 +93,7 @@ and open the template in the editor.
                                         <option value="2">Genap</option>
                                     </select>
                                     <!-- 2 -->
-                                    <input id="tahun" type="number" max="9999" ng-model="tahun" name="tahun"/>
+                                    <input id="tahun" type="number" max="9999" ng-model="tahun" name="tahun" ng-init="tahun=2016"/>
                                     /
                                     <input id="tahun_1" type="number" max="9999" value="{{tahun + 1}}" disabled="disabled"/>
 
@@ -112,7 +112,7 @@ and open the template in the editor.
                             <div id="pengenalMahasiswa">
                                 <p>
                                     <!-- 3 -->
-                                    <label class="col-md-1 col-xs-6" for="npm">NPM:</label><input maxlength="10" id="npm" class="inline-form col-md-3 col-xs-6" ng-model="n_npm" name="npm"/>
+                                    <label class="col-md-1 col-xs-6" for="npm">NPM:</label><input minlength="10" id="npm" class="inline-form col-md-3 col-xs-6" ng-model="n_npm" name="npm" required />
                                     <!-- 4 -->
                                     <label class="col-md-1 col-xs-6" for="nama">Nama:</label><input id="nama" class="inline-form col-md-7 col-xs-6" name="nama"/>
                                 </p>
@@ -133,7 +133,27 @@ and open the template in the editor.
                             <p>
                                 <label class="col-md-3 col-xs-8" for="pembimbing">Pembimbing:</label>
                                 <!-- 6 -->
-                                <input class="col-md-9 col-xs-4" id="pembimbing" name="namaPembimbing"/>
+                                <select class="col-md-9 col-xs-4" id="pembimbing" name="namaPembimbing">
+                                    <option value="-">-</option>
+                                    <option value="Cecilia Esti Nugraheni">Cecilia Esti Nugraheni</option>
+                                    <option value="Veronica Sri Moertini">Veronica Sri Moertini</option>
+                                    <option value="Rosa De Lima">Rosa De Lima</option>
+                                    <option value="Thomas Anung Basuki">Thomas Anung Basuki</option>
+                                    <option value="Lionov">Lionov</option>
+                                    <option value="Mariskha Tri Adithia">Mariskha Tri Adithia</option>
+                                    <option value="Luciana Abednego">Luciana Abednego</option>
+                                    <option value="Elisati Hulu">Elisati Hulu</option>
+                                    <option value="Chandra Wijaya">Chandra Wijaya</option>
+                                    <option value="Gede Karya">Gede Karya</option>
+                                    <option value="Nico Saputro">Nico Saputro</option>
+                                    <option value="Joanna Helga">Joanna Helga</option>
+                                    <option value="Pascal Alfadian">Pascal Alfadian</option>
+                                    <option value="Husnul Hakim">Husnul Hakim</option>
+                                    <option value="Vania Natali">Vania Natali</option>
+                                    <option value="Aditya Bagoes Saputra">Aditya Bagoes Saputra</option>
+                                    <option value="Claudio Fransiscus">Claudio Fransiscus</option>
+                                    <option value="Natalia">Natalia</option>
+                                </select>
                             </p>
                         </div>
                         <br/>
@@ -142,7 +162,27 @@ and open the template in the editor.
                             <p>
                                 <label class="col-md-3 col-xs-8" for="pembimbing2">Pembimbing Pendamping:</label>
                                 <!-- 7 -->
-                                <input class="col-md-9 col-xs-4" id="pembimbing2" name="namaPembimbingPendamping"/>
+                                <select class="col-md-9 col-xs-4" id="pembimbing2" name="namaPembimbingPendamping">
+                                    <option value="-">-</option>
+                                    <option value="Cecilia Esti Nugraheni">Cecilia Esti Nugraheni</option>
+                                    <option value="Veronica Sri Moertini">Veronica Sri Moertini</option>
+                                    <option value="Rosa De Lima">Rosa De Lima</option>
+                                    <option value="Thomas Anung Basuki">Thomas Anung Basuki</option>
+                                    <option value="Lionov">Lionov</option>
+                                    <option value="Mariskha Tri Adithia">Mariskha Tri Adithia</option>
+                                    <option value="Luciana Abednego">Luciana Abednego</option>
+                                    <option value="Elisati Hulu">Elisati Hulu</option>
+                                    <option value="Chandra Wijaya">Chandra Wijaya</option>
+                                    <option value="Gede Karya">Gede Karya</option>
+                                    <option value="Nico Saputro">Nico Saputro</option>
+                                    <option value="Joanna Helga">Joanna Helga</option>
+                                    <option value="Pascal Alfadian">Pascal Alfadian</option>
+                                    <option value="Husnul Hakim">Husnul Hakim</option>
+                                    <option value="Vania Natali">Vania Natali</option>
+                                    <option value="Aditya Bagoes Saputra">Aditya Bagoes Saputra</option>
+                                    <option value="Claudio Fransiscus">Claudio Fransiscus</option>
+                                    <option value="Natalia">Natalia</option>
+                                </select>       
                             </p>
                         </div>
                         <br/>
@@ -150,7 +190,27 @@ and open the template in the editor.
                             <p>
                                 <label class="col-md-3 col-xs-8" for="ketua">Ketua Tim Penguji:</label>
                                 <!-- 8 -->
-                                <input class="col-md-9 col-xs-4" id="ketua" name="namaKetuaTimPenguji"/>
+                                <select class="col-md-9 col-xs-4" id="ketua" name="namaKetuaTimPenguji">
+                                    <option value="-">-</option>
+                                    <option value="Cecilia Esti Nugraheni">Cecilia Esti Nugraheni</option>
+                                    <option value="Veronica Sri Moertini">Veronica Sri Moertini</option>
+                                    <option value="Rosa De Lima">Rosa De Lima</option>
+                                    <option value="Thomas Anung Basuki">Thomas Anung Basuki</option>
+                                    <option value="Lionov">Lionov</option>
+                                    <option value="Mariskha Tri Adithia">Mariskha Tri Adithia</option>
+                                    <option value="Luciana Abednego">Luciana Abednego</option>
+                                    <option value="Elisati Hulu">Elisati Hulu</option>
+                                    <option value="Chandra Wijaya">Chandra Wijaya</option>
+                                    <option value="Gede Karya">Gede Karya</option>
+                                    <option value="Nico Saputro">Nico Saputro</option>
+                                    <option value="Joanna Helga">Joanna Helga</option>
+                                    <option value="Pascal Alfadian">Pascal Alfadian</option>
+                                    <option value="Husnul Hakim">Husnul Hakim</option>
+                                    <option value="Vania Natali">Vania Natali</option>
+                                    <option value="Aditya Bagoes Saputra">Aditya Bagoes Saputra</option>
+                                    <option value="Claudio Fransiscus">Claudio Fransiscus</option>
+                                    <option value="Natalia">Natalia</option>
+                                </select>
 
                             </p>
                         </div>
@@ -160,7 +220,27 @@ and open the template in the editor.
                             <p>
                                 <label class="col-md-3 col-xs-8" for="anggota">Anggota Tim Penguji:</label>
                                 <!-- 9 -->
-                                <input class="col-md-9 col-xs-4" id="anggota" name="namaAnggotaTimPenguji" />
+                                <select class="col-md-9 col-xs-4" id="anggota" name="namaAnggotaTimPenguji" >
+                                    <option value="-">-</option>
+                                    <option value="Cecilia Esti Nugraheni">Cecilia Esti Nugraheni</option>
+                                    <option value="Veronica Sri Moertini">Veronica Sri Moertini</option>
+                                    <option value="Rosa De Lima">Rosa De Lima</option>
+                                    <option value="Thomas Anung Basuki">Thomas Anung Basuki</option>
+                                    <option value="Lionov">Lionov</option>
+                                    <option value="Mariskha Tri Adithia">Mariskha Tri Adithia</option>
+                                    <option value="Luciana Abednego">Luciana Abednego</option>
+                                    <option value="Elisati Hulu">Elisati Hulu</option>
+                                    <option value="Chandra Wijaya">Chandra Wijaya</option>
+                                    <option value="Gede Karya">Gede Karya</option>
+                                    <option value="Nico Saputro">Nico Saputro</option>
+                                    <option value="Joanna Helga">Joanna Helga</option>
+                                    <option value="Pascal Alfadian">Pascal Alfadian</option>
+                                    <option value="Husnul Hakim">Husnul Hakim</option>
+                                    <option value="Vania Natali">Vania Natali</option>
+                                    <option value="Aditya Bagoes Saputra">Aditya Bagoes Saputra</option>
+                                    <option value="Claudio Fransiscus">Claudio Fransiscus</option>
+                                    <option value="Natalia">Natalia</option>
+                                </select>
 
                             </p>
                         </div>
@@ -448,8 +528,15 @@ and open the template in the editor.
                             <div class= "tanggal">
                             <p>
                                 Ditetapkan di Bandung, <span id="date"></span>
+                                <br>
                             </p>
-
+                            <p>
+                                Dengan persetujuan:
+                                <p><input id="ketuaTimPengujiCheck" type="checkbox" value="1" required>Ketua tim penguji</p>
+                                <p><input id="anggotaTimPengujiCheck" type="checkbox" value="1" required>Anggota tim penguji</p>
+                                <p><input id="pembimbingCheck" type="checkbox" value="1" required>Pembimbing</p>
+                                <p><input class="submitBtn" type="submit" name="submit" value="Selesai" ></p>
+                            </p>
 
                             <script>
                                 var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
@@ -469,7 +556,8 @@ and open the template in the editor.
                                 newyear = parseInt(year);
                                 document.getElementById("tahun").value = newyear;
                             </script>
-                            <p><input type="submit" name="submit" value="Selesai"></p>
+
+                            
                         </div>
                         </div>
                     </div>

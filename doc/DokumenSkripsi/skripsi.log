@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.25)  8 MAY 2017 10:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.25)  6 JUN 2017 11:07
 entering extended mode
 **./skripsi.tex
 (skripsi.tex
@@ -1417,15 +1417,15 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 ] [2]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 70.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 72.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 70.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 72.
 
-Overfull \hbox (2.96721pt too wide) in paragraph at lines 70--71
+Overfull \hbox (2.96721pt too wide) in paragraph at lines 72--73
 []\T1/lmr/m/n/10.95 Bab 1 mem-ba-has la-tar be-la-kang, ru-mus-an ma-sa-lah, tu
 -ju-an pe-nu-lis-an, batasan-batasan,
  []
@@ -1439,96 +1439,100 @@ Overfull \hbox (2.96721pt too wide) in paragraph at lines 70--71
 
 ]
 Bab 2.
-<Gambar/flowChartCI.jpg, id=429, 554.82281pt x 176.15813pt>
+<Gambar/flowChartCI.jpg, id=431, 554.82281pt x 176.15813pt>
 File: Gambar/flowChartCI.jpg Graphic file (type jpg)
 
 <use Gambar/flowChartCI.jpg>
-Package pdftex.def Info: Gambar/flowChartCI.jpg used on input line 15.
+Package pdftex.def Info: Gambar/flowChartCI.jpg used on input line 17.
 (pdftex.def)             Requested size: 416.11609pt x 132.11826pt.
 
-Overfull \hbox (8.83829pt too wide) in paragraph at lines 22--23
+Overfull \hbox (8.83829pt too wide) in paragraph at lines 24--25
 []\T1/lmr/m/n/10.95 Index.php ber-fung-si se-ba-gai pe-ngon-trol uta-ma, yang m
 eng-i-ni-si-a-li-sa-sik-an sumber-sumber
  []
 
-[5 <./Gambar/flowChartCI.jpg>]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 62.
+[5 <./Gambar/flowChartCI.jpg>] [6]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 63.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [6] [7] [8]
-Overfull \hbox (18.08678pt too wide) in paragraph at lines 231--274
- [] 
- []
+) [7] [8]
+
+LaTeX Warning: Reference `panggilMode' on page 9 undefined on input line 175.
 
 [9] [10]
-Overfull \hbox (18.08678pt too wide) in paragraph at lines 297--330
+Overfull \hbox (18.08678pt too wide) in paragraph at lines 238--281
  [] 
  []
 
-[11] <Gambar/Dabin1.jpg, id=577, 321.45094pt x 192.72pt>
+[11]
+Overfull \hbox (18.08678pt too wide) in paragraph at lines 304--337
+ [] 
+ []
+
+[12] [13] <Gambar/Dabin1.jpg, id=598, 321.45094pt x 192.72pt>
 File: Gambar/Dabin1.jpg Graphic file (type jpg)
 
 <use Gambar/Dabin1.jpg>
-Package pdftex.def Info: Gambar/Dabin1.jpg used on input line 348.
+Package pdftex.def Info: Gambar/Dabin1.jpg used on input line 359.
 (pdftex.def)             Requested size: 241.0876pt x 144.53963pt.
- [12]
-<Gambar/Dabin2.jpg, id=583, 316.18124pt x 220.57407pt>
+ <Gambar/Dabin2.jpg, id=600, 316.18124pt x 220.57407pt>
 File: Gambar/Dabin2.jpg Graphic file (type jpg)
- <use Gambar/Dabin2.jpg>
-Package pdftex.def Info: Gambar/Dabin2.jpg used on input line 355.
+
+<use Gambar/Dabin2.jpg>
+Package pdftex.def Info: Gambar/Dabin2.jpg used on input line 366.
 (pdftex.def)             Requested size: 237.13535pt x 165.43013pt.
 
-Overfull \hbox (12.95209pt too wide) in paragraph at lines 366--367
+Overfull \hbox (12.95209pt too wide) in paragraph at lines 377--378
 \T1/lmr/m/n/10.95 AngularJS[[]] ju-ga me-ru-pak-an sa-lah sa-tu \T1/lmr/m/it/10
 .95 fra-me-work \T1/lmr/m/n/10.95 yang meng-gu-nak-an \T1/lmr/m/it/10.95 Model-
 View-Controller
  []
 
-[13 <./Gambar/Dabin1.jpg> <./Gambar/Dabin2.jpg>] [14] [15]
-<Gambar/gridOption.jpg, id=664, 638.385pt x 300.3722pt>
+[14 <./Gambar/Dabin1.jpg> <./Gambar/Dabin2.jpg>] [15] [16]
+<Gambar/gridOption.jpg, id=673, 638.385pt x 300.3722pt>
 File: Gambar/gridOption.jpg Graphic file (type jpg)
 
 <use Gambar/gridOption.jpg>
-Package pdftex.def Info: Gambar/gridOption.jpg used on input line 475.
+Package pdftex.def Info: Gambar/gridOption.jpg used on input line 478.
 (pdftex.def)             Requested size: 478.78757pt x 225.27858pt.
 
-Overfull \hbox (44.88303pt too wide) in paragraph at lines 475--476
+Overfull \hbox (44.88303pt too wide) in paragraph at lines 478--479
  [][] 
  []
 
-<Gambar/kolom.jpg, id=665, 666.99188pt x 182.93344pt>
+<Gambar/kolom.jpg, id=674, 666.99188pt x 182.93344pt>
 File: Gambar/kolom.jpg Graphic file (type jpg)
  <use Gambar/kolom.jpg>
-Package pdftex.def Info: Gambar/kolom.jpg used on input line 482.
+Package pdftex.def Info: Gambar/kolom.jpg used on input line 485.
 (pdftex.def)             Requested size: 500.24268pt x 137.19974pt.
 
-Overfull \hbox (66.33813pt too wide) in paragraph at lines 482--483
+Overfull \hbox (66.33813pt too wide) in paragraph at lines 485--486
  [][] 
  []
 
-[16 <./Gambar/gridOption.jpg> <./Gambar/kolom.jpg>]
-<Gambar/hasilForm.jpg, id=675, 628.59843pt x 256.70906pt>
+[17 <./Gambar/gridOption.jpg>]
+<Gambar/hasilForm.jpg, id=686, 628.59843pt x 256.70906pt>
 File: Gambar/hasilForm.jpg Graphic file (type jpg)
 
 <use Gambar/hasilForm.jpg>
-Package pdftex.def Info: Gambar/hasilForm.jpg used on input line 517.
+Package pdftex.def Info: Gambar/hasilForm.jpg used on input line 520.
 (pdftex.def)             Requested size: 471.44766pt x 192.53131pt.
 
-Overfull \hbox (37.54312pt too wide) in paragraph at lines 517--518
+Overfull \hbox (37.54312pt too wide) in paragraph at lines 520--521
  [][] 
  []
 
-) [17 <./Gambar/hasilForm.jpg>]
+) [18 <./Gambar/kolom.jpg> <./Gambar/hasilForm.jpg>]
 \openout2 = `Bab/bab3.aux'.
 
- (Bab/bab3.tex [18
-
-
-
-]
+ (Bab/bab3.tex
 Bab 3.
-[19] [20]
+[19
+
+
+
+] [20]
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <6> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 82.
  [21] [22] [23] [24] [25] [26]
@@ -1561,7 +1565,7 @@ Overfull \hbox (35.8802pt too wide) in paragraph at lines 298--299
  / 100 + ni-lai_PBimbinganP
  []
 
-[27] [28] <Gambar/usecase.jpg, id=902, 362.35374pt x 261.97874pt>
+[27] [28] <Gambar/usecase.jpg, id=912, 362.35374pt x 261.97874pt>
 File: Gambar/usecase.jpg Graphic file (type jpg)
 
 <use Gambar/usecase.jpg>
@@ -1572,7 +1576,7 @@ Package pdftex.def Info: Gambar/usecase.jpg used on input line 365.
 
  (Bab/bab4.tex
 Bab 4.
-<Gambar/C_skripsi.jpg, id=926, 175.40532pt x 114.4275pt>
+<Gambar/C_skripsi.jpg, id=936, 175.40532pt x 114.4275pt>
 File: Gambar/C_skripsi.jpg Graphic file (type jpg)
 
 <use Gambar/C_skripsi.jpg>
@@ -1583,14 +1587,14 @@ Package pdftex.def Info: Gambar/C_skripsi.jpg used on input line 28.
 
 
 ] [32 <./Gambar/C_skripsi.jpg>]
-<Gambar/tampilan1.jpg, id=954, 328.97906pt x 385.44pt>
+<Gambar/tampilan1.jpg, id=964, 328.97906pt x 385.44pt>
 File: Gambar/tampilan1.jpg Graphic file (type jpg)
 
 <use Gambar/tampilan1.jpg>
 Package pdftex.def Info: Gambar/tampilan1.jpg used on input line 146.
 (pdftex.def)             Requested size: 246.73369pt x 289.07928pt.
 
-<Gambar/tampilan2.jpg, id=955, 328.97906pt x 331.99031pt>
+<Gambar/tampilan2.jpg, id=965, 328.97906pt x 331.99031pt>
 File: Gambar/tampilan2.jpg Graphic file (type jpg)
 
 <use Gambar/tampilan2.jpg>
@@ -1601,7 +1605,7 @@ Package pdftex.def Info: Gambar/tampilan2.jpg used on input line 147.
 
  (Bab/bab5.tex
 Bab 5.
-<Gambar/beritaacaraisi.jpg, id=965, 868.74562pt x 477.28313pt>
+<Gambar/beritaacaraisi.jpg, id=975, 868.74562pt x 477.28313pt>
 File: Gambar/beritaacaraisi.jpg Graphic file (type jpg)
 
 <use Gambar/beritaacaraisi.jpg>
@@ -1612,28 +1616,28 @@ Package pdftex.def Info: Gambar/beritaacaraisi.jpg used on input line 37.
 
 
 ]
-<Gambar/ketuaisi.jpg, id=978, 810.77907pt x 361.35pt>
+<Gambar/ketuaisi.jpg, id=988, 810.77907pt x 361.35pt>
 File: Gambar/ketuaisi.jpg Graphic file (type jpg)
 
 <use Gambar/ketuaisi.jpg>
 Package pdftex.def Info: Gambar/ketuaisi.jpg used on input line 45.
 (pdftex.def)             Requested size: 405.38855pt x 180.67456pt.
 
-<Gambar/anggotaisi.jpg, id=979, 823.57687pt x 361.35pt>
+<Gambar/anggotaisi.jpg, id=989, 823.57687pt x 361.35pt>
 File: Gambar/anggotaisi.jpg Graphic file (type jpg)
 
 <use Gambar/anggotaisi.jpg>
 Package pdftex.def Info: Gambar/anggotaisi.jpg used on input line 51.
 (pdftex.def)             Requested size: 411.78743pt x 180.67456pt.
 
-<Gambar/pembimbingisi.jpg, id=980, 800.9925pt x 326.72063pt>
+<Gambar/pembimbingisi.jpg, id=990, 800.9925pt x 326.72063pt>
 File: Gambar/pembimbingisi.jpg Graphic file (type jpg)
 
 <use Gambar/pembimbingisi.jpg>
 Package pdftex.def Info: Gambar/pembimbingisi.jpg used on input line 57.
 (pdftex.def)             Requested size: 400.49527pt x 163.35991pt.
  [36 <./Gambar/beritaacaraisi.jpg> <./Gambar/ketuaisi.jpg>] <Gambar/selesaiisi.
-jpg, id=986, 876.27374pt x 356.0803pt>
+jpg, id=996, 876.27374pt x 356.0803pt>
 File: Gambar/selesaiisi.jpg Graphic file (type jpg)
 
 <use Gambar/selesaiisi.jpg>
@@ -1665,7 +1669,7 @@ Bab 6.
 
 ]
 Lampiran A.
-<Gambar/dokumen_skripsi.jpg, id=1034, 1504.62125pt x 2104.86375pt>
+<Gambar/dokumen_skripsi.jpg, id=1044, 1504.62125pt x 2104.86375pt>
 File: Gambar/dokumen_skripsi.jpg Graphic file (type jpg)
 
 <use Gambar/dokumen_skripsi.jpg>
@@ -1675,7 +1679,7 @@ Package pdftex.def Info: Gambar/dokumen_skripsi.jpg used on input line 8.
 
 LaTeX Warning: Reference `fig:appxa3' on page 46 undefined on input line 13.
 
-<Gambar/dokumen_rekap.jpg, id=1039, 1519.6775pt x 2084.78876pt>
+<Gambar/dokumen_rekap.jpg, id=1049, 1519.6775pt x 2084.78876pt>
 File: Gambar/dokumen_rekap.jpg Graphic file (type jpg)
 
 <use Gambar/dokumen_rekap.jpg>
@@ -1733,17 +1737,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 510.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 510.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 510.
 Package rerunfilecheck Info: File `skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: 90A0D58F29B90FAF932FA53B4C36659D;7808.
+(rerunfilecheck)             Checksum: 25D658C3200A7E959B9B15ED4CD41ABC;7808.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 44138 strings out of 493333
- 944733 string characters out of 3139171
- 2034990 words of memory out of 3000000
- 45663 multiletter control sequences out of 15000+200000
+ 44148 strings out of 493333
+ 944806 string characters out of 3139171
+ 2035856 words of memory out of 3000000
+ 45674 multiletter control sequences out of 15000+200000
  71548 words of font info for 59 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
  73i,16n,122p,10424b,3599s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1760,9 +1764,9 @@ Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/lm/lmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb>
-Output written on skripsi.pdf (68 pages, 2048759 bytes).
+Output written on skripsi.pdf (68 pages, 2057325 bytes).
 PDF statistics:
- 2131 PDF objects out of 2487 (max. 8388607)
- 1255 named destinations out of 1440 (max. 500000)
+ 2140 PDF objects out of 2487 (max. 8388607)
+ 1254 named destinations out of 1440 (max. 500000)
  559 words of extra memory for PDF output out of 10000 (max. 10000000)
 

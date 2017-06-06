@@ -4,26 +4,28 @@
 \section{Latar Belakang}
 \label{sec:latarBelakang}
 
-	Program Studi Teknik Informatika di Universitas Katolik Parahyangan memiliki beberapa syarat kelulusan antara lain minimal SKS yang lulus 144 yang terdiri dari mata kuliah wajib dan pilihan, indeks prestasi minimum adalah 2.00 dengan maksimum 14 semester. Salah satu mata kuliah wajib yang harus ditempuh dan lulus adalah skripsi. Skripsi di Program Studi Teknik Informatika di Universitas Katolik Parahyangan dibagi menjadi 2 mata kuliah yaitu skripsi 1 dan skripsi 2. 
+	Program Studi Teknik Informatika di Universitas Katolik Parahyangan memiliki beberapa syarat kelulusan. Salah satunya adalah minimal SKS lulus adalah 144 sks yang terdiri dari mata kuliah wajib, pilihan wajib, dan pilihan. Selain itu Indeks Prestasi Kumulatatif (IPK) minimum  yang diperlukan adalah 2.00 dengan maksimum 14 semester. Salah satu mata kuliah wajib yang harus ditempuh dan lulus adalah Skripsi. Skripsi pada Program Studi Teknik Informatika di Universitas Katolik Parahyangan dibagi menjadi 2 mata kuliah yaitu Skripsi 1 dan Skripsi 2. Penelitian ini berfokus pada sidang untuk mata kuliah Skripsi 2.
 	
-	Sistem Penilaian Sidang Skripsi 2 pada Program Studi Teknik Informatika di Universitas Katolik Parahyangan masih bersifat manual dimana penilai mengisi data-data mahasiswa  memberikan nilai untuk mahasiswa pada saat sidang dan juga melakukan penghitungan bobot nilai total. 
+	Pada sidang mata kuliah Skripsi 2, penilaian dilakukan dengan 2 lembar kertas penilaian yaitu lembar berita acara sidang skripsi (Gambar \ref{fig: skripsiAsli}) dan lembar rekapitulasi (Gambar \ref{fig: rekapAsli}). Lembar rekapitulasi merupakan lembar penilai menuliskan nilai yang ingin diberikan kepada mahasiswa, sedangkan lembar berita acara sidang skripsi adalah lembar untuk mengumpulkan nilai akhir masing-masing penilai yang diambil dari lembar rekapitulasi untuk dihitung menjadi nilai akhir mahasiswa. Penilaian pada sidang skripsi 2 bersifat manual, dimana penilai akan menuliskan nilai yang ingin diberikan serta melakukan perhitungan nilai untuk mendapatkan nilai akhir mahasiswa pada lembar rekapitulasi masing-masing penilai. Lembar rekapitulasi yang telah selesai dihitung kemudian akan di kumpulkan kepada ketua tim penguji untuk dituliskan di lembar berita acara sidang skripsi yang kemudian akan diproses menjadi nilai akhir mahasiswa bersangkutan.
 	
-	Sifat manual ini mengakibatkan kelalaian manusia dalam melakukan penilaian beberapa kali tidak dapat dihindarkan. Kelalaian manusia yang biasa terjadi contohnya adalah kesalahan perhitungan nilai akhir oleh penilai, kesalahan penulisan nama dan NPM mahasiswa yang bersangkutan, kesalahan penulisan semester atau tahun ajaran saat penilaian skripsi\footnote{berdasarkan diskusi dengan dosen pembimbing}. Selain itu, penyimpanan nilai skripsi tergolong sulit karena penyimpanan nilai tidak langsung dibarengi dengan npm mahasiswa yang mengerjakan. Untuk mengatasi hal-hal tersebut, diperlukan suatu sistem yang dapat menanggulangi masalah pengisian, kalkulasi perhitungan, dan juga penyimpanan skripsi.
+	Sifat manual ini mengakibatkan kelalaian manusia dalam melakukan penilaian beberapa kali tidak dapat dihindarkan. Kelalaian manusia yang biasa terjadi contohnya adalah kesalahan perhitungan nilai akhir oleh penilai, kesalahan penulisan nama dan NPM mahasiswa yang bersangkutan, kesalahan penulisan semester atau tahun ajaran saat penilaian skripsi\footnote{berdasarkan diskusi dengan dosen pembimbing}. Untuk mengatasi hal-hal tersebut, diperlukan suatu sistem yang dapat menanggulangi masalah pengisian, kalkulasi perhitungan, dan juga penyimpanan skripsi.
 	
 	Menurut penjelasan di atas, maka penulis mengusulkan otomatisasi sistem dalam penilaian skripsi yang akan dibuat guna mengurangi kesalahan-kesalahan kecil yang dapat berakibat fatal pada nilai mahasiswa yang bersangkutan. Berdasarkan hal tersebut dibuatlah penelitian otomatisasi sistem penilaian skripsi dengan cara membuat sebuah aplikasi berbasis \textit{web} yaitu Sistem Informasi Penilaian Sidang Skripsi2.
 		
-	Pada penelitian ini, akan dibuat sebuah sistem penilaian yang menanggulangi masalah-masalah tersebut, dengan cara menjadikan beberapa masukkan(\textit{input}) otomatis dan juga melakukan eksekusi perhitungan nilai akhir sesuai bobot secara otomatis. Hal ini dianggap akan memudahkan penilai dalam melakukan proses penilaian skripsi, karena penilai tidak perlu lagi repot melakukan perhitungan nilai dan juga mengisi masukkan-masukkan yang sudah terisi secara otomatis.
+	Pada penelitian ini, akan dibuat sebuah sistem penilaian yang menanggulangi masalah-masalah tersebut, dengan cara menjadikan beberapa masukan(\textit{input}) otomatis dan juga melakukan eksekusi perhitungan nilai akhir sesuai bobot secara otomatis. Hal ini dianggap akan memudahkan penilai dalam melakukan proses penilaian skripsi, karena penilai tidak perlu lagi repot melakukan perhitungan nilai dan juga mengisi masukan-masukan yang sudah terisi secara otomatis.
 	
 	Dalam penelitian ini saya memakai \textit{framework} AngularJS yang dimiliki oleh perusahaan \textit{Google}. AngularJS merupakan salah satu \textit{framework} yang paling sering digunakan untuk membuat sebuah aplikasi berbasis \textit{web} dengan konsep \textit{Single Page Application (SPA)}. \textit{Single Page Application} merupakan aplikasi berbasis \textit{web} yang memungkinkan sebuah halaman HTML memiliki konten-konten yang dapat digunakan di halaman tersebut tanpa perlu berganti ke halaman lain.
 	
 	AngularJS juga bisa diintegrasikan dengan aplikasi yang menggunakan \textit{framework} lain, sehingga sangat berguna dalam pengerjaan aplikasi berbasis \textit{web} terutama pada pengerjaan Sistem Informasi Penilaian Sidang Skripsi2 yang akan dibuat.
+	
+	Selain AngularJS, sistem usulan ini juga memakai 2 \textit{framework} pendukung yaitu CodeIgniter dan Twitter Bootstrap. CodeIgniter dipakai untuk memudahkan aliran data pada sistem usulan yang dibuat, sedangkan Twitter Bootstrap dipakai untuk mempermudah pengaturan tampilan pada sistem usulan yang akan dibuat.
 	
 \section{Rumusan Masalah}
 \label{sec: rumusanMasalah}
 
 	Berikut adalah susunan permasalahan yang akan dibahas pada penelitian ini:
 	\begin{enumerate}
-		\item Bagaimana sistem penilaian skripsi yang ada pada Program Studi Teknik Informatika di Universitas Katolik Parahyangan?
+		\item Bagaimana sistem penilaian skripsi 2 yang ada pada Program Studi Teknik Informatika di Universitas Katolik Parahyangan?
 		\item Bagaimana proses penyimpanan nilai skripsi?
 		\item Bagaimana AngularJS bekerja pada eksekusi perhitungan nilai akhir?
 	\end{enumerate}
@@ -35,7 +37,7 @@
 	\begin{enumerate}
 		\item Mempelajari sistem penilaian skripsi pada Program Studi Teknik Informatika di Universitas Katolik Parahyangan
 		\item Merancang dan mengimplementasi proses penyimpanan nilai skripsi
-		\item Menentukan dan mengimplementasi AngularJS untuk mengeksekusi perhitungan nilai akhir
+		\item Mengimplementasi AngularJS untuk mengeksekusi perhitungan nilai akhir
 	\end{enumerate}
 	
 \section{Batasan Masalah}
@@ -44,8 +46,8 @@
 	Penelitian ini memiliki batasan-batasan sebagai berikut:
 	
 	\begin{enumerate}
-		\item Penelitian ini hanya dilakukan untuk \textit{form} penilaian mata kuliah skripsi 2
-		\item Penelitian ini hanya melakukan kueri \textit{insert} ke basis data
+		\item Penelitian ini hanya dilakukan untuk \textit{form} penilaian mata kuliah Skripsi 2
+		\item Penelitian ini hanya melakukan fungsi \textit{insert} ke basis data
 	\end{enumerate}
 	
 \section{Metode Penelitian}

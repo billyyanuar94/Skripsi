@@ -1,6 +1,8 @@
 \chapter{Dasar Teori}
 \label{chap: dasarTeori}
-	
+
+Pada bab ini akan dijelaskan dasar-dasar teori mengenai CodeIgniter, AngularJS, dan Twitter Bootstrap.
+
 \section{CodeIgniter}
 \label{sec: codeigniter}
 
@@ -9,7 +11,7 @@ CodeIgniter\cite{ciDocs} merupakan sebuah \textit{framework} bagi \textit{progra
 \subsection{Flowchart Aplikasi CodeIgniter}
 \label{sub: FlowAppCI}
 
-Pada gambar \ref{fig:flowchartCI} menunjukkan \textit{flowchart} aliran data pada CodeIgniter:
+Pada Gambar \ref{fig:flowchartCI} adalah \textit{flowchart} aliran data pada CodeIgniter.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.75]{Gambar/flowChartCI}
@@ -17,10 +19,10 @@ Pada gambar \ref{fig:flowchartCI} menunjukkan \textit{flowchart} aliran data pad
 	\label{fig:flowchartCI}
 \end{figure}
 
-Keterangan Gambar \ref{fig:flowchartCI}:
+Keterangan Gambar \ref{fig:flowchartCI}
 \begin{enumerate}
 	\item Index.php berfungsi sebagai pengontrol utama, yang menginisialisasikan sumber-sumber yang diperlukan untuk menjalankan CodeIgniter.
-	\item \textit{Router} akan memeriksa permintaan HTTP untuk menentukan apa yang harus dilakukan selanjutnya
+	\item \textit{Routing / Router} akan memeriksa permintaan HTTP untuk menentukan apa yang harus dilakukan selanjutnya
 	\item Jika terdapat \textit{cache}, maka \textit{cache} tersebut akan dikirim langsung ke \textit{browser} dengan menjalankan sistem eksekusi \textit{normal}.
 	\item  HTTP \textit{request} dan data yang diserahkan oleh \textit{user} akan disaring terlebih dahulu oleh bagian keamanan(\textit{security}) dari CodeIgniter, yang dijalankan sebelum \textit{controller} dari aplikasi diisi.
 	\item \textit{Application Controller} akan mengambil isi dari \textit{model, libraries, helpers, plugins, scripts}, dan sumber lain yang diperlukan untuk menjalankan perintah-perintah spesifik.
@@ -43,8 +45,7 @@ MVC sendiri terdiri dari 3 bagian, yaitu:
 \label{sub: controller}
 
 	\textit{Controller} merupakan sebuah kelas sederhana dengan penerapan seperti URL. Seperti kelas pada umumnya, ketika nama kelas dari \textit{controller} dan nama kelas dari \textit{file controller} tersebut cocok, maka kelas dapat dijalankan dengan baik. Nama kelas suatu \textit{controller} dikatakan sah jika diawali dengan huruf besar. Untuk lebih jelasnya, perhatikan kode di bawah ini:
-	
-\begin{lstlisting}
+\begin{lstlisting}[caption={CI Controller},label={CIcontroller}]
 <?php
 class Blog extends CI_Controller{
 	
@@ -54,15 +55,15 @@ class Blog extends CI_Controller{
 }
 \end{lstlisting}
 
-	Nama \textit{file} pada kode di atas haruslah  "Blog.php" dengan B besar dan disimpan pada \textit{application/controllers} sehingga URL dapat berjalan dengan baik.
+	Nama \textit{file} pada kode listing di atas haruslah  "Blog.php" dengan B besar dan disimpan pada \textit{application/controllers} sehingga URL dapat berjalan dengan baik.
 	
 \subsubsection{Method}
 \label{subsub: method}
 
-	\textit{Method} merupakan nama fungsi dari suatu kelas. Nama \textit{method} pada kode subbab \ref{sub: controller} adalah "index()". \textit{Method} bernama "index" akan selalu dijalankan jika tidak ada arahan ke metode pada URL. Cara lain untuk menjalankan \textit{method} pada kode subbab \ref{sub: controller} adalah \url{example.com/index.php/blog/index/} dimana bagian terakhir adalah nama \textit{method} yang ingin dijalankan.
+	\textit{Method} merupakan nama fungsi dari suatu kelas. Nama \textit{method} pada Listing \ref{CIcontroller} adalah "index()". \textit{Method} bernama "index" akan selalu dijalankan jika tidak ada arahan ke metode pada URL. Cara lain untuk menjalankan \textit{method} pada kode subbab \ref{sub: controller} adalah \url{example.com/index.php/blog/index/} dimana bagian terakhir adalah nama \textit{method} yang ingin dijalankan.
 	
 	
-	\begin{lstlisting}
+	\begin{lstlisting}[caption=CI Controller Method]
 <?php
 class Products extends CI_Controller{
 
@@ -80,7 +81,7 @@ class Products extends CI_Controller{
 
 	CodeIgniter dapat menjalankan \textit{default controller} sehingga tidak diperlukannya penulisan URL yang lengkap untuk pemanggilan, melainkan \textit{controller} dapat dipanggil secara otomatis dengan URL \url{example.com} saja. Namun, untuk dapat menjalankan fungsi ini, diperlukan sedikit pengaturan pada \textit{file} "application/config/routes.php" yaitu perubahan variabel yang ditunjukkan kode di bawah ini:
 	
-	\begin{lstlisting}
+	\begin{lstlisting}[caption= Default Controller]
 	$route['default_controller'] = 'blog';
 	\end{lstlisting}
 	
@@ -95,9 +96,9 @@ class Products extends CI_Controller{
 	\subsubsection{Pembuatan Views}
 	\label{subsub: pembuatanView}
 	
-	Pembuatan \textit{file view} pada dasarnya sama seperti pembuatan \textit{file} berbasis PHP biasa. Berikut ini merupakan salah satu contoh kode sebuah \textit{file view} sederhana.
+	Pembuatan \textit{file view} pada dasarnya sama seperti pembuatan \textit{file} berbasis PHP. Berikut ini merupakan salah satu contoh kode sebuah \textit{file view} sederhana.
 	
-	\begin{lstlisting}
+	\begin{lstlisting}[caption={File View}, label={fileView}]
 <html>
 <head>
 	<title> My Blog </title>
@@ -108,14 +109,14 @@ class Products extends CI_Controller{
 </html>
 	\end{lstlisting}
 	
-	Setelah selesai membuat \textit{file view} yang diinginkan, maka penyimpanan \textit{file} tersebut harus diletakkan di direktori "application/views/".
+	Setelah selesai membuat \textit{file view} yang diinginkan, maka penyimpanan \textit{file} tersebut harus diletakkan di direktori "application/views/". Nama file pada view tidak diatur huruf besar maupun huruf kecil. Pada Listing \ref{fileView}, file disimpan dengan nama "blogview".
 	
 	\subsubsection{Menjalankan View}
 	\label{subsub: menjalankanView}
 	
-	Menjalankan \textit{view} pada CodeIgniter dilakukan di \textit{file controller}. Kode di bawah ini menunjukkan kode yang harus ditulis di dalam \textit{method controller}.
+	Menjalankan \textit{view} pada CodeIgniter dilakukan di \textit{file controller}. Listing di bawah ini menunjukkan kode yang harus ditulis di dalam \textit{method controller}.
 	
-	\begin{lstlisting}
+	\begin{lstlisting}[caption={Pemanggilan View}, label={panggilView}]
 <?php
 class Blog extends CI_Controller{
 	
@@ -125,13 +126,15 @@ class Blog extends CI_Controller{
 }
 	\end{lstlisting}
 	
+	Listing \ref{panggilView} merupakan listing untuk memanggil view yang dibuat pada Listing \ref{fileView}, dimana "blogview" merupakan nama file view yang diinginkan.
+	
 	\subsection{Models}
 	\label{sub: models}
 	
 	\textit{Model} merupakan \textit{file} berbasis PHP yang didesain sebagai penghubung aplikasi dengan basis data. \textit{Model} berfungsi menjalankan kueri-kueri sql seperti \textit{insert, update, delete, select,} dll.
-	Pada CodeIgniter terdapat fungsi \textit{query builder} yang memudahkan \textit{programmer} dalam membuat kueri. Berikut ini adalah contoh penggunaan \textit{query builder} untuk kueri sql \textit{insert} dan \textit{update}.
+	Pada CodeIgniter terdapat fungsi \textit{query builder} yang memudahkan \textit {programmer} dalam membuat kueri. Berikut ini adalah contoh penggunaan \textit{query builder} untuk kueri sql \textit{insert} dan \textit{update}.
 	
-	\begin{lstlisting}
+	\begin{lstlisting}[caption={Query Builder Insert dan Update}, label={QueriBuild}]
 public function insert_entry(){
 	$this->title	= $_POST['title'];
 	$this->content	= $_POST['content'];
@@ -149,12 +152,16 @@ public function update_entry(){
 }
 	\end{lstlisting}
 	
+	Pada Listing \ref{QueriBuild}, merupakan contoh penggunaan Query Builder dari Codeigniter. Pada method insert terdapat "\$this->title = \$\_POST['title'];" yang berarti bahwa variabel "title" akan mengambil masukan dari \textit{form view} yang memiliki variable "name = title". Setelah itu variabel akan dimasukkan ke Query Builder pada baris terakhir dari \textit{method insert} dan \textit{update}.
+	
+	Penamaan \textit{file} pada \textit{model} tidak memiliki aturan baku seperti pada \textit{file controller}. \textit{File model} pada Listing \ref{QueriBuild} disimpan dengan nama "blog.php".
+	
 	\subsubsection{Menjalankan Model}
 	\label{subsub: menjalankanModel}
 		
 	Sama seperti menjalankan \textit{file view}, \textit{model} pun tidak bisa dijalankan secara langsung menggunakan URL. Untuk menjalankan \textit{model} perlu dilakukan pemanggilan pada \textit{controller}.
 	
-	\begin{lstlisting}
+	\begin{lstlisting}[caption={Pemanggilan File Model}, label={panggilModel}]
 class Blog_controller extends CI_Controller {
 
 	public function blog(){
@@ -165,7 +172,7 @@ class Blog_controller extends CI_Controller {
 }
 	\end{lstlisting}
 	
-	Kode di atas menunjukkan bahwa \textit{file controller} melakukan pemanggilan \textit{model} yang diikuti dengan inisialisasi \textit{array data} dari basis data yang dimasukkan ke pemanggilan \textit{view}.
+	Listing \ref{panggilMode} di atas menunjukkan bahwa \textit{file controller} melakukan pemanggilan \textit{model} yang diikuti dengan inisialisasi \textit{array data} dari basis data yang dimasukkan ke pemanggilan \textit{view}, dimana "blog" pada baris 4 adalah nama \textit{file model}, dan "blog" pada baris 6 adalah nama dari \textit{file view} yang diinginkan.
 	
 	\subsection{Helper}
 	\label{sub: helper}
@@ -177,7 +184,7 @@ class Blog_controller extends CI_Controller {
 	
 	Cara menjalankan \textit{helper} pada CodeIgniter cukup dengan menambahkan kode di dalam \textit{file Helper} atau \textit{view}.
 	
-	\begin{lstlisting}
+	\begin{lstlisting}[caption="Kode Helper"]
 $this->load->helper('name');
 	\end{lstlisting}
 	
@@ -203,7 +210,7 @@ $autoload['libraries'] =array('database');
 	
 	Konfigurasi basis data pada CodeIgniter disimpan dengan cara \textit{multi-dimensional array}.
 	
-	\begin{lstlisting}
+	\begin{lstlisting}[caption=Array Basis Data, label=isiBasDat]
 $db['default'] = array(
 		'dsn'		=> '',
 		'hostname'	=> 'localhost',
@@ -225,8 +232,8 @@ $db['default'] = array(
 		'failover'	=> array()
 	);
 	\end{lstlisting}
-	
-	Keterangan kode di atas:
+	\pagebreak
+	Keterangan Listing \ref{isiBasDat}:
 	\begin{center}
 	\begin{tabular}{| m{5cm} | m{10cm} |}
 		\hline
@@ -276,14 +283,14 @@ $db['default'] = array(
 \section{AngularJS}
 \label{sec: angularJS}
 
-AngularJS\cite{AngularJSDocs} merupakan sebuah \textit{framework} terstruktur yang digunakan untuk aplikasi \textit{web} yang bersifat dinamis. Hal tersebut memungkinkan \textit{programmer} untuk mempergunakan HTML sebagai \textit{template} bahasa pemrograman dan memperluas sintaks HTML agar dapat mengekspresikan komponen aplikasi dengan jelas dan ringkas. Sifat AngularJS yang mengikat data dan mempunyai ketergantungan injeksi akan menghilangkan banyak kode yang seharusnya dituliskan oleh \textit{programmer}, dan semua itu terjadi pada \textit{browser} sehingga dapat disimpulkan bahwa AngularJS merupakan pasangan yang sangat ideal bagi penggunaan teknologi server. 
+AngularJS\cite{AngularJSDocs} merupakan sebuah \textit{framework} terstruktur yang digunakan untuk aplikasi \textit{web} yang bersifat dinamis. Hal tersebut memungkinkan \textit{programmer} untuk mempergunakan HTML sebagai \textit{template} bahasa pemrograman dan memperluas sintaks HTML agar dapat mengekspresikan komponen aplikasi dengan jelas dan ringkas. Sifat AngularJS yang mengikat data dan mempunyai injeksi ketergantungan (\textit{Dependency Injection}) yang berfungsi agar suatu kelas tidak terikat dengan kelas lain, juga akan menghilangkan banyak kode yang seharusnya dituliskan oleh \textit{programmer}, dan semua itu terjadi pada \textit{browser} sehingga dapat disimpulkan bahwa AngularJS merupakan pasangan yang sangat ideal bagi penggunaan teknologi server. 
 Dalam pembuatannya, ketidakcocokkan halaman statik dan dinamik biasanya diselesaikan dengan pendekatan sebagai berikut:
 \begin{enumerate}
 	\item \textit{Library}: merupakan sebuah koleksi dari berbagai macam fungsi yang berguna dalam pembuatan aplikasi \textit{web}, contoh: JQuery.
-	\item \textit{Frameworks}: merupakan suatu implementasi dari sebuah aplikasi \textit{web} yang menempatkan kode yang dituliskan secara detail. \textit{Framework} akan berperan melakukan pemanggilan ke kode yang dituliskan \textit{programmer} ketika aplikasi membutuhkan sesuatu yang spesifik, contoh: durandal, ember, dll.
+	\item \textit{Frameworks}: merupakan suatu implementasi dari sebuah aplikasi \textit{web} yang menempatkan kode yang dituliskan secara detail. \textit{Framework} akan berperan melakukan pemanggilan ke kode yang dituliskan \textit{programmer} ketika aplikasi membutuhkan sesuatu yang spesifik, contoh: durandal(\textit{light-weight javascript framework}), ember(\textit{open-source javascript framework}), dll.
 \end{enumerate}
 
-Dalam pembentukannya, AngularJS memiliki pendekatan yang berbeda. AngularJS berupaya untuk meminimalkan ketidakcocokan antara dokumen utama dari HTML dengan apa yang dibutuhkan oleh aplikasi untuk membuat konstruksi HTML baru. AngularJS mengajarkan \textit{browser} sintaks baru yang disebut \textit{directives}. Contoh \textit{directives} adalah:
+Dalam pembentukannya, AngularJS memiliki pendekatan yang berbeda. AngularJS mengajarkan \textit{browser} sintaks baru yang disebut \textit{directives}. Contoh \textit{directives} adalah:
 \begin{enumerate}
 	\item Keterikatan data di dalam \{\{\}\};
 	\item Dukungan untuk \textit{Form} dan \textit{Form Validation}
@@ -332,11 +339,15 @@ Dalam pembentukannya, AngularJS memiliki pendekatan yang berbeda. AngularJS beru
 \subsection{Directives}
 \label{sub: directives}
 
-	\textit{Directives} merupakan penanda pada \textit{DOM elements} (seperti attribut, nama elemen, \textit{comment},  dan kelas CSS) yang memberitahukan kepada \textit{AngularJS HTML compiler} untuk melampirkan perilaku yang di inginkan kepada \textit{DOM element} (contohnya memakai \textit{event listener}), atau bahkan mengubah \textit{DOM element} yang dituju beserta dengan peranakannya.
+	\textit{Directives} merupakan penanda pada \textit{DOM (Document Object Mode) elements} (seperti attribut, nama, \textit{comment},  dan kelas CSS) yang memberitahukan kepada \textit{AngularJS HTML compiler}\footnote{memperbolehkan pengembang untuk mengajarkan browser syntaks HTML baru}, sehingga dapat melampirkan perilaku yang diinginkan kepada \textit{DOM element} (contohnya memakai \textit{event listener}), atau bahkan mengubah \textit{DOM element} yang dituju beserta dengan peranakannya.
 	
-	AngularJS menyediakan sekumpulan \textit{directives built-in} seperti ng-Model, ng-Bind, dan ng-Class. 
+	AngularJS menyediakan sekumpulan \textit{directives built-in} seperti yang akan dijelaskan selanjutnya.
 	
-
+	\subsubsection{ng-Model}
+	ng-Model adalah suatu \textit{directives} yang dapat digunakan pada \textit{form control} seperti \textit{input, select, textarea}, dan \textit{form control} unik lainnya untuk mengikat data ke \textit{scope property (\$scope)} dengan menggunakan ngModelController (kelas yang menyediakan API (\textit{Application Programming Interface}) untuk ng-Model)
+	
+	\subsubsection{ng-Controller}
+	ng-Controller adalah suatu \textit{directives} yang menambahkan suatu kelas \textit{controller} pada bagian \textit{view} dari aplikasi angularJS. ng-Controller inilah yang merupakan kelas kunci dari bagaimana AngularJS dapat menerapkan Model-View-Controller bersifat front-end (pada tampilan).
 
 \subsection{Data Binding}
 \label{sub: dataBinding}
@@ -371,23 +382,23 @@ Dalam pembentukannya, AngularJS memiliki pendekatan yang berbeda. AngularJS beru
 	\end{itemize}
 	
 	Model dibuat dengan menggunakan atribut berupa objek atau konten-konten primitif yang dapat menyimpan data. Berikut adalah salah satu contoh praktis dalam pembuatan \textit{model}:
-\begin{lstlisting}
+\begin{lstlisting}[caption= Model berupa variabel]
 var someText = 'You have started your journey.'
 \end{lstlisting}
 	Setelah itu untuk menampilkannya maka perlu dibuat \textit{view} dari data \textit{model} "someText" diatas dengan cara:
-\begin{lstlisting}
+\begin{lstlisting}[caption= Menampilkan model]
 <p> {{someText}} </p>
 \end{lstlisting}
 	\textit{Syntax view} 2 kurung kurawal diatas disebut sebagai interlopasi (penyusupan), karena hal tersebut memasukkan konten baru ke dalam \textit{template} yang sudah ada.\\
 	Sementara kelas \textit{controllers} berguna untuk memberitahu AngularJS tentang objek atau konten primitif mana dari \textit{model} yang akan dipakai dengan cara menetapkannya ke objek '\$scope ', objek '\$scope' tersebut kemudian akan diberikan kepada \textit{controller} seperti contoh berikut:
-\begin{lstlisting}
+\begin{lstlisting}[caption= Controller , label= listController]
 function TextController($scope){
 	$scope.someText = someText;
 }
 \end{lstlisting}
 	
 	Berikut ini adalah contoh penggabungan fungsi \textit{model, view,} dan \textit{controller}:
-\begin{lstlisting}
+\begin{lstlisting}[caption= Penyatuan model view controller , label=penyatuanCI]
 <html>
 <body ng-controller = "TextController">
 	<p>{{someText}}</p>
@@ -405,16 +416,8 @@ function TextController($scope){
 </html>
 \end{lstlisting}
 	
-	Hasil dari kode diatas adalah tulisan "You have started your journey". Walaupun cara ini dapat dilakukan dengan mudah pada aplikasi sederhana seperti contoh diatas, tetapi untuk kebanyakan aplikasi sebaiknya dibuat objek \textit{model} untuk menyimpan \textit{data} yang ada. Untuk itu, daripada membuat \textit{model} seperti:
-	
-\begin{lstlisting}
-function TextController($scope){
-	$scope.someText = someText;
-}
-\end{lstlisting}
-	
-	Lebih baik menggunakan kode:
-\begin{lstlisting}
+	Hasil dari Listing \ref{penyatuanCI} diatas adalah tulisan "You have started your journey". Walaupun cara ini dapat dilakukan dengan mudah pada aplikasi sederhana seperti contoh diatas, tetapi untuk kebanyakan aplikasi sebaiknya dibuat objek \textit{model} untuk menyimpan \textit{data} yang ada. Untuk itu, daripada membuat \textit{model} seperti Listing \ref{listController}, akan lebih baik menggunakan kode:
+\begin{lstlisting}[caption= Penyederhanaan controller]
 var message= {};
 message.someText = 'You have started your journey';
 function TextController($scope){
@@ -422,11 +425,11 @@ function TextController($scope){
 }
 \end{lstlisting}
 	Yang kemudian akan dipanggil di \textit{template} dengan kode:
-\begin{lstlisting}
+\begin{lstlisting}[caption= Pemanggilan variabel]
 <p>{{message.someText}}</p>
 \end{lstlisting}
-	Perubahan yang dilakukan diatas berfungsi untuk mencegah perilaku tidak terduga yang dapat terjadi dari \textit{prototypal inheritance} dalam objek '\$scope'. Walaupun untuk sementara hal ini dapat berjalan dengan baik, tetapi cara yang benar dalam mendefinisikan sebuah \textit{controller} adalah dengan menggunakan sebuah kelas yang dinamakan \textit{module} yang menyediakan \textit{namespace} untuk bagian lain dari aplikasi berhubungan. Perubahan tersebut akan mengubah kode-kode diatas menjadi:
-	\begin{lstlisting}
+	Perubahan yang dilakukan diatas berfungsi untuk mencegah perilaku tidak terduga yang dapat terjadi dari \textit{prototypal inheritance} dalam objek '\$scope'. Walaupun untuk sementara hal ini dapat berjalan dengan baik, tetapi cara yang benar dalam mendefinisikan sebuah \textit{controller} adalah dengan menggunakan sebuah kelas yang dinamakan \textit{module} yang menyediakan \textit{namespace} untuk bagian lain dari aplikasi berhubungan. Perubahan tersebut akan mengubah kode-kode pada listing diatas menjadi:
+	\begin{lstlisting}[caption= Penyederhanaan MVC]
 <html ng-app='myApp'>
 <body ng-controller='TextController'>
 	<p>{{someText.message}}</p>
@@ -488,7 +491,7 @@ function TextController($scope){
 \label{sub: formClass}
 	Masing-masing form akan memiliki bentuk otomatis yang diatur secara global. Dengan memakai kelas ".form-control", pengaturan ukuran dari kelas <input>, <textarea>, dan <select> akan otomatis memiliki variabel \textit{width} 100\% secara \textit{default}. Untuk mendapatkan jarak \textit{spacing} yang maksimal, \textit{Bootstrap} memiliki kelas ".form-group" yang membungkus kelas \textit{form} menjadi grup-grup.
 	
-\begin{lstlisting}
+\begin{lstlisting}[caption= Contoh penggunaan Twitter Bootstrap]
 <form>
 	<div class="form-group">
 		<label for="exampleInputEmail1">Email Address</label>
