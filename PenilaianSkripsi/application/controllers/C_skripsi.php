@@ -22,11 +22,6 @@ class C_skripsi extends CI_Controller {
         {
                 $this->load->view('skripsi');
         }
-        //Check database
-        public function view_cekMahasiswa(){
-                $data = $this->skripsi_model->getAllMahasiswa();
-                $this->load->view('cek_mahasiswa', array('data' => $data));
-        }
         
         public function tambahDataMahasiswa(){
                 $semester = $_POST['semester'];

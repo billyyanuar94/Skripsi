@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.25)  6 JUN 2017 11:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.25)  18 JUN 2017 22:58
 entering extended mode
 **./skripsi.tex
 (skripsi.tex
@@ -1439,7 +1439,7 @@ Overfull \hbox (2.96721pt too wide) in paragraph at lines 72--73
 
 ]
 Bab 2.
-<Gambar/flowChartCI.jpg, id=431, 554.82281pt x 176.15813pt>
+<Gambar/flowChartCI.jpg, id=468, 554.82281pt x 176.15813pt>
 File: Gambar/flowChartCI.jpg Graphic file (type jpg)
 
 <use Gambar/flowChartCI.jpg>
@@ -1470,13 +1470,13 @@ Overfull \hbox (18.08678pt too wide) in paragraph at lines 304--337
  [] 
  []
 
-[12] [13] <Gambar/Dabin1.jpg, id=598, 321.45094pt x 192.72pt>
+[12] [13] <Gambar/Dabin1.jpg, id=635, 321.45094pt x 192.72pt>
 File: Gambar/Dabin1.jpg Graphic file (type jpg)
 
 <use Gambar/Dabin1.jpg>
 Package pdftex.def Info: Gambar/Dabin1.jpg used on input line 359.
 (pdftex.def)             Requested size: 241.0876pt x 144.53963pt.
- <Gambar/Dabin2.jpg, id=600, 316.18124pt x 220.57407pt>
+ <Gambar/Dabin2.jpg, id=637, 316.18124pt x 220.57407pt>
 File: Gambar/Dabin2.jpg Graphic file (type jpg)
 
 <use Gambar/Dabin2.jpg>
@@ -1490,7 +1490,7 @@ View-Controller
  []
 
 [14 <./Gambar/Dabin1.jpg> <./Gambar/Dabin2.jpg>] [15] [16]
-<Gambar/gridOption.jpg, id=673, 638.385pt x 300.3722pt>
+<Gambar/gridOption.jpg, id=710, 638.385pt x 300.3722pt>
 File: Gambar/gridOption.jpg Graphic file (type jpg)
 
 <use Gambar/gridOption.jpg>
@@ -1501,7 +1501,7 @@ Overfull \hbox (44.88303pt too wide) in paragraph at lines 478--479
  [][] 
  []
 
-<Gambar/kolom.jpg, id=674, 666.99188pt x 182.93344pt>
+<Gambar/kolom.jpg, id=711, 666.99188pt x 182.93344pt>
 File: Gambar/kolom.jpg Graphic file (type jpg)
  <use Gambar/kolom.jpg>
 Package pdftex.def Info: Gambar/kolom.jpg used on input line 485.
@@ -1512,7 +1512,7 @@ Overfull \hbox (66.33813pt too wide) in paragraph at lines 485--486
  []
 
 [17 <./Gambar/gridOption.jpg>]
-<Gambar/hasilForm.jpg, id=686, 628.59843pt x 256.70906pt>
+<Gambar/hasilForm.jpg, id=723, 628.59843pt x 256.70906pt>
 File: Gambar/hasilForm.jpg Graphic file (type jpg)
 
 <use Gambar/hasilForm.jpg>
@@ -1532,160 +1532,303 @@ Bab 3.
 
 
 
-] [20]
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 82.
- [21] [22] [23] [24] [25] [26]
-Overfull \hbox (9.83084pt too wide) in paragraph at lines 297--298
-[]\T1/lmr/m/n/10.95 "{{ketua.value+anggota.value+pembimbing.value+koordinator.v
-alue}} = me-nam-
- []
-
-
-Overfull \hbox (18.23785pt too wide) in paragraph at lines 298--299
-\T1/lmr/m/n/10.95 tua.value / 100 + (ni-lai_TTLaporanA * TT-La-po-ra-nA.value /
- 100 + ni-lai_KMateriA
- []
-
-
-Overfull \hbox (30.1026pt too wide) in paragraph at lines 298--299
-\T1/lmr/m/n/10.95 * KMa-te-riA.value / 100 + ni-lai_PMateriA * PMa-te-riA.value
- / 100 + ni-lai_PresentasiA
- []
-
-
-Overfull \hbox (8.96065pt too wide) in paragraph at lines 298--299
-\T1/lmr/m/n/10.95 ta.value / 100 + (ni-lai_TTLaporanP * TT-La-po-ranP.value / 1
-00 + ni-lai_KMateriP
- []
-
-
-Overfull \hbox (35.8802pt too wide) in paragraph at lines 298--299
-\T1/lmr/m/n/10.95 * KMa-te-riP.value / 100 + ni-lai_PMateriP * PMa-te-riP.value
- / 100 + ni-lai_PBimbinganP
- []
-
-[27] [28] <Gambar/usecase.jpg, id=912, 362.35374pt x 261.97874pt>
-File: Gambar/usecase.jpg Graphic file (type jpg)
-
-<use Gambar/usecase.jpg>
-Package pdftex.def Info: Gambar/usecase.jpg used on input line 365.
-(pdftex.def)             Requested size: 271.76463pt x 196.48357pt.
- [29 <./Gambar/usecase.jpg>]) [30]
-\openout2 = `Bab/bab4.aux'.
-
- (Bab/bab4.tex
-Bab 4.
-<Gambar/C_skripsi.jpg, id=936, 175.40532pt x 114.4275pt>
+] [20] <Gambar/C_skripsi.jpg, id=766, 175.40532pt x 114.4275pt>
 File: Gambar/C_skripsi.jpg Graphic file (type jpg)
 
 <use Gambar/C_skripsi.jpg>
-Package pdftex.def Info: Gambar/C_skripsi.jpg used on input line 28.
+Package pdftex.def Info: Gambar/C_skripsi.jpg used on input line 57.
 (pdftex.def)             Requested size: 175.40488pt x 114.42722pt.
- [31
+ [21 <./Gambar/C_skripsi.jpg>]
+Overfull \hbox (18.08678pt too wide) in paragraph at lines 159--234
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--234
+
+ []
+
+[22]
+Overfull \hbox (18.08678pt too wide) in paragraph at lines 240--291
+ [][] 
+ []
+
+
+Overfull \hbox (18.08678pt too wide) in paragraph at lines 294--309
+ [][] 
+ []
+
+[23]
+Overfull \vbox (31.7422pt too high) has occurred while \output is active []
+
+
+[24] [25] <Gambar/usecase.jpg, id=813, 362.35374pt x 261.97874pt>
+File: Gambar/usecase.jpg Graphic file (type jpg)
+
+<use Gambar/usecase.jpg>
+Package pdftex.def Info: Gambar/usecase.jpg used on input line 358.
+(pdftex.def)             Requested size: 271.76463pt x 196.48357pt.
+ [26 <./Gambar/usecase.jpg>]) [27]
+\openout2 = `Bab/bab4.aux'.
+
+ (Bab/bab4.tex
+[28
 
 
 
-] [32 <./Gambar/C_skripsi.jpg>]
-<Gambar/tampilan1.jpg, id=964, 328.97906pt x 385.44pt>
-File: Gambar/tampilan1.jpg Graphic file (type jpg)
+]
+Bab 4.
+[29] [30] [31] <Gambar/beritaacara.png, id=950, 557.6835pt x 493.24275pt>
+File: Gambar/beritaacara.png Graphic file (type png)
 
-<use Gambar/tampilan1.jpg>
-Package pdftex.def Info: Gambar/tampilan1.jpg used on input line 146.
-(pdftex.def)             Requested size: 246.73369pt x 289.07928pt.
+<use Gambar/beritaacara.png>
+Package pdftex.def Info: Gambar/beritaacara.png used on input line 227.
+(pdftex.def)             Requested size: 418.2616pt x 369.93115pt.
 
-<Gambar/tampilan2.jpg, id=965, 328.97906pt x 331.99031pt>
-File: Gambar/tampilan2.jpg Graphic file (type jpg)
+<Gambar/rekapitulasi.png, id=952, 741.36975pt x 446.8695pt>
+File: Gambar/rekapitulasi.png Graphic file (type png)
 
-<use Gambar/tampilan2.jpg>
-Package pdftex.def Info: Gambar/tampilan2.jpg used on input line 147.
-(pdftex.def)             Requested size: 246.73369pt x 248.99211pt.
-) [33] [34 <./Gambar/tampilan1.jpg> <./Gambar/tampilan2.jpg>]
+<use Gambar/rekapitulasi.png>
+Package pdftex.def Info: Gambar/rekapitulasi.png used on input line 235.
+(pdftex.def)             Requested size: 370.68396pt x 223.4342pt.
+) [32 <./Gambar/beritaacara.png>] [33 <./Gambar/rekapitulasi.png>]
 \openout2 = `Bab/bab5.aux'.
 
- (Bab/bab5.tex
+ (Bab/bab5.tex [34
+
+
+
+]
 Bab 5.
-<Gambar/beritaacaraisi.jpg, id=975, 868.74562pt x 477.28313pt>
+<Gambar/beritaacaraisi.jpg, id=968, 1142.46825pt x 557.6835pt>
 File: Gambar/beritaacaraisi.jpg Graphic file (type jpg)
 
 <use Gambar/beritaacaraisi.jpg>
 Package pdftex.def Info: Gambar/beritaacaraisi.jpg used on input line 37.
-(pdftex.def)             Requested size: 434.37175pt x 238.64098pt.
- [35
+(pdftex.def)             Requested size: 456.9792pt x 223.06944pt.
 
+Overfull \hbox (23.07466pt too wide) in paragraph at lines 37--38
+ [][] 
+ []
 
-
-]
-<Gambar/ketuaisi.jpg, id=988, 810.77907pt x 361.35pt>
+[35] <Gambar/ketuaisi.jpg, id=981, 1146.08176pt x 436.63126pt>
 File: Gambar/ketuaisi.jpg Graphic file (type jpg)
 
 <use Gambar/ketuaisi.jpg>
 Package pdftex.def Info: Gambar/ketuaisi.jpg used on input line 45.
-(pdftex.def)             Requested size: 405.38855pt x 180.67456pt.
+(pdftex.def)             Requested size: 458.42458pt x 174.6494pt.
 
-<Gambar/anggotaisi.jpg, id=989, 823.57687pt x 361.35pt>
+Overfull \hbox (24.52003pt too wide) in paragraph at lines 45--46
+ [][] 
+ []
+
+<Gambar/anggotaisi.jpg, id=982, 1144.87724pt x 354.123pt>
 File: Gambar/anggotaisi.jpg Graphic file (type jpg)
 
 <use Gambar/anggotaisi.jpg>
 Package pdftex.def Info: Gambar/anggotaisi.jpg used on input line 51.
-(pdftex.def)             Requested size: 411.78743pt x 180.67456pt.
+(pdftex.def)             Requested size: 457.9428pt x 141.64668pt.
 
-<Gambar/pembimbingisi.jpg, id=990, 800.9925pt x 326.72063pt>
+Overfull \hbox (24.03825pt too wide) in paragraph at lines 51--52
+ [][] 
+ []
+
+<Gambar/pembimbingisi.jpg, id=983, 1144.275pt x 372.79276pt>
 File: Gambar/pembimbingisi.jpg Graphic file (type jpg)
 
 <use Gambar/pembimbingisi.jpg>
 Package pdftex.def Info: Gambar/pembimbingisi.jpg used on input line 57.
-(pdftex.def)             Requested size: 400.49527pt x 163.35991pt.
- [36 <./Gambar/beritaacaraisi.jpg> <./Gambar/ketuaisi.jpg>] <Gambar/selesaiisi.
-jpg, id=996, 876.27374pt x 356.0803pt>
+(pdftex.def)             Requested size: 457.70189pt x 149.11446pt.
+
+Overfull \hbox (23.79735pt too wide) in paragraph at lines 57--58
+ [][] 
+ []
+
+[36 <./Gambar/beritaacaraisi.jpg> <./Gambar/ketuaisi.jpg>]
+<Gambar/selesaiisi.jpg, id=989, 1145.4795pt x 289.68225pt>
 File: Gambar/selesaiisi.jpg Graphic file (type jpg)
 
 <use Gambar/selesaiisi.jpg>
 Package pdftex.def Info: Gambar/selesaiisi.jpg used on input line 65.
-(pdftex.def)             Requested size: 350.50328pt x 142.4296pt.
- [37 <./Gambar/anggotaisi.jpg> <./Gambar/pembimbingisi.jpg> <./Gambar/selesaiis
-i.jpg>] [38]
-Overfull \hbox (64.2263pt too wide) in paragraph at lines 231--244
+(pdftex.def)             Requested size: 458.18369pt x 115.87083pt.
+
+Overfull \hbox (24.27914pt too wide) in paragraph at lines 65--66
  [][] 
  []
 
-) [39] [40]
+<Gambar/selesaiisi2.jpg, id=990, 1143.0705pt x 284.262pt>
+File: Gambar/selesaiisi2.jpg Graphic file (type jpg)
+
+<use Gambar/selesaiisi2.jpg>
+Package pdftex.def Info: Gambar/selesaiisi2.jpg used on input line 71.
+(pdftex.def)             Requested size: 457.2201pt x 113.70277pt.
+
+Overfull \hbox (23.31555pt too wide) in paragraph at lines 71--72
+ [][] 
+ []
+
+[37 <./Gambar/anggotaisi.jpg> <./Gambar/pembimbingisi.jpg> <./Gambar/selesaiisi
+.jpg>] [38 <./Gambar/selesaiisi2.jpg>]
+Underfull \hbox (badness 2717) in paragraph at lines 245--246
+[]|\T1/lmr/m/n/10.95 Pembangunan Ro-bot Fo-rex
+ []
+
+[39] [40] [41] [42] [43]
+Underfull \hbox (badness 10000) in paragraph at lines 518--518
+\T1/lmr/m/n/10.95 per-be-da-an tam-pil-an pa-da
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 518--519
+[]|\T1/lmr/m/n/10.95 Fungsi ber-jal-an
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 520--520
+\T1/lmr/m/n/10.95 per-be-da-an tam-pil-an pa-da
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 520--521
+[]|\T1/lmr/m/n/10.95 Fungsi ber-jal-an
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 522--523
+[]|\T1/lmr/m/n/10.95 Fungsi ber-jal-an
+ []
+
+
+Overfull \hbox (64.2263pt too wide) in paragraph at lines 514--525
+ [][] 
+ []
+
+[44] <Gambar/MsEdge.png, id=1027, 1156.32pt x 650.43pt>
+File: Gambar/MsEdge.png Graphic file (type png)
+
+<use Gambar/MsEdge.png>
+Package pdftex.def Info: Gambar/MsEdge.png used on input line 529.
+(pdftex.def)             Requested size: 462.5198pt x 260.16739pt.
+
+<Gambar/MsEdgeSelesai.png, id=1028, 1156.32pt x 650.43pt>
+File: Gambar/MsEdgeSelesai.png Graphic file (type png)
+
+<use Gambar/MsEdgeSelesai.png>
+Package pdftex.def Info: Gambar/MsEdgeSelesai.png used on input line 530.
+(pdftex.def)             Requested size: 462.5198pt x 260.16739pt.
+
+Overfull \hbox (28.61526pt too wide) in paragraph at lines 529--531
+ [][] 
+ []
+
+
+Overfull \hbox (28.61526pt too wide) in paragraph at lines 529--531
+ [] 
+ []
+
+[45] <Gambar/Mozila.png, id=1033, 1156.32pt x 650.43pt>
+File: Gambar/Mozila.png Graphic file (type png)
+
+<use Gambar/Mozila.png>
+Package pdftex.def Info: Gambar/Mozila.png used on input line 537.
+(pdftex.def)             Requested size: 462.5198pt x 260.16739pt.
+
+<Gambar/MozilaSelesai.png, id=1034, 1156.32pt x 650.43pt>
+File: Gambar/MozilaSelesai.png Graphic file (type png)
+
+<use Gambar/MozilaSelesai.png>
+Package pdftex.def Info: Gambar/MozilaSelesai.png used on input line 538.
+(pdftex.def)             Requested size: 462.5198pt x 260.16739pt.
+
+Overfull \hbox (28.61526pt too wide) in paragraph at lines 537--539
+ [][] 
+ []
+
+
+Overfull \hbox (28.61526pt too wide) in paragraph at lines 537--539
+ [] 
+ []
+
+[46 <./Gambar/MsEdge.png> <./Gambar/MsEdgeSelesai.png>]
+<Gambar/hp_menu.png, id=1039, 722.7pt x 1284.8pt>
+File: Gambar/hp_menu.png Graphic file (type png)
+ <use Gambar/hp_menu.png>
+Package pdftex.def Info: Gambar/hp_menu.png used on input line 545.
+(pdftex.def)             Requested size: 144.53743pt x 256.95544pt.
+
+[47 <./Gambar/Mozila.png> <./Gambar/MozilaSelesai.png>]
+<Gambar/hp_beritaacara.png, id=1044, 722.7pt x 1284.8pt>
+File: Gambar/hp_beritaacara.png Graphic file (type png)
+
+<use Gambar/hp_beritaacara.png>
+Package pdftex.def Info: Gambar/hp_beritaacara.png used on input line 552.
+(pdftex.def)             Requested size: 144.53743pt x 256.95544pt.
+
+<Gambar/hp_nilai.png, id=1045, 430.60875pt x 327.02174pt>
+File: Gambar/hp_nilai.png Graphic file (type png)
+
+<use Gambar/hp_nilai.png>
+Package pdftex.def Info: Gambar/hp_nilai.png used on input line 559.
+(pdftex.def)             Requested size: 86.12021pt x 65.40318pt.
+ <Gambar/hp_ketua.png, id=1046, 722.7pt x 1284.8pt>
+File: Gambar/hp_ketua.png Graphic file (type png)
+
+<use Gambar/hp_ketua.png>
+Package pdftex.def Info: Gambar/hp_ketua.png used on input line 566.
+(pdftex.def)             Requested size: 144.53743pt x 256.95544pt.
+ [48 <./Gambar/hp_menu.png> <./Gambar/hp_beritaacara.png> <./Gambar/hp_nilai.pn
+g>]
+<Gambar/hp_anggota.png, id=1051, 722.7pt x 1284.8pt>
+File: Gambar/hp_anggota.png Graphic file (type png)
+
+<use Gambar/hp_anggota.png>
+Package pdftex.def Info: Gambar/hp_anggota.png used on input line 573.
+(pdftex.def)             Requested size: 144.53743pt x 256.95544pt.
+
+<Gambar/hp_pembimbing.png, id=1052, 722.7pt x 1284.8pt>
+File: Gambar/hp_pembimbing.png Graphic file (type png)
+
+<use Gambar/hp_pembimbing.png>
+Package pdftex.def Info: Gambar/hp_pembimbing.png used on input line 580.
+(pdftex.def)             Requested size: 144.53743pt x 256.95544pt.
+) [49 <./Gambar/hp_ketua.png> <./Gambar/hp_anggota.png>] [50 <./Gambar/hp_pembi
+mbing.png>]
 \openout2 = `Bab/bab6.aux'.
 
  (Bab/bab6.tex
 Bab 6.
-) [41
+) [51
 
 
 
-] (skripsi.bbl [42
+] (skripsi.bbl [52
 
 
-]) [43]
+]) [53]
 \openout2 = `Lampiran/lampA.aux'.
 
- (Lampiran/lampA.tex [44
+ (Lampiran/lampA.tex [54
 
 
 ]
 Lampiran A.
-<Gambar/dokumen_skripsi.jpg, id=1044, 1504.62125pt x 2104.86375pt>
+<Gambar/dokumen_skripsi.jpg, id=1090, 846.7635pt x 1238.226pt>
 File: Gambar/dokumen_skripsi.jpg Graphic file (type jpg)
 
 <use Gambar/dokumen_skripsi.jpg>
 Package pdftex.def Info: Gambar/dokumen_skripsi.jpg used on input line 8.
-(pdftex.def)             Requested size: 300.91891pt x 420.9653pt.
- [45 <./Gambar/dokumen_skripsi.jpg>]
+(pdftex.def)             Requested size: 169.3497pt x 247.64081pt.
+ [55 <./Gambar/dokumen_skripsi.jpg>]
 
-LaTeX Warning: Reference `fig:appxa3' on page 46 undefined on input line 13.
+LaTeX Warning: Reference `fig:appxa3' on page 56 undefined on input line 13.
 
-<Gambar/dokumen_rekap.jpg, id=1049, 1519.6775pt x 2084.78876pt>
+<Gambar/dokumen_rekap.jpg, id=1096, 879.88725pt x 1202.69325pt>
 File: Gambar/dokumen_rekap.jpg Graphic file (type jpg)
 
 <use Gambar/dokumen_rekap.jpg>
 Package pdftex.def Info: Gambar/dokumen_rekap.jpg used on input line 17.
-(pdftex.def)             Requested size: 303.93011pt x 416.95036pt.
-) [46 <./Gambar/dokumen_rekap.jpg>]
+(pdftex.def)             Requested size: 175.97433pt x 240.5344pt.
+) [56 <./Gambar/dokumen_rekap.jpg>]
 \openout2 = `Lampiran/lampB.aux'.
 
 
@@ -1699,55 +1842,63 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 ("C:\Users\billy yanuar\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang2.
 sty"
 File: lstlang2.sty 2015/06/04 1.6 listings language file
-) [47
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <6> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 19.
+ [57
 
 
 
-] [48] [49] [50] [51] [52] [53] [54] [55]) [56]
+] [58] [59] [60] [61] [62] [63] [64] [65]
+
+Package lineno Warning: Linenumber reference failed, 
+(lineno)                rerun to get it right.
+
+) [66]
 \openout2 = `Lampiran/lampC.aux'.
 
  (Lampiran/lampC.tex)
 \openout2 = `Lampiran/lampD.aux'.
 
-
-(Lampiran/lampD.tex)
+ (Lampiran/lampD.tex)
 \openout2 = `Lampiran/lampE.aux'.
 
  (Lampiran/lampE.tex)
 \openout2 = `Lampiran/lampF.aux'.
 
- (Lampiran/lampF.tex)
+
+(Lampiran/lampF.tex)
 \openout2 = `Lampiran/lampG.aux'.
 
-
-(Lampiran/lampG.tex)
+ (Lampiran/lampG.tex)
 \openout2 = `Lampiran/lampH.aux'.
 
  (Lampiran/lampH.tex)
 \openout2 = `Lampiran/lampI.aux'.
 
- (Lampiran/lampI.tex)
+
+(Lampiran/lampI.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 510.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 510.
- (skripsi.aux
-(Bab/bab1.aux) (Bab/bab2.aux) (Bab/bab3.aux) (Bab/bab4.aux) (Bab/bab5.aux)
-(Bab/bab6.aux) (Lampiran/lampA.aux) (Lampiran/lampB.aux) (Lampiran/lampC.aux)
-(Lampiran/lampD.aux) (Lampiran/lampE.aux) (Lampiran/lampF.aux)
-(Lampiran/lampG.aux) (Lampiran/lampH.aux) (Lampiran/lampI.aux))
+ (skripsi.aux (Bab/bab1.aux) (Bab/bab2.aux) (Bab/bab3.aux)
+(Bab/bab4.aux) (Bab/bab5.aux) (Bab/bab6.aux) (Lampiran/lampA.aux)
+(Lampiran/lampB.aux) (Lampiran/lampC.aux) (Lampiran/lampD.aux)
+(Lampiran/lampE.aux) (Lampiran/lampF.aux) (Lampiran/lampG.aux)
+(Lampiran/lampH.aux) (Lampiran/lampI.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 510.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 510.
 Package rerunfilecheck Info: File `skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: 25D658C3200A7E959B9B15ED4CD41ABC;7808.
+(rerunfilecheck)             Checksum: 5EBD33633C1D4AF3F44492142B02BCAF;7808.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 44148 strings out of 493333
- 944806 string characters out of 3139171
- 2035856 words of memory out of 3000000
- 45674 multiletter control sequences out of 15000+200000
+ 44192 strings out of 493333
+ 945898 string characters out of 3139171
+ 2039153 words of memory out of 3000000
+ 45732 multiletter control sequences out of 15000+200000
  71548 words of font info for 59 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
  73i,16n,122p,10424b,3599s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1764,9 +1915,9 @@ Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/lm/lmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb>
-Output written on skripsi.pdf (68 pages, 2057325 bytes).
+Output written on skripsi.pdf (78 pages, 3485963 bytes).
 PDF statistics:
- 2140 PDF objects out of 2487 (max. 8388607)
- 1254 named destinations out of 1440 (max. 500000)
- 559 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2183 PDF objects out of 2487 (max. 8388607)
+ 1229 named destinations out of 1440 (max. 500000)
+ 614 words of extra memory for PDF output out of 10000 (max. 10000000)
 

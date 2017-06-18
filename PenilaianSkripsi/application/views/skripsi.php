@@ -42,7 +42,7 @@ and open the template in the editor.
                     </button>
                 </div>
 
-                <form role="form" method="post" accept-charset="utf-8" action="<?php echo base_url() . "index.php/c_skripsi/tambahDataMahasiswa" ?>" ng-controller="DefaultValue">
+                <form role="form" method="post" accept-charset="utf-8" action="<?php echo base_url() . "index.php/c_skripsi/tambahDataMahasiswa" ?>" ng-controller="DefaultValue" onsubmit="return confirm('Apakah anda yakin?');">
 
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -53,10 +53,10 @@ and open the template in the editor.
                                 <a class="page-scroll" href="#page-top">Berita Acara Sidang Skripsi</a>
                             </li>
                             <li>
-                                <a class="page-scroll" href="#rekAnggota">Lembar Rekapitulasi Anggota Tim Penguji</a>
+                                <a class="page-scroll" href="#rekKetua">Lembar Rekapitulasi Ketua Tim Penguji</a>
                             </li>
                             <li>
-                                <a class="page-scroll" href="#rekKetua">Lembar Rekapitulasi Ketua Tim Penguji</a>
+                                <a class="page-scroll" href="#rekAnggota">Lembar Rekapitulasi Anggota Tim Penguji</a>
                             </li>
                             <li>
                                 <a class="page-scroll" href="#rekPembimbing">Lembar Rekapitulasi Pembimbing</a>
@@ -133,8 +133,7 @@ and open the template in the editor.
                             <p>
                                 <label class="col-md-3 col-xs-8" for="pembimbing">Pembimbing:</label>
                                 <!-- 6 -->
-                                <select class="col-md-9 col-xs-4" id="pembimbing" name="namaPembimbing">
-                                    <option value="-">-</option>
+                                <select class="col-md-9 col-xs-4" id="pembimbing" name="namaPembimbing" ng-model="namaPembimbing">
                                     <option value="Cecilia Esti Nugraheni">Cecilia Esti Nugraheni</option>
                                     <option value="Veronica Sri Moertini">Veronica Sri Moertini</option>
                                     <option value="Rosa De Lima">Rosa De Lima</option>
@@ -162,8 +161,7 @@ and open the template in the editor.
                             <p>
                                 <label class="col-md-3 col-xs-8" for="pembimbing2">Pembimbing Pendamping:</label>
                                 <!-- 7 -->
-                                <select class="col-md-9 col-xs-4" id="pembimbing2" name="namaPembimbingPendamping">
-                                    <option value="-">-</option>
+                                <select class="col-md-9 col-xs-4" id="pembimbing2" name="namaPembimbingPendamping" ng-model="namaPembimbingPendamping">
                                     <option value="Cecilia Esti Nugraheni">Cecilia Esti Nugraheni</option>
                                     <option value="Veronica Sri Moertini">Veronica Sri Moertini</option>
                                     <option value="Rosa De Lima">Rosa De Lima</option>
@@ -190,8 +188,7 @@ and open the template in the editor.
                             <p>
                                 <label class="col-md-3 col-xs-8" for="ketua">Ketua Tim Penguji:</label>
                                 <!-- 8 -->
-                                <select class="col-md-9 col-xs-4" id="ketua" name="namaKetuaTimPenguji">
-                                    <option value="-">-</option>
+                                <select class="col-md-9 col-xs-4" id="ketua" name="namaKetuaTimPenguji" ng-model="namaKetuaTimPenguji">
                                     <option value="Cecilia Esti Nugraheni">Cecilia Esti Nugraheni</option>
                                     <option value="Veronica Sri Moertini">Veronica Sri Moertini</option>
                                     <option value="Rosa De Lima">Rosa De Lima</option>
@@ -220,8 +217,7 @@ and open the template in the editor.
                             <p>
                                 <label class="col-md-3 col-xs-8" for="anggota">Anggota Tim Penguji:</label>
                                 <!-- 9 -->
-                                <select class="col-md-9 col-xs-4" id="anggota" name="namaAnggotaTimPenguji" >
-                                    <option value="-">-</option>
+                                <select class="col-md-9 col-xs-4" id="anggota" name="namaAnggotaTimPenguji" ng-model="namaAnggotaTimPenguji">
                                     <option value="Cecilia Esti Nugraheni">Cecilia Esti Nugraheni</option>
                                     <option value="Veronica Sri Moertini">Veronica Sri Moertini</option>
                                     <option value="Rosa De Lima">Rosa De Lima</option>
@@ -532,9 +528,9 @@ and open the template in the editor.
                             </p>
                             <p>
                                 Dengan persetujuan:
-                                <p><input id="ketuaTimPengujiCheck" type="checkbox" value="1" required>Ketua tim penguji</p>
-                                <p><input id="anggotaTimPengujiCheck" type="checkbox" value="1" required>Anggota tim penguji</p>
-                                <p><input id="pembimbingCheck" type="checkbox" value="1" required>Pembimbing</p>
+                                <p><input id="ketuaTimPengujiCheck" type="checkbox" value="1" required><label for="ketuaTimPengujiCheck">Ketua tim penguji (<span ng-bind="namaKetuaTimPenguji"></span>)</label></p>
+                                <p><input id="anggotaTimPengujiCheck" type="checkbox" value="1" required><label for="anggotaTimPengujiCheck">Anggota tim penguji (<span ng-bind="namaAnggotaTimPenguji"></span>)</label></p>
+                                <p><input id="pembimbingCheck" type="checkbox" value="1" required><label for="pembimbingCheck"> Pembimbing (<span ng-bind="namaPembimbing"></span>)</label></p>
                                 <p><input class="submitBtn" type="submit" name="submit" value="Selesai" ></p>
                             </p>
 

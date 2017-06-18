@@ -34,7 +34,7 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 		Bagian ini adalah halaman yang bersangkutan dalam pengisian data diri mahasiswa yang bersangkutan, sekaligus sebagai halaman akhir yang menyimpulkan perhitungan nilai akhir mahasiswa. Kolom penilaian pada halaman ini tidak dapat diisi secara manual kecuali kolom penilaian milik koordinator skripsi. Kolom penilaian yang lain didapatkan berdasarkan perhitungan nilai akhir masing-masing penguji.
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.5]{Gambar/beritaacaraisi}
+			\includegraphics[scale=0.4]{Gambar/beritaacaraisi}
 			\caption{Formulir berita acara sidang skripsi 2 terisi}
 			\label{fig:beritaisi}
 		\end{figure}
@@ -42,33 +42,39 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 		Bagian ini adalah halaman yang bersangkutan dalam menampung nilai-nilai yang diberikan oleh ketua tim penguji, anggota tim penguji, dan pembimbing pada mahasiswa. 
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.5]{Gambar/ketuaisi}
+			\includegraphics[scale=0.4]{Gambar/ketuaisi}
 			\caption{Formulir rekapitulasi ketua tim penguji terisi}
 			\label{fig:ketuaisi}
 		\end{figure}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.5]{Gambar/anggotaisi}
+			\includegraphics[scale=0.4]{Gambar/anggotaisi}
 			\caption{Formulir rekapitulasi anggota tim penguji terisi}
 			\label{fig:anggotaisi}
 		\end{figure}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.5]{Gambar/pembimbingisi}
+			\includegraphics[scale=0.4]{Gambar/pembimbingisi}
 			\caption{Formulir rekapitulasi pembimbing terisi}
 			\label{fig:pembimbingisi}
 		\end{figure}
 		\item Bagian selesai.\\
-		Bagian ini adalah bagian terakhir dari sistem informasi. Ketika formulir sudah selesai diisi, maka dengan menekan tombol selesai pada bagian ini, \textit{data} yang telah terisi akan dimasukkan ke dalam \textit{database}.
+		Bagian ini adalah bagian terakhir dari sistem informasi. Ketika formulir sudah selesai diisi, diperlukan persetujuan dengan cara menandai checkbox dari 3 pihak penilai yaitu ketua tim penguji, anggota tim penguji, dan pembimbing. Setelah selesai, dengan menekan tombol selesai pada bagian ini, akan terdapat sebuah pop up untuk memastikan bahwa pengisian sistem telah selesai. Jika "OK" d tekan, maka \textit{data} yang telah terisi akan dimasukkan ke dalam \textit{database}.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.4]{Gambar/selesaiisi}
-			\caption{Ketika tombol selesai di klik}
+			\caption{Pengisian Checkbox}
 			\label{tab: hasilPeng}
 		\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.4]{Gambar/selesaiisi2}
+		\caption{Pop Up untuk memastikan pengisian nilai sistem}
+		\label{tab: hasilPeng2}
+	\end{figure}
 		\begin{table}[htbp]
 			\centering
-			\caption{Tabel Hasil Pengujian}
+			\caption{Tabel Hasil Implementasi}
 			\begin{tabular}{| m{7cm} | m{5cm} |}
 				\hline
 				Jenis Data & Input Nilai\\
@@ -87,11 +93,11 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 				\hline
 				namaPembimbing & Pascal Alfadian\\
 				\hline
-				namaPembimbingPendamping & -\\
+				namaPembimbingPendamping & \\
 				\hline
-				namaKetuaTimPenguji & Ketua tim penguji\\
+				namaKetuaTimPenguji & Chandra Wijaya\\
 				\hline
-				namaAnggotaTimPenguji & Anggota tim penguji\\
+				namaAnggotaTimPenguji & Mariskha Tri Adithia\\
 				\hline
 				bobotKetuaTimPenguji & 35\\
 				\hline
@@ -131,7 +137,7 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 				\hline
 				prosesBimbinganPembimbing & 30\\
 				\hline
-				nilaiAkhirMahasiswa & 80\\
+				nilaiAkhirMahasiswa & 77.785\\
 				\hline
 			\end{tabular}
 		\end{table}
@@ -149,10 +155,286 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 	
 	Pada saat melakukan pengujian eksperimental, sistem kini memiliki kekurangan kecerobohan manusia yang mengakibatkan kesalahan dalam perhitungan nilai baik dari lembar rekapitulasi maupun lembar berita acara sidang skripsi. Hal tersebut diketahui pada saat membandingkan nilai perhitungan nilai akhir yang didapatkan oleh mahasiswa pada sistem kini dan sistem usulan. Pada beberapa kesalahan tersebut, penguji kembali melakukan perhitungan secara manual dengan menggunakan mesin hitung berupa kalkulator pada \textit{gadget} penguji. Setelah perhitungan dilakukan, didapatkan bahwa sistem usulan memiliki hasil yang benar.
 	
-	Percobaan eksperimental menghasilkan kesimpulan sistem usulan dapat menutupi kekurangan sistem kini yang berfokus pada perhitungan penilaian mahasiswa. Dengan menggunakan sistem usulan, perhitungan nilai dibuktikan lebih akurat dibandingkan dengan sistem kini. Berikut ini adalah salah satu hasil dari pengujian eksperimental:
-	\begin{table}[htbp]
+	Percobaan eksperimental menghasilkan kesimpulan sistem usulan dapat menutupi kekurangan sistem kini yang berfokus pada perhitungan penilaian mahasiswa. Dengan menggunakan sistem usulan, perhitungan nilai dibuktikan lebih akurat dibandingkan dengan sistem kini. Berikut ini adalah hasil dari pengujian eksperimental.
+	\begin{table}[H]
 		\centering
-		\caption{Tabel Pengujian Eksperimental}
+		\caption{Tabel Pengujian Eksperimental 1}
+		\begin{tabular}{| m{7cm} | m{5cm} |}
+			\hline
+			Jenis Data & Input Nilai\\
+			\hline
+			id & 26\\
+			\hline
+			tahun & 2016\\
+			\hline
+			semester & 1\\
+			\hline
+			npm & 2012730001\\
+			\hline
+			nama & A\\
+			\hline
+			judul & A(Tidak Tercatat) \\
+			\hline
+			namaPembimbing & Mariskha A\\
+			\hline
+			namaPembimbingPendamping & -\\
+			\hline
+			namaKetuaTimPenguji & Pascal A\\
+			\hline
+			namaAnggotaTimPenguji & Joanna H\\
+			\hline
+			bobotKetuaTimPenguji & 35\\
+			\hline
+			bobotAnggotaTimPenguji & 35\\
+			\hline
+			bobotPembimbing & 20\\
+			\hline
+			nilaiKoordinatorSkripsi & 100\\
+			\hline
+			bobotKoordinatorSkripsi & 10\\
+			\hline
+			bobotTataTulisLaporanAnggota & 15\\
+			\hline
+			bobotKelengkapanMateriAnggota & 10\\
+			\hline
+			bobotPenguasaanMateriAnggota & 30\\
+			\hline
+			bobotPresentasiAnggota & 15\\
+			\hline
+			bobotPencapaianTujuanKetua & 30\\
+			\hline
+			bobotTataTulisLaporanKetua & 15\\
+			\hline
+			bobotKelengkapanMateriKetua & 10\\
+			\hline
+			bobotPenguasaanMateriKetua & 30\\
+			\hline
+			bobotPresentasiKetua & 15\\
+			\hline
+			bobotPencapaianTujuanKetua & 30\\
+			\hline
+			bobotTataTulisLaporanPembimbing & 20\\
+			\hline
+			bobotKelengkapanMateriPembimbing &20\\
+			\hline
+			bobotPenguasaanMateriPembimbing & 30\\
+			\hline
+			prosesBimbinganPembimbing & 30\\
+			\hline
+			nilaiAkhirMahasiswa & 83\\
+			\hline
+		\end{tabular}
+	\end{table}
+	\begin{table}[H]
+		\centering
+		\caption{Tabel Pengujian Eksperimental 2}
+		\begin{tabular}{| m{7cm} | m{5cm} |}
+			\hline
+			Jenis Data & Input Nilai\\
+			\hline
+			id & 27\\
+			\hline
+			tahun & 2016\\
+			\hline
+			semester & 1\\
+			\hline
+			npm & 2012730002\\
+			\hline
+			nama & B\\
+			\hline
+			judul & Pembangunan Robot Forex dengan Memanfaatkan Analisis Teknikal dan Fundamental \\
+			\hline
+			namaPembimbing & Luciana A\\
+			\hline
+			namaPembimbingPendamping & -\\
+			\hline
+			namaKetuaTimPenguji & Cecilian E N\\
+			\hline
+			namaAnggotaTimPenguji & Vania\\
+			\hline
+			bobotKetuaTimPenguji & 35\\
+			\hline
+			bobotAnggotaTimPenguji & 35\\
+			\hline
+			bobotPembimbing & 20\\
+			\hline
+			nilaiKoordinatorSkripsi & 100\\
+			\hline
+			bobotKoordinatorSkripsi & 10\\
+			\hline
+			bobotTataTulisLaporanAnggota & 15\\
+			\hline
+			bobotKelengkapanMateriAnggota & 10\\
+			\hline
+			bobotPenguasaanMateriAnggota & 30\\
+			\hline
+			bobotPresentasiAnggota & 15\\
+			\hline
+			bobotPencapaianTujuanKetua & 30\\
+			\hline
+			bobotTataTulisLaporanKetua & 15\\
+			\hline
+			bobotKelengkapanMateriKetua & 10\\
+			\hline
+			bobotPenguasaanMateriKetua & 30\\
+			\hline
+			bobotPresentasiKetua & 15\\
+			\hline
+			bobotPencapaianTujuanKetua & 30\\
+			\hline
+			bobotTataTulisLaporanPembimbing & 20\\
+			\hline
+			bobotKelengkapanMateriPembimbing &20\\
+			\hline
+			bobotPenguasaanMateriPembimbing & 30\\
+			\hline
+			prosesBimbinganPembimbing & 30\\
+			\hline
+			nilaiAkhirMahasiswa & 84\\
+			\hline
+		\end{tabular}
+	\end{table}
+	\begin{table}[H]
+		\centering
+		\caption{Tabel Pengujian Eksperimental 3}
+		\begin{tabular}{| m{7cm} | m{5cm} |}
+			\hline
+			Jenis Data & Input Nilai\\
+			\hline
+			id & 28\\
+			\hline
+			tahun & 2016\\
+			\hline
+			semester & 1\\
+			\hline
+			npm & 2012730003\\
+			\hline
+			nama & C\\
+			\hline
+			judul & ASD(Tidak tercatat) \\
+			\hline
+			namaPembimbing & Anoeng\\
+			\hline
+			namaPembimbingPendamping & -\\
+			\hline
+			namaKetuaTimPenguji & Bagoes\\
+			\hline
+			namaAnggotaTimPenguji & Pascal A\\
+			\hline
+			bobotKetuaTimPenguji & 35\\
+			\hline
+			bobotAnggotaTimPenguji & 35\\
+			\hline
+			bobotPembimbing & 20\\
+			\hline
+			nilaiKoordinatorSkripsi & 100\\
+			\hline
+			bobotKoordinatorSkripsi & 10\\
+			\hline
+			bobotTataTulisLaporanAnggota & 15\\
+			\hline
+			bobotKelengkapanMateriAnggota & 10\\
+			\hline
+			bobotPenguasaanMateriAnggota & 30\\
+			\hline
+			bobotPresentasiAnggota & 15\\
+			\hline
+			bobotPencapaianTujuanKetua & 30\\
+			\hline
+			bobotTataTulisLaporanKetua & 15\\
+			\hline
+			bobotKelengkapanMateriKetua & 10\\
+			\hline
+			bobotPenguasaanMateriKetua & 30\\
+			\hline
+			bobotPresentasiKetua & 15\\
+			\hline
+			bobotPencapaianTujuanKetua & 30\\
+			\hline
+			bobotTataTulisLaporanPembimbing & 20\\
+			\hline
+			bobotKelengkapanMateriPembimbing &20\\
+			\hline
+			bobotPenguasaanMateriPembimbing & 30\\
+			\hline
+			prosesBimbinganPembimbing & 30\\
+			\hline
+			nilaiAkhirMahasiswa & 76\\
+			\hline
+		\end{tabular}
+	\end{table}
+	\begin{table}[H]
+		\centering
+		\caption{Tabel Pengujian Eksperimental 4}
+		\begin{tabular}{| m{7cm} | m{5cm} |}
+			\hline
+			Jenis Data & Input Nilai\\
+			\hline
+			id & 29\\
+			\hline
+			tahun & 2016\\
+			\hline
+			semester & 1\\
+			\hline
+			npm & 2012730004\\
+			\hline
+			nama & DE\\
+			\hline
+			judul & Converter \\
+			\hline
+			namaPembimbing & Pascal A\\
+			\hline
+			namaPembimbingPendamping & -\\
+			\hline
+			namaKetuaTimPenguji & Gede Karya\\
+			\hline
+			namaAnggotaTimPenguji & Rosa De Lima\\
+			\hline
+			bobotKetuaTimPenguji & 35\\
+			\hline
+			bobotAnggotaTimPenguji & 35\\
+			\hline
+			bobotPembimbing & 20\\
+			\hline
+			nilaiKoordinatorSkripsi & 100\\
+			\hline
+			bobotKoordinatorSkripsi & 10\\
+			\hline
+			bobotTataTulisLaporanAnggota & 15\\
+			\hline
+			bobotKelengkapanMateriAnggota & 10\\
+			\hline
+			bobotPenguasaanMateriAnggota & 30\\
+			\hline
+			bobotPresentasiAnggota & 15\\
+			\hline
+			bobotPencapaianTujuanKetua & 30\\
+			\hline
+			bobotTataTulisLaporanKetua & 15\\
+			\hline
+			bobotKelengkapanMateriKetua & 10\\
+			\hline
+			bobotPenguasaanMateriKetua & 30\\
+			\hline
+			bobotPresentasiKetua & 15\\
+			\hline
+			bobotPencapaianTujuanKetua & 30\\
+			\hline
+			bobotTataTulisLaporanPembimbing & 20\\
+			\hline
+			bobotKelengkapanMateriPembimbing &20\\
+			\hline
+			bobotPenguasaanMateriPembimbing & 30\\
+			\hline
+			prosesBimbinganPembimbing & 30\\
+			\hline
+			nilaiAkhirMahasiswa & 78\\
+			\hline
+		\end{tabular}
+	\end{table}
+	\begin{table}[H]
+		\centering
+		\caption{Tabel Pengujian Eksperimental 5}
 		\begin{tabular}{| m{7cm} | m{5cm} |}
 			\hline
 			Jenis Data & Input Nilai\\
@@ -223,22 +505,79 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 		
 		\subsection{Pengujian Fungsional}
 		\label{sub: PFungsional}
-		Pengujian fungsional dilakukan untuk mengetahui apakah sistem informasi dapat menjalankan seluruh fungsi-fungsi yang dimiliki dengan baik. Hasil pengujian fungsional sistem informasi akan dijabarkan pada tabel berikut:
+		Pengujian fungsional dilakukan untuk mengetahui apakah sistem informasi dapat menjalankan seluruh fungsi-fungsi yang dimiliki dengan baik ketika dijalankan pada \textit{platform} yang berbeda. Hasil pengujian fungsional sistem informasi akan dijabarkan pada Tabel \ref{pengFung} berikut.
 		
-	\begin{table}[htbp]
+	\begin{table}[H]
 		\centering
 		\caption{Tabel Pengujian Fungsional}
+		\label{pengFung}
 		\begin{tabular}{| m{0.75cm} | m{7cm} | m{5cm} | m{3cm} |}
 			\hline
 			No & Aksi Pengguna & Reaksi yang diharapkan & Keterangan \\
 			\hline
-			1 & Pengguna menjalankan sistem informasi & Halaman berita acara ditampilkan & Reaksi sesuai \\
+			1 & Pengguna menjalankan sistem informasi pada browser Microsoft Edge & Halaman ditampilkan dengan perbedaan tampilan pada tombol pengubah angka serta checklist & Fungsi berjalan sesuai \\
 			\hline
-			2 & Pengguna memasukkan nilai & Menampilkan hasil dari perhitungan otomatis & Reaksi sesuai \\
+			2 & Pengguna menjalankan sistem informasi pada browser Mozilla Firefox & Halaman ditampilkan dengan perbedaan tampilan pada tombol pengubah angka serta checklist & Fungsi berjalan sesuai \\
 			\hline
-			3 & Pengguna menekan tombol selesai & Menampilkan notifikasi data telah tersimpan & Reaksi sesuai \\
-			\hline
-			4 & Pengguna menekan tombol ok pada notifikasi & Menampilkan kembali halaman lembar formulir berita acara awal sebelum terisi & Reaksi sesuai \\
+			3 & Pengguna menjalankan sistem informasi pada mobile device berupa smartphone & Halaman ditampilkan dengan perbedaan pada tampilan & Fungsi berjalan sesuai \\
 			\hline
 		\end{tabular}
 	\end{table}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{Gambar/MsEdge}
+	\includegraphics[scale=0.4]{Gambar/MsEdgeSelesai}
+	\caption{Tampilan sistem pada platform Microsoft Edge}
+	\label{fig:MsEdge}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{Gambar/Mozila}
+	\includegraphics[scale=0.4]{Gambar/MozilaSelesai}
+	\caption{Tampilan sistem pada platform Mozilla Firefox}
+	\label{fig:Mozila}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{Gambar/hp_menu}
+	\caption{Tampilan menu sistem pada platform browser smartphone}
+	\label{fig:hp_menu}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{Gambar/hp_beritaacara}
+	\caption{Tampilan lembar berita acara sistem sidang skripsi pada platform browser smartphone}
+	\label{fig:hp_beritaacara}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{Gambar/hp_nilai}
+	\caption{Tampilan lembar nilai berita acara sidang skripsi sistem pada platform browser smartphone}
+	\label{fig:hp_nilai}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{Gambar/hp_ketua}
+	\caption{Tampilan lembar rekapitulasi ketua tim penguji sistem pada platform browser smartphone}
+	\label{fig:hp_ketua}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{Gambar/hp_anggota}
+	\caption{Tampilan lembar rekapitulasi anggota tim penguji sistem pada platform browser smartphone}
+	\label{fig:hp_anggota}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{Gambar/hp_pembimbing}
+	\caption{Tampilan lembar rekapitulasi pembimbing sistem pada platform browser smartphone}
+	\label{fig:hp_pembimbing}
+\end{figure}

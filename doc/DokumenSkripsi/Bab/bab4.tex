@@ -22,14 +22,89 @@
 	\section{Controllers}
 	\label{sec: controllers}
 	
-	\textit{Controller} terdiri dari sebuah kelas yang dinamakan "C\_Skripsi". Keseluruhan aktivitas dari sistem informasi penilaian skripsi diatur oleh kelas ini. Berikut adalah gambar kelas diagram dari \textit{controllers}:
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale= 1.0]{Gambar/C_skripsi}
-		\caption {Gambar diagram kelas \textit{file controllers}}
-		\label{fig:controllers}
-	\end{figure}
+	\textit{Controller} terdiri dari sebuah kelas yang dinamakan "C\_Skripsi". Keseluruhan aktivitas dari sistem informasi penilaian skripsi diatur oleh kelas ini. Seperti yang telah dibahas pada Gambar \ref{fig:controllers}, berikut ini adalah \textit{file controller} dengan nama C\_skripsi.php.
 	
+	\begin{lstlisting}[caption= File Controller, label= ciController]
+		<?php
+		defined('BASEPATH') OR exit('No direct script access allowed');
+		
+		class C_skripsi extends CI_Controller {
+		
+		public function index()
+		{
+			$this->load->view('skripsi');
+		}
+		
+		public function tambahDataMahasiswa(){
+			$semester = $_POST['semester'];
+			$tahun = $_POST['tahun'];
+			$npm = $_POST['npm'];
+			$nama = $_POST['nama'];
+			$judul = $_POST['judul'];
+			$namaPembimbing = $_POST['namaPembimbing'];
+			$namaPembimbingPendamping = $_POST['namaPembimbingPendamping'];
+			$namaKetuaTimPenguji = $_POST['namaKetuaTimPenguji'];
+			$namaAnggotaTimPenguji = $_POST['namaAnggotaTimPenguji'];
+			$bobotKetuaTimPenguji = $_POST['bobotKetuaTimPenguji'];
+			$bobotAnggotaTimPenguji = $_POST['bobotAnggotaTimPenguji'];
+			$bobotPembimbing = $_POST['bobotPembimbing'];
+			$nilaiKoordinatorSkripsi = $_POST['nilaiKoordinatorSkripsi'];
+			$bobotKoordinatorSkripsi = $_POST['bobotKoordinatorSkripsi'];
+			$bobotTataTulisLaporanAnggota = $_POST['bobotTataTulisLaporanAnggota'];
+			$bobotKelengkapanMateriAnggota = $_POST['bobotKelengkapanMateriAnggota'];
+			$bobotPenguasaanMateriAnggota = $_POST['bobotPenguasaanMateriAnggota'];
+			$bobotPresentasiAnggota = $_POST['bobotPresentasiAnggota'];
+			$bobotPencapaianTujuanAnggota = $_POST['bobotPencapaianTujuanAnggota'];
+			$bobotTataTulisLaporanKetua = $_POST['bobotTataTulisLaporanKetua'];
+			$bobotKelengkapanMateriKetua = $_POST['bobotKelengkapanMateriKetua'];
+			$bobotPenguasaanMateriKetua = $_POST['bobotPenguasaanMateriKetua'];
+			$bobotPresentasiKetua = $_POST['bobotPresentasiKetua'];
+			$bobotPencapaianTujuanKetua = $_POST['bobotPencapaianTujuanKetua'];
+			$bobotTataTulisLaporanPembimbing = $_POST['bobotTataTulisLaporanPembimbing'];
+			$bobotKelengkapanMateriPembimbing = $_POST['bobotKelengkapanMateriPembimbing'];
+			$bobotPenguasaanMateriPembimbing = $_POST['bobotPenguasaanMateriPembimbing'];
+			$prosesBimbinganPembimbing = $_POST['prosesBimbinganPembimbing'];
+			$nilaiAkhirMahasiswa = $_POST['nilaiAkhirMahasiswa'];
+			$data_insert = array(
+				'semester' => $semester,
+				'tahun' => $tahun,
+				'npm' => $npm,
+				'nama' => $nama,
+				'judul' => $judul,
+				'namaPembimbing' => $namaPembimbing,
+				'namaPembimbingPendamping' => $namaPembimbingPendamping,
+				'namaKetuaTimPenguji' => $namaKetuaTimPenguji,
+				'namaAnggotaTimPenguji' => $namaAnggotaTimPenguji,
+				'bobotKetuaTimPenguji' => $bobotKetuaTimPenguji,
+				'bobotAnggotaTimPenguji' => $bobotAnggotaTimPenguji,
+				'bobotPembimbing' => $bobotPembimbing,
+				'nilaiKoordinatorSkripsi' => $nilaiKoordinatorSkripsi,
+				'bobotKoordinatorSkripsi' =>$bobotKoordinatorSkripsi,
+				'bobotTataTulisLaporanAnggota' => $bobotTataTulisLaporanAnggota,
+				'bobotKelengkapanMateriAnggota' => $bobotKelengkapanMateriAnggota,
+				'bobotPenguasaanMateriAnggota' => $bobotPenguasaanMateriAnggota,
+				'bobotPresentasiAnggota' => $bobotPresentasiAnggota,
+				'bobotPencapaianTujuanAnggota' => $bobotPencapaianTujuanAnggota,
+				'bobotTataTulisLaporanKetua' => $bobotTataTulisLaporanKetua,
+				'bobotKelengkapanMateriKetua' => $bobotKelengkapanMateriKetua,
+				'bobotPenguasaanMateriKetua' => $bobotPenguasaanMateriKetua,
+				'bobotPresentasiKetua' => $bobotPresentasiKetua,
+				'bobotPencapaianTujuanKetua' => $bobotPencapaianTujuanKetua,
+				'bobotTataTulisLaporanPembimbing' => $bobotTataTulisLaporanPembimbing,
+				'bobotKelengkapanMateriPembimbing' => $bobotKelengkapanMateriPembimbing,
+				'bobotPenguasaanMateriPembimbing' => $bobotPenguasaanMateriPembimbing,
+				'prosesBimbinganPembimbing' => $prosesBimbinganPembimbing,
+				'nilaiAkhirMahasiswa' => $nilaiAkhirMahasiswa,
+		
+			);
+			$res = $this->skripsi_model->insertDataMahasiswa('beritaacarasidangskripsi',$data_insert);
+			redirect(base_url(), 'refresh');
+		}
+		
+		}
+	\end{lstlisting}
+	
+	Keterangan Listing \ref{ciController}.
 	\begin{itemize}
 		\item public function index()\\
 		Berfungsi untuk mengarahkan pengguna ke \textit{file views default} dari aplikasi.
@@ -96,7 +171,7 @@
 		\hline
 		13 & bobotPembimbing & int(2)\\
 		\hline
-		14 & nilaiKoordinatorSkripsi & int(2)\\
+		14 & nilaiKoordinatorSkripsi & float\\
 		\hline
 		15 & bobotKoordinatorSkripsi & int(2)\\
 		\hline
@@ -120,6 +195,12 @@
 		\hline
 		25 & bobotPencapaianTujuanKetua & int(2)\\
 		\hline
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+\centering
+	\begin{tabular}{| m{0.75cm} | m{7cm} | m{3cm} |}
+	\hline
 		26 & bobotTataTulisLaporanPembimbing & int(2)\\
 		\hline
 		27 & bobotKelengkapanMateriPembimbing & int(2)\\
@@ -128,7 +209,7 @@
 		\hline
 		29 & prosesBimbinganPembimbing & int(2)\\
 		\hline
-		30 & nilaiAkhirMahasiswa & int(2)\\
+		30 & nilaiAkhirMahasiswa & float\\
 		\hline
 		\end{tabular}
 	\end{table}
@@ -140,11 +221,18 @@
 	
 	Perbedaan yang akan ditampilkan adalah dengan adanya otomatisasi penghitungan nilai sesuai dengan bobot yang diberikan kepada penilai. Hal ini akan memberikan kemudahan penilai untuk melakukan penilaian.
 	
-	Gambar \ref{fig:tampilan} adalah bayangan awal tampilan untuk sistem informasi penilaian skripsi:
+	Gambar \ref{fig:beritaacara} adalah bayangan awal tampilan untuk sistem informasi penilaian skripsi lembar berita acara sidang skripsi.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.75]{Gambar/tampilan1}
-		\includegraphics[scale=0.75]{Gambar/tampilan2}
-		\caption{Perkiraan Tampilan}
-		\label{fig:tampilan}
+		\includegraphics[scale=0.75]{Gambar/beritaacara}
+		\caption{Perkiraan Tampilan Lembar Berita Acara Sidang Skripsi}
+		\label{fig:beritaacara}
+	\end{figure}
+
+	Gambar \ref{fig:rekapitulasi} adalah bayangan awal tampilan untuk sistem informasi penilaian skripsi lembar rekapitulasi ketua tim penguji, anggota tim penguji, dan pembimbing.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{Gambar/rekapitulasi}
+		\caption{Perkiraan Tampilan Lembar Rekapitulasi}
+		\label{fig:rekapitulasi}
 	\end{figure}
