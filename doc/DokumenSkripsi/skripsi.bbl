@@ -3,12 +3,10 @@
 \bibitem{ciDocs}
 Ellis, R. (2014) Codeigniter user guide.
 \newblock \url{http://www.codeigniter.com/user_guide/index.html}.
-\newblock 2 Mei 2017.
 
 \bibitem{AngularJSDocs}
 Google (2010) Guide to angularjs documentation.
 \newblock \url{https://docs.angularjs.org/guide}.
-\newblock 3 Mei 2017.
 
 \bibitem{green2013angularjs}
 Green, B. dan Seshadri, S. (2013) {\em AngularJS}. " O'Reilly Media, Inc.".
@@ -16,6 +14,5 @@ Green, B. dan Seshadri, S. (2013) {\em AngularJS}. " O'Reilly Media, Inc.".
 \bibitem{bootstrap}
 Mark~Otto, J. (2004) Scaffolding.
 \newblock \url{http://getbootstrap.com/2.3.2/scaffolding.html}.
-\newblock 2 Mei 2017.
 
 \end{thebibliography}
