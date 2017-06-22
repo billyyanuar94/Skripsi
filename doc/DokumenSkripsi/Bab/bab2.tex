@@ -55,7 +55,7 @@ class Blog extends CI_Controller{
 }
 \end{lstlisting}
 
-	Nama \textit{file} pada kode listing di atas haruslah  "Blog.php" dengan B besar dan disimpan pada \textit{application/controllers} sehingga URL dapat berjalan dengan baik.
+	Nama \textit{file} pada kode Listing \ref{CIcontroller} di atas haruslah  "Blog.php" dengan B besar dan disimpan pada \textit{application/controllers} sehingga URL dapat berjalan dengan baik.
 	
 \subsubsection{Method}
 \label{subsub: method}
@@ -172,7 +172,7 @@ class Blog_controller extends CI_Controller {
 }
 	\end{lstlisting}
 	
-	Listing \ref{panggilMode} di atas menunjukkan bahwa \textit{file controller} melakukan pemanggilan \textit{model} yang diikuti dengan inisialisasi \textit{array data} dari basis data yang dimasukkan ke pemanggilan \textit{view}, dimana "blog" pada baris 4 adalah nama \textit{file model}, dan "blog" pada baris 6 adalah nama dari \textit{file view} yang diinginkan.
+	Listing \ref{panggilModel} di atas menunjukkan bahwa \textit{file controller} melakukan pemanggilan \textit{model} yang diikuti dengan inisialisasi \textit{array data} dari basis data yang dimasukkan ke pemanggilan \textit{view}, dimana "blog" pada baris 4 adalah nama \textit{file model}, dan "blog" pada baris 6 adalah nama dari \textit{file view} yang diinginkan.
 	
 	\subsection{Helper}
 	\label{sub: helper}
@@ -184,11 +184,11 @@ class Blog_controller extends CI_Controller {
 	
 	Cara menjalankan \textit{helper} pada CodeIgniter cukup dengan menambahkan kode di dalam \textit{file Helper} atau \textit{view}.
 	
-	\begin{lstlisting}[caption="Kode Helper"]
+	\begin{lstlisting}[caption="Kode Helper", label={jalanHelper}]
 $this->load->helper('name');
 	\end{lstlisting}
 	
-	Penulisan "name" pada kode diatas diisi dengan \textit{part helper} yang diinginkan. Contoh jika pada aplikasi perlu \textit{URL Helper} maka "name" diganti dengan "url". Helper juga dapat dijalankan secara otomatis dengan cara mengisi variable 'helper' pada \textit{file autoload} yang berada di direktori "application/config/autoload.php".
+	Penulisan "name" pada Listing \ref{jalanHelper} diatas diisi dengan \textit{part helper} yang diinginkan. Contoh jika pada aplikasi perlu \textit{URL Helper} maka "name" diganti dengan "url". Helper juga dapat dijalankan secara otomatis dengan cara mengisi variable 'helper' pada \textit{file autoload} yang berada di direktori "application/config/autoload.php".
 	
 	\subsection{Basis data}
 	\label{sub: database}

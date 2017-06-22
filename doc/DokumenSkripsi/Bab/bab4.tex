@@ -12,12 +12,12 @@
 	\label{sec: routes}
 	
 	\textit{Routes} merupakan bagian dari \textit{codeigniter} untuk melakukan pemetaan terhadap lokasi \textit{file controllers} dari aplikasi. Berikut adalah isi dari "config/routes":
-	\begin{lstlisting}
+	\begin{lstlisting}[caption= File Routes, label= routes]
 		$route['default_controller'] = 'C_skripsi';
 		$route['404_override] ="";
 		$route[translate_url_dahses'] =	FALSE;
 	\end{lstlisting}
-	Baris pertama dari kode di atas adalah nama \textit{file controller} yang terletak di \textit{folder controllers} yang akan diambil. Baris kedua merupakan kode untuk menangani \textit{error} yang terjadi jika \textit{file} yang dicari tidak ditemukan, contoh penggunaanya adalah "\$route['404\_override'] = 'errors/page\_missing;". Baris ketiga mempunyai fungsi mengganti seluruh nama \textit{file} yang mengandung '-' menjadi '\_', contoh penggunaanya adalah: "my-controller/index"	menjadi "my\_controller/index".
+	Baris pertama dari Listing \ref{routes} di atas adalah nama \textit{file controller} yang terletak di \textit{folder controllers} yang akan diambil. Baris kedua merupakan kode untuk menangani \textit{error} yang terjadi jika \textit{file} yang dicari tidak ditemukan, contoh penggunaanya adalah "\$route['404\_override'] = 'errors/page\_missing;". Baris ketiga mempunyai fungsi mengganti seluruh nama \textit{file} yang mengandung '-' menjadi '\_', contoh penggunaanya adalah: "my-controller/index"	menjadi "my\_controller/index".
 
 	\section{Controllers}
 	\label{sec: controllers}
@@ -116,7 +116,7 @@
 	\label{sec: models}
 	
 	\textit{Models} mempunyai fungsi menghubungkan \textit{views} dan \textit{controllers} pada basis data. Pada penggunaan \textit{codeigniter}, \textit{model} dibuat dengan sangat sederhana. Berikut adalah isi dari kelas model:
-	\begin{lstlisting}
+	\begin{lstlisting}[caption= File Model, label= models]
 		<?php
 			defined('BASEPATH') OR exit('No direct script access allowed');
 			
@@ -128,7 +128,7 @@
 		}
 		
 	\end{lstlisting}
-	
+	\textit{Method} pada Listing \ref{models}:
 	\begin{itemize}
 		\item public function insertDataMahasiswa(\$tablename, \$data)\\
 		Berfungsi untuk mengolah data yang sudah diolah oleh \textit{controllers} menjadi kueri sql \textit{insert data}.
