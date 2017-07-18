@@ -29,7 +29,7 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 	
 	Hasil implementasi dari penelitian ini adalah sebuah sistem informasi berbasis web yang menggunakan \textit{codeigniter}, \textit{AngularJS}, dan \textit{Twitter Bootstrap} sebagai dasar pembuatan. Aplikasi dapat diakses melalui jaringan \textit{global} dengan URL \url{http://sipskripsi.com}. Sistem informasi terdiri dari bagian-bagian sebagai berikut:
 	
-	\begin{enumerate}
+	\begin{itemize}
 		\item Bagian formulir berita acara sidang skripsi\\
 		Bagian ini adalah halaman yang bersangkutan dalam pengisian data diri mahasiswa yang bersangkutan, sekaligus sebagai halaman akhir yang menyimpulkan perhitungan nilai akhir mahasiswa. Kolom penilaian pada halaman ini tidak dapat diisi secara manual kecuali kolom penilaian milik koordinator skripsi. Kolom penilaian yang lain didapatkan berdasarkan perhitungan nilai akhir masing-masing penguji.
 		\begin{figure}[H]
@@ -38,6 +38,18 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 			\caption{Formulir berita acara sidang skripsi 2 terisi}
 			\label{fig:beritaisi}
 		\end{figure}
+	Keterangan Gambar \ref{fig:beritaisi}.
+		\begin{enumerate}
+			\item Tempat navigasi untuk berpindah halaman
+			\item Pengisian semester sidang (Genap/Ganjil), dan tahun sidang (default 2016 / otomatis +1)
+			\item NPM mahasiswa (harus tepat 10 angka)
+			\item Nama mahasiswa
+			\item Judul skripsi
+			\item Data diri penilai (nama ketua tim penguji, anggota tim penguji, pembimbing, dan pembimbing pendamping)
+			\item Kotak masukan nilai per kategori (otomatis diambil dari rekapitulasi)
+			\item Bobot nilai yang dimiliki kategori (\textit{default})
+			\item Nilai hasil perhitungan nilai dengan bobot (otomatis)
+		\end{enumerate}
 		\item Bagian formulir rekapitulasi penilaian sidang skripsi 2.\\
 		Bagian ini adalah halaman yang bersangkutan dalam menampung nilai-nilai yang diberikan oleh ketua tim penguji, anggota tim penguji, dan pembimbing pada mahasiswa. 
 		\begin{figure}[H]
@@ -46,18 +58,42 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 			\caption{Formulir rekapitulasi ketua tim penguji terisi}
 			\label{fig:ketuaisi}
 		\end{figure}
+	Keterangan Gambar \ref{fig:ketuaisi}.
+	\begin{enumerate}
+		\item Tempat navigasi untuk berpindah halaman
+		\item NPM mahasiswa (otomatis diambil dari berita acara)
+		\item Kotak masukan nilai per kategori (masukan)
+		\item Bobot nilai yang dimiliki kategori (\textit{default})
+		\item Nilai hasil perhitungan nilai dengan bobot (otomatis)
+	\end{enumerate}
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.4]{Gambar/anggotaisi}
 			\caption{Formulir rekapitulasi anggota tim penguji terisi}
 			\label{fig:anggotaisi}
 		\end{figure}
+	Keterangan Gambar \ref{fig:anggotaisi}.
+	\begin{enumerate}
+		\item Tempat navigasi untuk berpindah halaman
+		\item NPM mahasiswa (otomatis diambil dari berita acara)
+		\item Kotak masukan nilai per kategori (masukan)
+		\item Bobot nilai yang dimiliki kategori (\textit{default})
+		\item Nilai hasil perhitungan nilai dengan bobot (otomatis)
+	\end{enumerate}
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.4]{Gambar/pembimbingisi}
 			\caption{Formulir rekapitulasi pembimbing terisi}
 			\label{fig:pembimbingisi}
 		\end{figure}
+	Keterangan Gambar \ref{fig:ketuaisi}.
+	\begin{enumerate}
+		\item Tempat navigasi untuk berpindah halaman
+		\item NPM mahasiswa (otomatis diambil dari berita acara)
+		\item Kotak masukan nilai per kategori (masukan)
+		\item Bobot nilai yang dimiliki kategori (\textit{default})
+		\item Nilai hasil perhitungan nilai dengan bobot (otomatis)
+	\end{enumerate}
 		\item Bagian selesai.\\
 		Bagian ini adalah bagian terakhir dari sistem informasi. Ketika formulir sudah selesai diisi, diperlukan persetujuan dengan cara menandai checkbox dari 3 pihak penilai yaitu ketua tim penguji, anggota tim penguji, dan pembimbing. Setelah selesai, dengan menekan tombol selesai pada bagian ini, akan terdapat sebuah pop up untuk memastikan bahwa pengisian sistem telah selesai. Jika "OK" d tekan, maka \textit{data} yang telah terisi akan dimasukkan ke dalam \textit{database}.
 		\begin{figure}[H]
@@ -141,17 +177,17 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 				\hline
 			\end{tabular}
 		\end{table}
-	\end{enumerate}
+	\end{itemize}
 	
 \section{Hasil Pengujian}
 \label{sec:hasilUji}
 
 	Pengujian pada sistem informasi penilaian sidang skripsi 2 merupakan pengujian bersifat fungsional, dan pengujian eksperimental. Berikut penjelasannya:
 	
-	\subsection{Pengujian Eksperimental}
-	\label{sub: PEksperimen}
+	\subsection{Pengujian Fungsional}
+	\label{sub: PFungsional}
 	
-	Pengujian eksperimental dilakukan dengan cara mengikuti sidang skripsi 2 yang dilakukan pada semester ganjil 2016/2017. Pada sidang yang diujikan, penilaian dilakukan dengan dua cara, yaitu dengan sistem kini yang bekerja secara manual dan dengan sistem usulan menggunakan laptop. Sehubungan dengan sifat kerasahasiaan \textit{data} pengujian, maka dengan persetujuan pembimbing pengujian eksperimental dilakukan dengan merahasiakan identitas mahasiswa yang berhubungan.
+	Pengujian eksperimental dilakukan dengan cara mengikuti sidang Skripsi 2 yang dilakukan pada semester ganjil 2016/2017. Pada sidang yang diujikan, penilaian dilakukan dengan dua cara, yaitu dengan sistem kini yang bekerja secara manual dan dengan sistem usulan menggunakan laptop. Sehubungan dengan sifat kerasahasiaan \textit{data} pengujian, maka dengan persetujuan pembimbing pengujian eksperimental dilakukan dengan merahasiakan identitas mahasiswa yang berhubungan.
 	
 	Pada saat melakukan pengujian eksperimental, sistem kini memiliki kekurangan kecerobohan manusia yang mengakibatkan kesalahan dalam perhitungan nilai baik dari lembar rekapitulasi maupun lembar berita acara sidang skripsi. Hal tersebut diketahui pada saat membandingkan nilai perhitungan nilai akhir yang didapatkan oleh mahasiswa pada sistem kini dan sistem usulan. Pada beberapa kesalahan tersebut, penguji kembali melakukan perhitungan secara manual dengan menggunakan mesin hitung berupa kalkulator pada \textit{gadget} penguji. Setelah perhitungan dilakukan, didapatkan bahwa sistem usulan memiliki hasil yang benar.
 	
@@ -173,7 +209,7 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 			\hline
 			nama & A\\
 			\hline
-			judul & A(Tidak Tercatat) \\
+			judul & Tidak Dicatat \\
 			\hline
 			namaPembimbing & Mariskha A\\
 			\hline
@@ -189,6 +225,12 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 			\hline
 			bobotPembimbing & 20\\
 			\hline
+		\end{tabular}
+	\end{table}
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{| m{7cm} | m{5cm} |}
+		\hline
 			nilaiKoordinatorSkripsi & 100\\
 			\hline
 			bobotKoordinatorSkripsi & 10\\
@@ -242,7 +284,7 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 			\hline
 			nama & B\\
 			\hline
-			judul & Pembangunan Robot Forex dengan Memanfaatkan Analisis Teknikal dan Fundamental \\
+			judul & Tidak Dicatat \\
 			\hline
 			namaPembimbing & Luciana A\\
 			\hline
@@ -311,7 +353,7 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 			\hline
 			nama & C\\
 			\hline
-			judul & ASD(Tidak tercatat) \\
+			judul & Tidak Dicatat \\
 			\hline
 			namaPembimbing & Anoeng\\
 			\hline
@@ -380,7 +422,7 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 			\hline
 			nama & DE\\
 			\hline
-			judul & Converter \\
+			judul & Tidak Dicatat \\
 			\hline
 			namaPembimbing & Pascal A\\
 			\hline
@@ -394,6 +436,12 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 			\hline
 			bobotAnggotaTimPenguji & 35\\
 			\hline
+		\end{tabular}
+	\end{table}
+\begin{table}[H]
+\centering
+\begin{tabular}{| m{7cm} | m{5cm} |}
+\hline
 			bobotPembimbing & 20\\
 			\hline
 			nilaiKoordinatorSkripsi & 100\\
@@ -449,7 +497,7 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 			\hline
 			nama & E\\
 			\hline
-			judul & Watermarking\\
+			judul & Tidak Dicatat\\
 			\hline
 			namaPembimbing & Mariskha A\\
 			\hline
@@ -501,11 +549,8 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 			\hline
 		\end{tabular}
 	\end{table}
-		
-		
-		\subsection{Pengujian Fungsional}
-		\label{sub: PFungsional}
-		Pengujian fungsional dilakukan untuk mengetahui apakah sistem informasi dapat menjalankan seluruh fungsi-fungsi yang dimiliki dengan baik ketika dijalankan pada \textit{platform} yang berbeda. Hasil pengujian fungsional sistem informasi akan dijabarkan pada Tabel \ref{pengFung} berikut.
+
+		Tabel \ref{pengFung} adalah hasil pengujian sistem usulan pada berbagai macam \textit{platform}, yang bertujuan untuk mengetahui apakah sistem informasi dapat menjalankan seluruh fungsi-fungsi yang dimiliki dengan baik ketika dijalankan pada \textit{platform} yang berbeda.
 		
 	\begin{table}[H]
 		\centering
@@ -526,8 +571,8 @@ Pada bagian ini merupakan rincian atau penjelasan lanjut mengenai lingkungan imp
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.4]{Gambar/MsEdge}
-	\includegraphics[scale=0.4]{Gambar/MsEdgeSelesai}
+	\includegraphics[scale=0.3]{Gambar/MsEdge}
+	\includegraphics[scale=0.3]{Gambar/MsEdgeSelesai}
 	\caption{Tampilan sistem pada platform Microsoft Edge}
 	\label{fig:MsEdge}
 \end{figure}

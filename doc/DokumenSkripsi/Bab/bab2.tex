@@ -6,7 +6,7 @@ Pada bab ini akan dijelaskan dasar-dasar teori mengenai CodeIgniter, AngularJS, 
 \section{CodeIgniter}
 \label{sec: codeigniter}
 
-CodeIgniter\cite{ciDocs} merupakan sebuah \textit{framework} bagi \textit{programmer} yang ingin membuat sebuah \textit{web} dengan menggunakan bahasa PHP. Penggunaan CodeIgniter sendiri mempunyai tujuan mempercepat pengembangan proyek-proyek bersangkutan jika dibandingkan dengan menuliskan kode dari awal. Tujuan tersebut diwujudkan dengan tersedianya \textit{library} berisi \textit{task} yang biasa dibutuhkan dalam pengembangan \textit{program}, dibarengi dengan antarmuka yang sederhana serta struktur logika khusus untuk mengakses \textit{library} tersebut. Dengan begitu dapat disimpulkan bahwa CodeIgniter membuat pemrogram fokus pada kreativitas pembuatan \textit{program} dengan meminimalkan jumlah kode yang dituliskan.
+CodeIgniter \cite{ciDocs} merupakan sebuah \textit{framework} bagi \textit{programmer} yang ingin membuat sebuah \textit{web} dengan menggunakan bahasa PHP. Penggunaan CodeIgniter sendiri mempunyai tujuan mempercepat pengembangan proyek-proyek bersangkutan jika dibandingkan dengan menuliskan kode dari awal. Tujuan tersebut diwujudkan dengan tersedianya \textit{library} berisi \textit{task} yang biasa dibutuhkan dalam pengembangan \textit{program}, dibarengi dengan antarmuka yang sederhana serta struktur logika khusus untuk mengakses \textit{library} tersebut. Dengan begitu dapat disimpulkan bahwa CodeIgniter membuat pemrogram fokus pada kreativitas pembuatan \textit{program} dengan meminimalkan jumlah kode yang dituliskan.
 
 \subsection{Flowchart Aplikasi CodeIgniter}
 \label{sub: FlowAppCI}
@@ -19,7 +19,7 @@ Pada Gambar \ref{fig:flowchartCI} adalah \textit{flowchart} aliran data pada Cod
 	\label{fig:flowchartCI}
 \end{figure}
 
-Keterangan Gambar \ref{fig:flowchartCI}
+Keterangan Gambar \ref{fig:flowchartCI}.
 \begin{enumerate}
 	\item Index.php berfungsi sebagai pengontrol utama, yang menginisialisasikan sumber-sumber yang diperlukan untuk menjalankan CodeIgniter.
 	\item \textit{Routing / Router} akan memeriksa permintaan HTTP untuk menentukan apa yang harus dilakukan selanjutnya
@@ -44,7 +44,7 @@ MVC sendiri terdiri dari 3 bagian, yaitu:
 \subsection{Controller}
 \label{sub: controller}
 
-	\textit{Controller} merupakan sebuah kelas sederhana dengan penerapan seperti URL. Seperti kelas pada umumnya, ketika nama kelas dari \textit{controller} dan nama kelas dari \textit{file controller} tersebut cocok, maka kelas dapat dijalankan dengan baik. Nama kelas suatu \textit{controller} dikatakan sah jika diawali dengan huruf besar. Untuk lebih jelasnya, perhatikan kode di bawah ini:
+	\textit{Controller} merupakan sebuah kelas sederhana dengan penerapan seperti URL. Seperti kelas pada umumnya, ketika nama kelas dari \textit{controller} dan nama kelas dari \textit{file controller} tersebut cocok, maka kelas dapat dijalankan dengan baik. Nama kelas suatu \textit{controller} dikatakan sah jika diawali dengan huruf besar.
 \begin{lstlisting}[caption={CI Controller},label={CIcontroller}]
 <?php
 class Blog extends CI_Controller{
@@ -63,7 +63,7 @@ class Blog extends CI_Controller{
 	\textit{Method} merupakan nama fungsi dari suatu kelas. Nama \textit{method} pada Listing \ref{CIcontroller} adalah "index()". \textit{Method} bernama "index" akan selalu dijalankan jika tidak ada arahan ke metode pada URL. Cara lain untuk menjalankan \textit{method} pada kode subbab \ref{sub: controller} adalah \url{example.com/index.php/blog/index/} dimana bagian terakhir adalah nama \textit{method} yang ingin dijalankan.
 	
 	
-	\begin{lstlisting}[caption=CI Controller Method]
+	\begin{lstlisting}[caption=CI Controller Method, label= ciContMethod]
 <?php
 class Products extends CI_Controller{
 
@@ -74,14 +74,14 @@ class Products extends CI_Controller{
 }
 	\end{lstlisting}
 	
-	Jika \textit{method} yang dituju memiliki parameter, diperlukan tambahan pada URL pemanggilannya. Sebagai contoh, pemanggilan \textit{method}	pada kode di atas dilakukan dengan URL \url{example.com/index.php/products/shoes/sandals/123} dimana "sandals" dan "123" merupakan isi dari \textit{parameter 1} dan 2 dari \textit{method} "shoes".
+	Jika \textit{method} yang dituju memiliki parameter seperti pada Listing \ref{ciContMethod}, diperlukan tambahan pada URL pemanggilannya. Sebagai contoh, pemanggilan \textit{method}	pada kode di atas dilakukan dengan URL \url{example.com/index.php/products/shoes/sandals/123} dimana "sandals" dan "123" merupakan isi dari \textit{parameter 1} dan 2 dari \textit{method} "shoes".
 	
 \subsubsection{Mendefinisikan Controller Default}
 \label{subsub: defaulController}
 
-	CodeIgniter dapat menjalankan \textit{default controller} sehingga tidak diperlukannya penulisan URL yang lengkap untuk pemanggilan, melainkan \textit{controller} dapat dipanggil secara otomatis dengan URL \url{example.com} saja. Namun, untuk dapat menjalankan fungsi ini, diperlukan sedikit pengaturan pada \textit{file} "application/config/routes.php" yaitu perubahan variabel yang ditunjukkan kode di bawah ini:
+	CodeIgniter dapat menjalankan \textit{default controller} sehingga tidak diperlukannya penulisan URL yang lengkap untuk pemanggilan, melainkan \textit{controller} dapat dipanggil secara otomatis dengan URL \url{example.com} saja. Namun, untuk dapat menjalankan fungsi ini, diperlukan sedikit pengaturan pada \textit{file} "application/config/routes.php" yaitu perubahan variabel yang ditunjukkan Listing \ref{defCont}.
 	
-	\begin{lstlisting}[caption= Default Controller]
+	\begin{lstlisting}[caption= Default Controller, label= defCont]
 	$route['default_controller'] = 'blog';
 	\end{lstlisting}
 	
@@ -184,7 +184,7 @@ class Blog_controller extends CI_Controller {
 	
 	Cara menjalankan \textit{helper} pada CodeIgniter cukup dengan menambahkan kode di dalam \textit{file Helper} atau \textit{view}.
 	
-	\begin{lstlisting}[caption="Kode Helper", label={jalanHelper}]
+	\begin{lstlisting}[caption=Kode Helper, label={jalanHelper}]
 $this->load->helper('name');
 	\end{lstlisting}
 	
@@ -192,14 +192,14 @@ $this->load->helper('name');
 	
 	\subsection{Basis data}
 	\label{sub: database}
-	
-	\subsubsection{Menyambungkan ke Basis Data}
+	Pada subbab ini akan dibahas mengenai koneksi  pada basis data dan konfigurasi basis data pada \textit{codeigniter}.
+	\subsubsection{Koneksi pada Basis Data}
 	\label{subsub: connectDatabase}
 	
 	Perlu diingat bahwa kelas \textit{model} tidak menjalankan basis data secara otomatis. Untuk membuat aplikasi terkoneksi dengan basis data, diperlukan beberapa tambahan kode pada \textit{file model} atau \textit{file controller}.
-	CodeIgniter memiliki fitur \textit{automatically connecting} yang membuat seluruh aplikasi tersambung dengan basis data pada setiap \textit{page load}. untuk mengaktifkan fitur ini cukup mengetikkan "database" pada variabel autoload['libraries'] di "application/config/autoload.php" seperti kode dibawah ini.
+	CodeIgniter memiliki fitur \textit{automatically connecting} yang membuat seluruh aplikasi tersambung dengan basis data pada setiap \textit{page load}. untuk mengaktifkan fitur ini cukup mengetikkan "database" pada variabel autoload['libraries'] di "application/config/autoload.php" yang ditunjukkan pada Listing \ref{autoloadCI}.
 	
-	\begin{lstlisting}
+	\begin{lstlisting}[caption= Autoload Codeigniter, label= autoloadCI]
 $autoload['libraries'] =array('database');
 	\end{lstlisting}
 	
@@ -233,8 +233,10 @@ $db['default'] = array(
 	);
 	\end{lstlisting}
 	\pagebreak
-	Keterangan Listing \ref{isiBasDat}:
-	\begin{center}
+	Berikut ini adalah keterang dari Listing \ref{isiBasDat}.
+	\begin{table}[H]
+		\centering
+		\caption{Tabel Keterangan Basis Data}
 	\begin{tabular}{| m{5cm} | m{10cm} |}
 		\hline
 		Nama Konfigurasi & Deskripsi\\
@@ -278,12 +280,12 @@ $db['default'] = array(
 		port & nomor port dari basis data. Untuk menggunakannya diperlukan penambahan di config array database.\\
 		\hline
 	\end{tabular}
-\end{center}
+\end{table}
 	
 \section{AngularJS}
 \label{sec: angularJS}
 
-AngularJS\cite{AngularJSDocs} merupakan sebuah \textit{framework} terstruktur yang digunakan untuk aplikasi \textit{web} yang bersifat dinamis. Hal tersebut memungkinkan \textit{programmer} untuk mempergunakan HTML sebagai \textit{template} bahasa pemrograman dan memperluas sintaks HTML agar dapat mengekspresikan komponen aplikasi dengan jelas dan ringkas. Sifat AngularJS yang mengikat data dan mempunyai injeksi ketergantungan (\textit{Dependency Injection}) yang berfungsi agar suatu kelas tidak terikat dengan kelas lain, juga akan menghilangkan banyak kode yang seharusnya dituliskan oleh \textit{programmer}, dan semua itu terjadi pada \textit{browser} sehingga dapat disimpulkan bahwa AngularJS merupakan pasangan yang sangat ideal bagi penggunaan teknologi server. 
+AngularJS \cite{AngularJSDocs} merupakan sebuah \textit{framework} terstruktur yang digunakan untuk aplikasi \textit{web} yang bersifat dinamis. Hal tersebut memungkinkan \textit{programmer} untuk mempergunakan HTML sebagai \textit{template} bahasa pemrograman dan memperluas sintaks HTML agar dapat mengekspresikan komponen aplikasi dengan jelas dan ringkas. Sifat AngularJS yang mengikat data dan mempunyai injeksi ketergantungan (\textit{Dependency Injection}) yang berfungsi agar suatu kelas tidak terikat dengan kelas lain, juga akan menghilangkan banyak kode yang seharusnya dituliskan oleh \textit{programmer}, dan semua itu terjadi pada \textit{browser} sehingga dapat disimpulkan bahwa AngularJS merupakan pasangan yang sangat ideal bagi penggunaan teknologi server. 
 Dalam pembuatannya, ketidakcocokkan halaman statik dan dinamik biasanya diselesaikan dengan pendekatan sebagai berikut:
 \begin{enumerate}
 	\item \textit{Library}: merupakan sebuah koleksi dari berbagai macam fungsi yang berguna dalam pembuatan aplikasi \textit{web}, contoh: JQuery.
@@ -300,7 +302,9 @@ Dalam pembentukannya, AngularJS memiliki pendekatan yang berbeda. AngularJS meng
 \subsection{Gambaran Konseptual}
 \label{sub: gambaranKonsep}
 	Berikut ini adalah beberapa bagian-bagian terpenting dalam AngularJS.
-	\begin{center}
+	\begin{table}[H]
+		\centering
+		\caption{Tabel Gambaran Konseptual}
 		\begin{tabular}{| m{5cm} | m{10cm} |}
 			\hline
 			Konsep & Deskripsi \\
@@ -334,7 +338,7 @@ Dalam pembentukannya, AngularJS memiliki pendekatan yang berbeda. AngularJS meng
 			Services & Logika bisnis independen dari \textit{views} yang bisa dipakai kembali  \\
 			\hline
 			\end{tabular}
-		\end{center}
+		\end{table}
 		
 \subsection{Directives}
 \label{sub: directives}
@@ -360,7 +364,7 @@ Dalam pembentukannya, AngularJS memiliki pendekatan yang berbeda. AngularJS meng
 		\caption{Data Binding Classical Templates System}
 		\label{fig:dabin1}
 	\end{figure}
-	Pada gambar \ref{fig:dabin1} menjelaskan bahwa kebanyakan \textit{data binding} adalah proses satu arah. Hal itu dilakukan dengan menyatukan \textit{template} dan \textit{model} menjadi \textit{view}. Setelah penyatuan, pergantian pada \textit{model} tidak secara otomatis mengganti \textit{view} yang sudah ditampilkan.
+	Pada Gambar \ref{fig:dabin1} menjelaskan bahwa kebanyakan \textit{data binding} adalah proses satu arah. Hal itu dilakukan dengan menyatukan \textit{template} dan \textit{model} menjadi \textit{view}. Setelah penyatuan, pergantian pada \textit{model} tidak secara otomatis mengganti \textit{view} yang sudah ditampilkan.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.75]{Gambar/Dabin2}
@@ -374,7 +378,7 @@ Dalam pembentukannya, AngularJS memiliki pendekatan yang berbeda. AngularJS meng
 \subsection{Model-View-Controller(MVC)}
 \label{sub: mvcAngular}
 
-	AngularJS\cite{green2013angularjs} juga merupakan salah satu \textit{framework} yang menggunakan  \textit{Model-View-Controller} sebagai patokan desain aplikasi. Walaupun AngularJS mempunyai banyak flexibilitas dalam membangun aplikasi, tetapi akan ada beberapa hal yang selalu dijumpai dalam mendesain sebuah aplikasi, diantaranya:
+	AngularJS \cite{green2013angularjs} juga merupakan salah satu \textit{framework} yang menggunakan  \textit{Model-View-Controller} sebagai patokan desain aplikasi. Walaupun AngularJS mempunyai banyak flexibilitas dalam membangun aplikasi, tetapi akan ada beberapa hal yang selalu dijumpai dalam mendesain sebuah aplikasi, diantaranya:
 	\begin{itemize}
 		\item Sebuah \textit{model} selalu menampung data yang merepresentasikan keadaan aplikasi.
 		\item \textit{Views} yang menyajikan data tersebut.
@@ -455,7 +459,7 @@ function TextController($scope){
 \section{Twitter Bootstrap}
 \label{sec: Bootrstrap}
 
-\textit{Twitter Bootstrap}\cite{bootstrap} atau yang lebih dikenal dengan \textit{Bootstrap} adalah \textit{framework} HTML, CSS, dan JS terpopuler dalam hal pengembangan tampilan yang responsif \textit{mobile} pertama dalam hal aplikasi berbasis \textit{web}. 
+\textit{Twitter Bootstrap} \cite{bootstrap} atau yang lebih dikenal dengan \textit{Bootstrap} adalah \textit{framework} HTML, CSS, dan JS terpopuler dalam hal pengembangan tampilan yang responsif \textit{mobile} pertama dalam hal aplikasi berbasis \textit{web}. 
 
 \subsection{Grid System}
 \label{sub: gridSystem}
